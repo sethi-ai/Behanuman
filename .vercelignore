@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+_checks
+_preview
+_refs
+.env*
+*.pem
+*.tsbuildinfo
+HANDOFF.md
+AGENTS.md
+CLAUDE_REVIEW.md
+AUDIT-*.html
