@@ -139,7 +139,7 @@ export default function AccountPanel() {
       <button onClick={() => void logout()} disabled={busy}>Sign out</button>
       <button onClick={() => setConfirmDelete(true)} disabled={busy}>Delete account</button>
       {confirmDelete && <div role="alert"><p>Delete your account and all practice saved to it? This cannot be undone.</p><button onClick={() => void removeAccount()} disabled={busy}>Yes, delete my account</button><button onClick={() => setConfirmDelete(false)} disabled={busy}>Cancel</button></div>}
-    </> : <><p>Chant as a guest, or sign in to save your practice across devices.</p><button disabled={!status?.googleReady || busy} onClick={async () => { setBusy(true); try { await signIn("google", { redirectTo: "/" }); } catch { setMessage("Google sign-in couldn’t start. Please try again."); setBusy(false); } }}>Continue with Google</button>{status && !status.googleReady && <p className="cloud-note">Google sign-in is being connected. Guest chanting is ready to use.</p>}</>}
+    </> : <><p>Chant as a guest, or sign in to save your practice across devices.</p><button disabled={!status?.googleReady || busy} onClick={async () => { setBusy(true); try { await signIn("google", { redirectTo: window.location.origin + "/" }); } catch { setMessage("Google sign-in couldn’t start. Please try again."); setBusy(false); } }}>Continue with Google</button>{status && !status.googleReady && <p className="cloud-note">Google sign-in is being connected. Guest chanting is ready to use.</p>}</>}
     {message && <p role="status">{message}</p>}
   </section>, slot);
 }
