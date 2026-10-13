@@ -1,0 +1,660 @@
+{
+  "01": {
+    "file": "01.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 97150,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-0d91c46a-1472-4f35-9b5b-901cd6c7fa71.png",
+    "quality": 70
+  },
+  "02": {
+    "file": "02.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 154338,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-1d38812e-75e3-4705-941b-03cf763374af.png",
+    "quality": 64
+  },
+  "03": {
+    "file": "03.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 115104,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-b6c17be2-303a-43e1-a3b8-f85de84ba2d6.png",
+    "quality": 64
+  },
+  "04": {
+    "file": "04.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 129138,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-f75c401f-0287-4e21-bfb4-051a4e5ed16f.png",
+    "quality": 64
+  },
+  "05": {
+    "file": "05.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 97866,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-127d8dec-b733-4ed4-99b8-665b0e2a3e54.png",
+    "quality": 82
+  },
+  "06": {
+    "file": "06.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 101656,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-3539c812-5ffa-445d-932c-70b7a4bcb337.png",
+    "quality": 64
+  },
+  "07": {
+    "file": "07.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 109510,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-f1aac88a-a747-4ea9-a87c-969d9f57fea7.png",
+    "quality": 64
+  },
+  "08": {
+    "file": "08.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 115038,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-35ef8e6b-a187-4e15-b485-44fc37bb3028.png",
+    "quality": 64
+  },
+  "09": {
+    "file": "09.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 111004,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-8dacdf4a-5122-441d-8db2-782c1646bc9c.png",
+    "quality": 64
+  },
+  "10": {
+    "file": "10.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 176116,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-d1e93db9-b1aa-4168-a084-d38c20d9565e.png",
+    "quality": 64
+  },
+  "11": {
+    "file": "11.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 152064,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-b9cb7301-4c2e-4b62-b812-27452d6c9bb1.png",
+    "quality": 64
+  },
+  "12": {
+    "file": "12.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 138032,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-e41b4cf1-d321-428c-ba96-e76513deb46e.png",
+    "quality": 64
+  },
+  "13": {
+    "file": "13.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 110830,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-c8fd065a-5559-468f-b007-0b59910fa5db.png",
+    "quality": 64
+  },
+  "14": {
+    "file": "14.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 122918,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-1d373649-b48a-4b03-931b-22ed039e5883.png",
+    "quality": 64
+  },
+  "15": {
+    "file": "15.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 127222,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-927d01f1-3675-4810-88b4-cd0f7ceb62dc.png",
+    "quality": 64
+  },
+  "16": {
+    "file": "16.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 147478,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-c685b635-bc48-4251-8553-e5ccdd7b3adc.png",
+    "quality": 64
+  },
+  "17": {
+    "file": "17.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 140496,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-c3081983-a9c8-45f1-bcb2-fd4069c6f8cc.png",
+    "quality": 64
+  },
+  "18": {
+    "file": "18.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 105084,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-fa29042d-ede4-46c1-8058-ff0da7a7ec5e.png",
+    "quality": 64
+  },
+  "19": {
+    "file": "19.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 131614,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-de980734-2ec5-421f-a15f-183340f09073.png",
+    "quality": 64
+  },
+  "20": {
+    "file": "20.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 126260,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-3b090146-6c69-4ec0-9cda-0194a6e79618.png",
+    "quality": 64
+  },
+  "21": {
+    "file": "21.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 109558,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-1c587c05-3118-4458-8fda-fd02e55654c2.png",
+    "quality": 64
+  },
+  "22": {
+    "file": "22.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 130020,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-4694485d-993c-4f97-a489-e5bd34fb2dd3.png",
+    "quality": 64
+  },
+  "23": {
+    "file": "23.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 96498,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-d8ebeb8a-02b4-4248-bbde-80e3f6d475f7.png",
+    "quality": 82
+  },
+  "24": {
+    "file": "24.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 164368,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-f1074034-3469-4fa9-9a31-00b57b89453f.png",
+    "quality": 64
+  },
+  "25": {
+    "file": "25.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 133668,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-ca70915c-2b08-4be0-82a9-8fe079ec50bf.png",
+    "quality": 64
+  },
+  "26": {
+    "file": "26.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 106770,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-9130ce33-be56-48eb-a510-48372358df74.png",
+    "quality": 64
+  },
+  "27": {
+    "file": "27.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 122250,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-57207117-7952-4d2c-a74b-3f7f6c70eeae.png",
+    "quality": 64
+  },
+  "28": {
+    "file": "28.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 123370,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-57b48945-03b9-4d5a-bbae-6d3a3aa5838a.png",
+    "quality": 64
+  },
+  "29": {
+    "file": "29.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 153324,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-a17e2848-1121-42dc-93f6-49d2ed6a7ccf.png",
+    "quality": 64
+  },
+  "30": {
+    "file": "30.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 166058,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-fcaf113f-2c85-4a30-b36d-928f22f1ae1e.png",
+    "quality": 64
+  },
+  "31": {
+    "file": "31.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 154192,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-53b5c5f4-af1b-4a77-b4a0-5f5ef6d07f69.png",
+    "quality": 64
+  },
+  "32": {
+    "file": "32.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 158060,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-f4286b40-884b-4e8b-89e8-2550b9eaf11f.png",
+    "quality": 64
+  },
+  "33": {
+    "file": "33.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 95772,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-9496c313-6582-47b1-98a5-11422b5d0283.png",
+    "quality": 82
+  },
+  "34": {
+    "file": "34.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 132566,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-e0dd912f-6f04-4e76-9830-2682efac9fde.png",
+    "quality": 64
+  },
+  "35": {
+    "file": "35.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 120246,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-e98da164-212f-4253-9fd2-5abe0e04d8e6.png",
+    "quality": 64
+  },
+  "36": {
+    "file": "36.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 101664,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-0e3d7f4f-a30d-49b1-8838-3b79bbd68301.png",
+    "quality": 70
+  },
+  "37": {
+    "file": "37.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 133782,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-61366641-8d72-4c37-93ce-a336cfd659af.png",
+    "quality": 64
+  },
+  "38": {
+    "file": "38.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 96808,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-2f92bb8f-5811-4c64-9374-9cb23c892ac8.png",
+    "quality": 82
+  },
+  "39": {
+    "file": "39.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 105732,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-830934da-9c00-48d2-80ed-2e49f37ca588.png",
+    "quality": 64
+  },
+  "40": {
+    "file": "40.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 100734,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-ea93842d-2c92-44e0-a660-9ed86bec5600.png",
+    "quality": 64
+  },
+  "41": {
+    "file": "41.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 100084,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-8b620638-70e0-4e35-bf49-7792f2f44023.png",
+    "quality": 88
+  },
+  "42": {
+    "file": "42.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 133088,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-7a081957-5f26-4395-89a8-4b463a455a1d.png",
+    "quality": 64
+  },
+  "jaikara": {
+    "file": "jaikara.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 100486,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-63afd84b-81d7-45ea-bb5e-20759e7369c2.png",
+    "quality": 64
+  },
+  "jaikara2": {
+    "file": "jaikara2.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 133668,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-3771e2ce-2634-4009-b2f4-d355ff072f85.png",
+    "quality": 64
+  },
+  "opening2": {
+    "file": "opening2.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 100278,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-b4eecf77-b901-4993-aaba-487e959937ca.png",
+    "quality": 82
+  },
+  "sankalp": {
+    "file": "sankalp.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 95672,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-dbd29b56-e20c-411b-badd-2fa825c2d47a.png",
+    "quality": 82
+  },
+  "progress-bar-image": {
+    "file": "progress-bar-image.webp",
+    "size": [
+      900,
+      900
+    ],
+    "bytes": 31860,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "generated_source": "C:\\Users\\aksha\\.codex\\generated_images\\01a1172a-ed21-7f23-8b3f-5dc0cf5593c1\\exec-8473ea08-b2f4-4606-9f50-c8341bd5ad7c.png",
+    "quality": 88
+  }
+}

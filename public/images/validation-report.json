@@ -1,0 +1,1273 @@
+{
+  "status": "passed",
+  "stories": 108,
+  "shelf_covers": 6,
+  "light_ui": 22,
+  "dark_ui": 22,
+  "dark_filename_aliases": 22,
+  "unique_images": 158,
+  "webp_files": 180,
+  "total_bytes": 20832768,
+  "files": [
+    {
+      "file": "facts/f001.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 134466,
+      "passed": true
+    },
+    {
+      "file": "facts/f002.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 141200,
+      "passed": true
+    },
+    {
+      "file": "facts/f003.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139494,
+      "passed": true
+    },
+    {
+      "file": "facts/f004.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142822,
+      "passed": true
+    },
+    {
+      "file": "facts/f005.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139412,
+      "passed": true
+    },
+    {
+      "file": "facts/f006.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 140802,
+      "passed": true
+    },
+    {
+      "file": "facts/f007.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 137940,
+      "passed": true
+    },
+    {
+      "file": "facts/f008.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 149834,
+      "passed": true
+    },
+    {
+      "file": "facts/f009.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139684,
+      "passed": true
+    },
+    {
+      "file": "facts/f010.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 140208,
+      "passed": true
+    },
+    {
+      "file": "facts/f011.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143920,
+      "passed": true
+    },
+    {
+      "file": "facts/f012.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148616,
+      "passed": true
+    },
+    {
+      "file": "facts/f013.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143568,
+      "passed": true
+    },
+    {
+      "file": "facts/f014.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148642,
+      "passed": true
+    },
+    {
+      "file": "facts/f015.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143900,
+      "passed": true
+    },
+    {
+      "file": "facts/f016.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 141668,
+      "passed": true
+    },
+    {
+      "file": "facts/f017.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 141194,
+      "passed": true
+    },
+    {
+      "file": "facts/f018.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139210,
+      "passed": true
+    },
+    {
+      "file": "facts/f019.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139464,
+      "passed": true
+    },
+    {
+      "file": "facts/f020.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139694,
+      "passed": true
+    },
+    {
+      "file": "facts/f021.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 136754,
+      "passed": true
+    },
+    {
+      "file": "facts/f022.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 138774,
+      "passed": true
+    },
+    {
+      "file": "facts/f023.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143800,
+      "passed": true
+    },
+    {
+      "file": "facts/f024.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 140514,
+      "passed": true
+    },
+    {
+      "file": "facts/f025.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 141226,
+      "passed": true
+    },
+    {
+      "file": "facts/f026.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144712,
+      "passed": true
+    },
+    {
+      "file": "facts/f027.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 146840,
+      "passed": true
+    },
+    {
+      "file": "facts/f028.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139316,
+      "passed": true
+    },
+    {
+      "file": "facts/f029.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143462,
+      "passed": true
+    },
+    {
+      "file": "facts/f030.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144238,
+      "passed": true
+    },
+    {
+      "file": "facts/f031.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139628,
+      "passed": true
+    },
+    {
+      "file": "facts/f032.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 147852,
+      "passed": true
+    },
+    {
+      "file": "facts/f033.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 149290,
+      "passed": true
+    },
+    {
+      "file": "facts/f034.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139576,
+      "passed": true
+    },
+    {
+      "file": "facts/f035.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 133868,
+      "passed": true
+    },
+    {
+      "file": "facts/f036.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 146948,
+      "passed": true
+    },
+    {
+      "file": "facts/f037.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 141456,
+      "passed": true
+    },
+    {
+      "file": "facts/f038.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 145366,
+      "passed": true
+    },
+    {
+      "file": "facts/f039.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143544,
+      "passed": true
+    },
+    {
+      "file": "facts/f040.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 138632,
+      "passed": true
+    },
+    {
+      "file": "facts/f041.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 138954,
+      "passed": true
+    },
+    {
+      "file": "facts/f042.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143406,
+      "passed": true
+    },
+    {
+      "file": "facts/f043.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 141770,
+      "passed": true
+    },
+    {
+      "file": "facts/f044.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 134558,
+      "passed": true
+    },
+    {
+      "file": "facts/f045.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144358,
+      "passed": true
+    },
+    {
+      "file": "facts/f046.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 147822,
+      "passed": true
+    },
+    {
+      "file": "facts/f047.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144906,
+      "passed": true
+    },
+    {
+      "file": "facts/f048.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 135626,
+      "passed": true
+    },
+    {
+      "file": "facts/f049.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 149462,
+      "passed": true
+    },
+    {
+      "file": "facts/f050.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 141732,
+      "passed": true
+    },
+    {
+      "file": "facts/f051.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143204,
+      "passed": true
+    },
+    {
+      "file": "facts/f052.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142804,
+      "passed": true
+    },
+    {
+      "file": "facts/f053.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142486,
+      "passed": true
+    },
+    {
+      "file": "facts/f054.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148420,
+      "passed": true
+    },
+    {
+      "file": "facts/f055.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 140810,
+      "passed": true
+    },
+    {
+      "file": "facts/f056.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 147146,
+      "passed": true
+    },
+    {
+      "file": "facts/f057.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 138668,
+      "passed": true
+    },
+    {
+      "file": "facts/f058.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144466,
+      "passed": true
+    },
+    {
+      "file": "facts/f059.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 146966,
+      "passed": true
+    },
+    {
+      "file": "facts/f060.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 147438,
+      "passed": true
+    },
+    {
+      "file": "facts/f061.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 145616,
+      "passed": true
+    },
+    {
+      "file": "facts/f062.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 149094,
+      "passed": true
+    },
+    {
+      "file": "facts/f063.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144402,
+      "passed": true
+    },
+    {
+      "file": "facts/f064.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 135656,
+      "passed": true
+    },
+    {
+      "file": "facts/f065.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 146078,
+      "passed": true
+    },
+    {
+      "file": "facts/f066.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148108,
+      "passed": true
+    },
+    {
+      "file": "facts/f067.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148604,
+      "passed": true
+    },
+    {
+      "file": "facts/f068.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139042,
+      "passed": true
+    },
+    {
+      "file": "facts/f069.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148094,
+      "passed": true
+    },
+    {
+      "file": "facts/f070.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 141802,
+      "passed": true
+    },
+    {
+      "file": "facts/f071.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142108,
+      "passed": true
+    },
+    {
+      "file": "facts/f072.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 140490,
+      "passed": true
+    },
+    {
+      "file": "facts/f073.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142250,
+      "passed": true
+    },
+    {
+      "file": "facts/f074.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139154,
+      "passed": true
+    },
+    {
+      "file": "facts/f075.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 149464,
+      "passed": true
+    },
+    {
+      "file": "facts/f076.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148060,
+      "passed": true
+    },
+    {
+      "file": "facts/f077.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144346,
+      "passed": true
+    },
+    {
+      "file": "facts/f078.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 146664,
+      "passed": true
+    },
+    {
+      "file": "facts/f079.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 134698,
+      "passed": true
+    },
+    {
+      "file": "facts/f080.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 145438,
+      "passed": true
+    },
+    {
+      "file": "facts/f081.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142630,
+      "passed": true
+    },
+    {
+      "file": "facts/f082.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 137682,
+      "passed": true
+    },
+    {
+      "file": "facts/f083.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142040,
+      "passed": true
+    },
+    {
+      "file": "facts/f084.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 137442,
+      "passed": true
+    },
+    {
+      "file": "facts/f085.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 149226,
+      "passed": true
+    },
+    {
+      "file": "facts/f086.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142112,
+      "passed": true
+    },
+    {
+      "file": "facts/f087.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 145342,
+      "passed": true
+    },
+    {
+      "file": "facts/f088.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144236,
+      "passed": true
+    },
+    {
+      "file": "facts/f089.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142930,
+      "passed": true
+    },
+    {
+      "file": "facts/f090.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148216,
+      "passed": true
+    },
+    {
+      "file": "facts/f091.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142518,
+      "passed": true
+    },
+    {
+      "file": "facts/f092.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 144710,
+      "passed": true
+    },
+    {
+      "file": "facts/f093.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 138138,
+      "passed": true
+    },
+    {
+      "file": "facts/f094.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 140864,
+      "passed": true
+    },
+    {
+      "file": "facts/f095.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 138148,
+      "passed": true
+    },
+    {
+      "file": "facts/f096.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139194,
+      "passed": true
+    },
+    {
+      "file": "facts/f097.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 148388,
+      "passed": true
+    },
+    {
+      "file": "facts/f098.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 136150,
+      "passed": true
+    },
+    {
+      "file": "facts/f099.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 146460,
+      "passed": true
+    },
+    {
+      "file": "facts/f100.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 138298,
+      "passed": true
+    },
+    {
+      "file": "facts/f101.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 143760,
+      "passed": true
+    },
+    {
+      "file": "facts/f102.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 134732,
+      "passed": true
+    },
+    {
+      "file": "facts/f103.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 137106,
+      "passed": true
+    },
+    {
+      "file": "facts/f104.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 142088,
+      "passed": true
+    },
+    {
+      "file": "facts/f105.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 135608,
+      "passed": true
+    },
+    {
+      "file": "facts/f106.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 139446,
+      "passed": true
+    },
+    {
+      "file": "facts/f107.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 149656,
+      "passed": true
+    },
+    {
+      "file": "facts/f108.webp",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 147470,
+      "passed": true
+    },
+    {
+      "file": "facts/s1.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 49510,
+      "passed": true
+    },
+    {
+      "file": "facts/s2.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 59360,
+      "passed": true
+    },
+    {
+      "file": "facts/s3.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 48538,
+      "passed": true
+    },
+    {
+      "file": "facts/s4.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 52860,
+      "passed": true
+    },
+    {
+      "file": "facts/s5.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 75942,
+      "passed": true
+    },
+    {
+      "file": "facts/s6.webp",
+      "width": 600,
+      "height": 600,
+      "bytes": 54076,
+      "passed": true
+    },
+    {
+      "file": "ui/home-sankalp.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 84144,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/home-sankalp.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 79934,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/home-sankalp-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 79934,
+      "passed": true
+    },
+    {
+      "file": "ui/home-empty.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 75168,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/home-empty.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 74256,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/home-empty-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 74256,
+      "passed": true
+    },
+    {
+      "file": "ui/home-complete.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 89330,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/home-complete.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 83886,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/home-complete-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 83886,
+      "passed": true
+    },
+    {
+      "file": "ui/home-streak.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 34258,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/home-streak.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 34998,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/home-streak-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 34998,
+      "passed": true
+    },
+    {
+      "file": "ui/chant-rest.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 83240,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/chant-rest.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 80930,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/chant-rest-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 80930,
+      "passed": true
+    },
+    {
+      "file": "ui/learn-hub.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 87344,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-hub.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 82436,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-hub-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 82436,
+      "passed": true
+    },
+    {
+      "file": "ui/learn-maxing.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 73750,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-maxing.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 71414,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-maxing-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 71414,
+      "passed": true
+    },
+    {
+      "file": "ui/learn-audio.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 83558,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-audio.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 81664,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-audio-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 81664,
+      "passed": true
+    },
+    {
+      "file": "ui/learn-stories.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 78958,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-stories.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 81604,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-stories-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 81604,
+      "passed": true
+    },
+    {
+      "file": "ui/learn-sankalp.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 87680,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-sankalp.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 83274,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-sankalp-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 83274,
+      "passed": true
+    },
+    {
+      "file": "ui/learn-mode.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 88754,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-mode.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 85540,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/learn-mode-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 85540,
+      "passed": true
+    },
+    {
+      "file": "ui/settings.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 74152,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/settings.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 69218,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/settings-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 69218,
+      "passed": true
+    },
+    {
+      "file": "ui/x01-meditate.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 87136,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x01-meditate.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 84590,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x01-meditate-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 84590,
+      "passed": true
+    },
+    {
+      "file": "ui/x02-namaste-stand.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 60858,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x02-namaste-stand.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 62382,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x02-namaste-stand-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 62382,
+      "passed": true
+    },
+    {
+      "file": "ui/x03-playful-monkey.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 89838,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x03-playful-monkey.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 84742,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x03-playful-monkey-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 84742,
+      "passed": true
+    },
+    {
+      "file": "ui/x04-gada.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 74246,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x04-gada.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 74930,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x04-gada-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 74930,
+      "passed": true
+    },
+    {
+      "file": "ui/x05-flying.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 69138,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x05-flying.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 75554,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x05-flying-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 75554,
+      "passed": true
+    },
+    {
+      "file": "ui/x06-ramnaam.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 84698,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x06-ramnaam.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 86316,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x06-ramnaam-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 86316,
+      "passed": true
+    },
+    {
+      "file": "ui/x07-sleeping.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 78036,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x07-sleeping.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 81194,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x07-sleeping-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 81194,
+      "passed": true
+    },
+    {
+      "file": "ui/x08-thinking.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 80860,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x08-thinking.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 80332,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x08-thinking-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 80332,
+      "passed": true
+    },
+    {
+      "file": "ui/x09-celebrate.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 76244,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x09-celebrate.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 80016,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x09-celebrate-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 80016,
+      "passed": true
+    },
+    {
+      "file": "ui/x10-offering.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 72302,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x10-offering.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 70038,
+      "passed": true
+    },
+    {
+      "file": "ui/dark/x10-offering-dk.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 70038,
+      "passed": true
+    }
+  ]
+}

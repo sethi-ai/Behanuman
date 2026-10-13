@@ -1,0 +1,5 @@
+type Tab = "home" | "chant" | "settings";
+const paths={home:<><rect x="4" y="4" width="16" height="7" rx="2"/><rect x="4" y="13" width="16" height="7" rx="2"/></>,chant:<path d="M4 12h2M8 8v8M12 4v16M16 8v8M20 12h-2"/>,settings:<><path d="M4 7h9M19 7h1M4 17h1M11 17h9"/><circle cx="16" cy="7" r="2.4"/><circle cx="8" cy="17" r="2.4"/></>};
+export default function Navigation({ active, onTab, onRestart }: {active: string;onTab:(tab:Tab)=>void;onRestart:()=>void}) {
+ return <nav className="tabbar" aria-label="Main">{(["chant","home","settings"] as Tab[]).map(tab=><button key={tab} aria-label={tab==="home"?"Feed":tab[0].toUpperCase()+tab.slice(1)} aria-current={active===tab?"page":undefined} onClick={()=>onTab(tab)}><svg viewBox="0 0 24 24" aria-hidden="true">{paths[tab]}</svg><span>{tab==="home"?"Feed":tab[0].toUpperCase()+tab.slice(1)}</span></button>)}<button className="nav-restart" aria-label="Restart recitation" onClick={onRestart}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5M4.5 4.5v4h4"/></svg><span>Restart</span></button></nav>;
+}

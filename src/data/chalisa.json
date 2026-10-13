@@ -1,0 +1,716 @@
+[
+ {
+  "k": "दोहा",
+  "kl": "Doha 1",
+  "n": 0,
+  "dev": [
+   "श्रीगुरु चरन सरोज रज, निज मनु मुकुरु सुधारि।",
+   "बरनउँ रघुबर बिमल जसु, जो दायकु फल चारि॥"
+  ],
+  "hing": [
+   "Shri guru charan saroj raj, nij manu mukuru sudhaari",
+   "Baranau Raghubar bimal jasu, jo daayaku phal chaari"
+  ],
+  "hi": "गुरु के चरण-कमलों की धूल से अपने मन रूपी दर्पण को साफ़ करके, मैं श्रीराम के उस निर्मल यश का वर्णन करता हूँ जो धर्म, अर्थ, काम और मोक्ष, चारों फल देने वाला है।",
+  "en": "Cleaning the mirror of my mind with the dust of my Guru's lotus feet, I sing the pure glory of Sri Ram, which grants all four fruits of life.",
+  "mt": "Having cleaned the mirror of my mind with the dust of my teacher’s lotus feet, I describe the pure glory of Lord Rama, which grants the four aims of life.",
+  "ex": "The “mirror” is the mind: pride, confusion, and selfishness can cloud our understanding. Honouring the teacher represents humility and readiness to learn. The four aims are dharma, living rightly; artha, earning and sustaining life; kama, love and fulfilment; and moksha, spiritual freedom."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 1,
+  "dev": [
+   "जय हनुमान ज्ञान गुन सागर।",
+   "जय कपीस तिहुँ लोक उजागर॥"
+  ],
+  "hing": [
+   "Jai Hanumaan gyaan gun saagar",
+   "Jai Kapees tihun lok ujaagar"
+  ],
+  "hi": "ज्ञान और गुणों के सागर हनुमान जी की जय हो। तीनों लोकों को अपने तेज से प्रकाशित करने वाले वानरराज की जय हो।",
+  "en": "Victory to Hanuman, ocean of wisdom and virtue. Victory to the Lord of the monkeys, whose glory lights up all three worlds.",
+  "mt": "Glory to Hanuman, whose knowledge and virtues are as vast as an ocean. Glory to the lord of the vanaras, whose greatness shines through the three worlds.",
+  "ex": "The vanaras are the monkey-like beings who help Rama in the Ramayana. The three worlds broadly mean the heavenly, earthly, and lower realms. Hanuman is praised first for wisdom and character, showing that his greatness includes much more than strength."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 2,
+  "dev": [
+   "राम दूत अतुलित बल धामा।",
+   "अंजनि-पुत्र पवनसुत नामा॥"
+  ],
+  "hing": [
+   "Raam doot atulit bal dhaamaa",
+   "Anjani-putra Pavansut naamaa"
+  ],
+  "hi": "आप श्रीराम के दूत और अतुलनीय बल के भंडार हैं। आप अंजनी के पुत्र और 'पवनसुत' नाम से जाने जाते हैं।",
+  "en": "You are Ram's messenger and the home of unmatched strength, known as Anjani's son and the son of the Wind.",
+  "mt": "You are Rama’s messenger and the home of incomparable strength. You are Anjana’s son, also known as the son of the Wind God.",
+  "ex": "These names describe Hanuman’s parentage and divine connection. “Rama’s messenger” also expresses his purpose: he uses his abilities to serve Rama faithfully."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 3,
+  "dev": [
+   "महावीर बिक्रम बजरंगी।",
+   "कुमति निवार सुमति के संगी॥"
+  ],
+  "hing": [
+   "Mahaabeer bikram Bajrangee",
+   "Kumati nivaar sumati ke sangee"
+  ],
+  "hi": "आप महावीर, पराक्रमी और वज्र जैसे अंगों वाले हैं। आप बुरी बुद्धि को दूर करते हैं और अच्छी बुद्धि वालों के साथी हैं।",
+  "en": "Great hero, mighty one, with a body hard as a thunderbolt. You drive away bad thinking and stand with those who think well.",
+  "mt": "You are a great hero of extraordinary courage, with a body strong as a thunderbolt. You dispel harmful thinking and support good judgement.",
+  "ex": "“Bajrangi” refers to his thunderbolt-like strength. The second line turns attention inward: a person may need help overcoming confused or destructive thoughts as much as an outside enemy."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 4,
+  "dev": [
+   "कंचन बरन बिराज सुबेसा।",
+   "कानन कुंडल कुंचित केसा॥"
+  ],
+  "hing": [
+   "Kanchan baran biraaj subesaa",
+   "Kaanan kundal kunchit kesaa"
+  ],
+  "hi": "आपका रंग सोने जैसा है और आप सुंदर वेश में सुशोभित हैं। कानों में कुंडल हैं और बाल घुँघराले हैं।",
+  "en": "Golden in colour and beautifully dressed, you wear earrings in your ears and your hair falls in curls.",
+  "mt": "Your golden form shines in beautiful attire. You wear earrings, and your hair is curly.",
+  "ex": "This verse describes Hanuman’s appearance for devotional contemplation. It gives the person praying a vivid image on which to rest their attention."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 5,
+  "dev": [
+   "हाथ बज्र औ ध्वजा बिराजै।",
+   "काँधे मूँज जनेऊ साजै॥"
+  ],
+  "hing": [
+   "Haath bajra au dhvajaa biraajai",
+   "Kaandhe moonj janeoo saajai"
+  ],
+  "hi": "आपके हाथ में गदा और ध्वजा सुशोभित है, और कंधे पर मूँज का जनेऊ शोभा देता है।",
+  "en": "A mace and a flag grace your hands, and a sacred thread of munja grass adorns your shoulder.",
+  "mt": "A thunderbolt-like weapon and a flag adorn your hands, while a sacred thread made of munja grass rests across your shoulder.",
+  "ex": "The weapon expresses strength, and the flag suggests his sacred mission. The sacred thread represents religious discipline and learning. Together, these features portray a warrior whose power is guided by spiritual commitment."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 6,
+  "dev": [
+   "शंकर सुवन केसरी नंदन।",
+   "तेज प्रताप महा जग बंदन॥"
+  ],
+  "hing": [
+   "Shankar suvan Kesaree nandan",
+   "Tej prataap mahaa jag bandan"
+  ],
+  "hi": "आप भगवान शंकर के अंश और केसरी के पुत्र हैं। आपके तेज और प्रताप की पूरी दुनिया वंदना करती है।",
+  "en": "You are Shiva's own form and Kesari's son. Your radiance and might are honoured by the whole world.",
+  "mt": "You are Shankar’s offspring and Kesari’s son. Your radiance and greatness are honoured throughout the world.",
+  "ex": "Shankar is Shiva. This line expresses Hanuman’s connection with Shiva; many traditions understand Hanuman as a manifestation of Shiva. Kesari is his earthly father."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 7,
+  "dev": [
+   "विद्यावान गुनी अति चातुर।",
+   "राम काज करिबे को आतुर॥"
+  ],
+  "hing": [
+   "Vidyaavaan gunee ati chaatur",
+   "Raam kaaj karibe ko aatur"
+  ],
+  "hi": "आप विद्वान, गुणवान और अत्यंत चतुर हैं, और श्रीराम का काम करने के लिए सदा उत्सुक रहते हैं।",
+  "en": "Learned, virtuous and very clever, you are always eager to do Ram's work.",
+  "mt": "You are learned, virtuous, and exceptionally capable. You are always eager to carry out Rama’s work.",
+  "ex": "Hanuman combines knowledge with practical judgement. His learning becomes useful through action, and his eagerness comes from devotion."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 8,
+  "dev": [
+   "प्रभु चरित्र सुनिबे को रसिया।",
+   "राम लखन सीता मन बसिया॥"
+  ],
+  "hing": [
+   "Prabhu charitra sunibe ko rasiyaa",
+   "Raam Lakhan Seetaa man basiyaa"
+  ],
+  "hi": "आपको प्रभु श्रीराम की कथा सुनने में रस मिलता है। श्रीराम, लक्ष्मण और सीता जी आपके मन में बसते हैं।",
+  "en": "You love to hear the stories of the Lord, and Ram, Lakshman and Sita live in your heart.",
+  "mt": "You delight in hearing about the Lord’s deeds. Rama, Lakshmana, and Sita dwell within your heart.",
+  "ex": "Hanuman’s devotion is a source of joy. Their presence in his heart means that love for them continually shapes his thoughts and actions."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 9,
+  "dev": [
+   "सूक्ष्म रूप धरि सियहिं दिखावा।",
+   "बिकट रूप धरि लंक जरावा॥"
+  ],
+  "hing": [
+   "Sookshma roop dhari Siyahin dikhaavaa",
+   "Bikat roop dhari Lank jaraavaa"
+  ],
+  "hi": "आपने छोटा रूप धरकर सीता जी को दर्शन दिए और विकराल रूप धरकर लंका को जला डाला।",
+  "en": "Taking a tiny form you appeared before Sita, and taking a fierce form you burned down Lanka.",
+  "mt": "You took a small form to appear before Sita, and a fearsome form to burn Lanka.",
+  "ex": "When meeting Sita, Hanuman approaches in a way that will reassure her. When confronting Ravana’s forces, he reveals his power. A personal lesson is that wisdom includes knowing when gentleness is needed and when firmness is needed."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 10,
+  "dev": [
+   "भीम रूप धरि असुर सँहारे।",
+   "रामचंद्र के काज सँवारे॥"
+  ],
+  "hing": [
+   "Bheem roop dhari asur sanhaare",
+   "Raamchandra ke kaaj sanvaare"
+  ],
+  "hi": "विशाल रूप धरकर आपने राक्षसों का संहार किया और श्रीरामचंद्र के सब कार्य सफल बनाए।",
+  "en": "In a gigantic form you destroyed the demons and carried Ram's tasks through to success.",
+  "mt": "Taking a mighty form, you defeated the demons and accomplished Rama’s tasks.",
+  "ex": "This recalls Hanuman’s role in the struggle against Ravana. His courage serves the rescue of Sita and Rama’s cause."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 11,
+  "dev": [
+   "लाय सजीवन लखन जियाये।",
+   "श्रीरघुबीर हरषि उर लाये॥"
+  ],
+  "hing": [
+   "Laay sajeevan Lakhan jiyaaye",
+   "Shree Raghubeer harashi ur laaye"
+  ],
+  "hi": "आपने संजीवनी बूटी लाकर लक्ष्मण जी के प्राण बचाए, तब श्रीराम ने प्रसन्न होकर आपको गले से लगा लिया।",
+  "en": "You brought the Sanjeevani herb and revived Lakshman; Sri Ram embraced you with joy.",
+  "mt": "You brought the life-restoring herb and revived Lakshmana. Rama joyfully embraced you.",
+  "ex": "This refers to Hanuman’s rescue of Lakshmana after he is gravely wounded. Rama’s embrace expresses love and gratitude for Hanuman’s service."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 12,
+  "dev": [
+   "रघुपति कीन्ही बहुत बड़ाई।",
+   "तुम मम प्रिय भरतहि सम भाई॥"
+  ],
+  "hing": [
+   "Raghupati keenhee bahut badaaee",
+   "Tum mam priya Bharatahi sam bhaaee"
+  ],
+  "hi": "श्रीराम ने आपकी बहुत प्रशंसा की और कहा, \"तुम मुझे भरत के समान प्रिय भाई हो।\"",
+  "en": "Ram praised you greatly and said, \"You are as dear to me as my brother Bharat.\"",
+  "mt": "Rama praised you greatly, saying, “You are as dear to me as my brother Bharata.”",
+  "ex": "Bharata is deeply beloved by Rama. Comparing Hanuman with him recognises Hanuman as someone held close in love, beyond his role as a servant or messenger."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 13,
+  "dev": [
+   "सहस बदन तुम्हरो जस गावैं।",
+   "अस कहि श्रीपति कंठ लगावैं॥"
+  ],
+  "hing": [
+   "Sahas badan tumharo jas gaavain",
+   "As kahi Shreepati kanth lagaavain"
+  ],
+  "hi": "\"हज़ार मुख वाले शेषनाग भी तुम्हारे यश का गान करें\", यह कहकर श्रीराम ने आपको गले लगा लिया।",
+  "en": "\"Let the thousand-headed Shesha sing your glory,\" said Ram, and held you close to his heart.",
+  "mt": "Rama declares that the thousand-headed serpent sings your glory, and embraces you.",
+  "ex": "The thousand-headed serpent is Shesha, also called Ananta. The image suggests that Hanuman’s greatness deserves praise from countless mouths. “Shripati” is a name of Vishnu, used here for Rama."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 14,
+  "dev": [
+   "सनकादिक ब्रह्मादि मुनीसा।",
+   "नारद सारद सहित अहीसा॥"
+  ],
+  "hing": [
+   "Sanakaadik Brahmaadi muneesaa",
+   "Naarad Saarad sahit Aheesaa"
+  ],
+  "hi": "सनकादि ऋषि, ब्रह्मा जी, मुनिगण, नारद जी, सरस्वती जी और शेषनाग, सब आपका गुणगान करते हैं (बात अगली चौपाई में जारी)।",
+  "en": "Sanaka and the sages, Brahma and the great seers, Narada, Saraswati and Shesha all sing your praise (continued in the next verse).",
+  "mt": "Sages such as Sanaka, Brahma, Narada, Saraswati, and Shesha praise your greatness.",
+  "ex": "This verse names beings associated with spiritual wisdom, creation, music, and learning. Its thought continues into the next verse."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 15,
+  "dev": [
+   "जम कुबेर दिगपाल जहाँ ते।",
+   "कबि कोबिद कहि सके कहाँ ते॥"
+  ],
+  "hing": [
+   "Jam Kuber digpaal jahaan te",
+   "Kabi kobid kahi sake kahaan te"
+  ],
+  "hi": "यमराज, कुबेर और सब दिशाओं के रक्षक भी, और कवि-विद्वान भी आपकी महिमा पूरी तरह नहीं कह पाते।",
+  "en": "Yama, Kubera and the guardians of the directions, even poets and scholars, cannot fully describe your glory.",
+  "mt": "Even Yama, Kubera, the guardians of the directions, and accomplished poets and scholars cannot fully describe your glory.",
+  "ex": "Yama is associated with death and justice; Kubera with wealth. Taken with verse 14, the meaning is that even the wisest and most powerful beings cannot exhaust Hanuman’s praise."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 16,
+  "dev": [
+   "तुम उपकार सुग्रीवहिं कीन्हा।",
+   "राम मिलाय राज पद दीन्हा॥"
+  ],
+  "hing": [
+   "Tum upkaar Sugreevahin keenhaa",
+   "Raam milaay raaj pad deenhaa"
+  ],
+  "hi": "आपने सुग्रीव पर उपकार किया, उन्हें श्रीराम से मिलवाया और राजपद दिलाया।",
+  "en": "You did Sugriva a great favour: you introduced him to Ram and he won back his kingdom.",
+  "mt": "You helped Sugriva by bringing him to Rama, leading to his recovery of the throne.",
+  "ex": "Sugriva had lost his kingdom to his brother Vali. Hanuman helped establish the friendship through which Rama restored Sugriva’s position. The verse praises Hanuman as someone who brings help to another person."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 17,
+  "dev": [
+   "तुम्हरो मंत्र बिभीषन माना।",
+   "लंकेस्वर भए सब जग जाना॥"
+  ],
+  "hing": [
+   "Tumharo mantra Bibheeshan maanaa",
+   "Lankeshwar bhaye sab jag jaanaa"
+  ],
+  "hi": "विभीषण ने आपकी सलाह मानी, और वे लंका के राजा बने, यह सारा संसार जानता है।",
+  "en": "Vibhishana followed your counsel and became king of Lanka, as the whole world knows.",
+  "mt": "Vibhishana accepted your counsel and became king of Lanka, as the whole world knows.",
+  "ex": "Vibhishana is Ravana’s brother, who chooses Rama’s side. “Mantra” here means advice or counsel. The verse honours guidance that helps someone choose a righteous path."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 18,
+  "dev": [
+   "जुग सहस्र जोजन पर भानू।",
+   "लील्यो ताहि मधुर फल जानू॥"
+  ],
+  "hing": [
+   "Jug sahasra jojan par bhaanoo",
+   "Leelyo taahi madhur phal jaanoo"
+  ],
+  "hi": "हज़ारों योजन दूर स्थित सूर्य को आपने मीठा फल समझकर निगल लिया।",
+  "en": "The Sun, thousands of yojanas away, you swallowed thinking it a sweet fruit.",
+  "mt": "Though the sun was an immense distance away, you swallowed it, thinking it was a sweet fruit.",
+  "ex": "This recalls the traditional childhood story of Hanuman reaching for the sun. The enormous distance is expressed through traditional terms and measures. The verse celebrates his astonishing childhood power."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 19,
+  "dev": [
+   "प्रभु मुद्रिका मेलि मुख माहीं।",
+   "जलधि लाँघि गए अचरज नाहीं॥"
+  ],
+  "hing": [
+   "Prabhu mudrikaa meli mukh maahin",
+   "Jaladhi laanghi gaye acharaj naahin"
+  ],
+  "hi": "प्रभु श्रीराम की अँगूठी मुँह में रखकर आपने समुद्र लाँघ लिया, इसमें कोई आश्चर्य नहीं।",
+  "en": "Holding Ram's ring in your mouth, you leapt across the ocean. No wonder at all.",
+  "mt": "Carrying Rama’s ring in your mouth, you crossed the ocean—an achievement entirely fitting for you.",
+  "ex": "The ring was a token by which Sita could recognise Hanuman as Rama’s messenger. He crosses the ocean carrying both that proof and the responsibility entrusted to him."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 20,
+  "dev": [
+   "दुर्गम काज जगत के जेते।",
+   "सुगम अनुग्रह तुम्हरे तेते॥"
+  ],
+  "hing": [
+   "Durgam kaaj jagat ke jete",
+   "Sugam anugraha tumhare tete"
+  ],
+  "hi": "संसार के जितने भी कठिन काम हैं, आपकी कृपा से वे सब आसान हो जाते हैं।",
+  "en": "Every impossible task in the world becomes easy with your grace.",
+  "mt": "The world’s difficult tasks become easier through your grace.",
+  "ex": "The devotee expresses trust in Hanuman’s help when facing obstacles. A personal reading is that devotion can give courage and steadiness to undertake work that initially feels beyond one’s ability."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 21,
+  "dev": [
+   "राम दुआरे तुम रखवारे।",
+   "होत न आज्ञा बिनु पैसारे॥"
+  ],
+  "hing": [
+   "Raam duaare tum rakhvaare",
+   "Hot na aagyaa binu paisaare"
+  ],
+  "hi": "आप श्रीराम के द्वार के रखवाले हैं; आपकी आज्ञा के बिना कोई प्रवेश नहीं कर सकता।",
+  "en": "You guard the door of Ram; no one enters without your permission.",
+  "mt": "You guard Rama’s doorway; no one enters without your permission.",
+  "ex": "The image presents Hanuman as a guide to Rama. Spiritually, his qualities—humility, faithful service, and love—show the devotee a way to approach the divine."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 22,
+  "dev": [
+   "सब सुख लहै तुम्हारी सरना।",
+   "तुम रक्षक काहू को डर ना॥"
+  ],
+  "hing": [
+   "Sub sukh lahai tumhaaree sharnaa",
+   "Tum rakshak kaahoo ko dar naa"
+  ],
+  "hi": "आपकी शरण में आने वाले प्राणी को सभी प्रकार के सुख सहज ही प्राप्त हो जाते हैं। जब आप रक्षक हैं, तो फिर किसी प्रकार का भय नहीं रहता।",
+  "en": "Those who take refuge in you find all happiness. When you are the protector, one does not have any fears or worries in life.",
+  "mt": "Those who take refuge in you find happiness. With you as their protector, they need not fear.",
+  "ex": "Taking refuge means placing trust in Hanuman’s care. The verse expresses the reassurance of feeling supported through difficulty."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 23,
+  "dev": [
+   "आपन तेज सम्हारो आपै।",
+   "तीनों लोक हाँक तें काँपै॥"
+  ],
+  "hing": [
+   "Aapan tej samhaaro aapai",
+   "Teenon lok haank te kaanpai"
+  ],
+  "hi": "आप अपने तेज को स्वयं ही सँभाल सकते हैं; आपकी एक हुँकार से तीनों लोक काँप उठते हैं।",
+  "en": "Only you can hold your own power; at your roar all three worlds tremble.",
+  "mt": "Only you can contain your immense power; your roar makes all three worlds tremble.",
+  "ex": "Hanuman’s strength is so great that he himself must govern it. A useful personal lesson is that power requires self-control."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 24,
+  "dev": [
+   "भूत पिसाच निकट नहिं आवै।",
+   "महाबीर जब नाम सुनावै॥"
+  ],
+  "hing": [
+   "Bhoot pisaach nikat nahin aavai",
+   "Mahaabeer jab naam sunaavai"
+  ],
+  "hi": "जहाँ महावीर हनुमान का नाम सुनाया जाता है, वहाँ भूत-पिशाच पास नहीं आते।",
+  "en": "Ghosts and evil spirits do not come near where the name of Mahabir is chanted.",
+  "mt": "Ghosts and harmful spirits do not approach when the name of the great hero Hanuman is spoken.",
+  "ex": "The literal meaning is protection from hostile supernatural beings. A symbolic reading also sees remembrance of Hanuman as a source of courage against frightening thoughts; that reading adds to the literal meaning."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 25,
+  "dev": [
+   "नासै रोग हरै सब पीरा।",
+   "जपत निरंतर हनुमत बीरा॥"
+  ],
+  "hing": [
+   "Naasai rog harai sab peeraa",
+   "Japat nirantar Hanumat beeraa"
+  ],
+  "hi": "वीर हनुमान के नाम का निरंतर जप करने से रोग मिट जाते हैं और सब पीड़ाएँ दूर हो जाती हैं।",
+  "en": "Constant chanting of brave Hanuman's name destroys disease and removes all suffering.",
+  "mt": "Continually repeating the name of brave Hanuman removes illness and suffering.",
+  "ex": "This is a devotional expression of faith in his healing grace. It gives the person suffering a prayer to hold onto, rather than setting out a medical treatment or a guaranteed outcome."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 26,
+  "dev": [
+   "संकट तें हनुमान छुड़ावै।",
+   "मन क्रम बचन ध्यान जो लावै॥"
+  ],
+  "hing": [
+   "Sankat te Hanumaan chhudaavai",
+   "Man kram bachan dhyaan jo laavai"
+  ],
+  "hi": "जो मन, कर्म और वचन से हनुमान जी का ध्यान करता है, उसे वे हर संकट से छुड़ा लेते हैं।",
+  "en": "Hanuman frees from trouble anyone who remembers him with mind, action and word.",
+  "mt": "Hanuman delivers from trouble those who remember him through thought, action, and speech.",
+  "ex": "The verse asks for devotion involving the whole person. What someone thinks, says, and does should support the same sincere commitment."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 27,
+  "dev": [
+   "सब पर राम तपस्वी राजा।",
+   "तिन के काज सकल तुम साजा॥"
+  ],
+  "hing": [
+   "Sab par Raam tapasvee raajaa",
+   "Tin ke kaaj sakal tum saajaa"
+  ],
+  "hi": "तपस्वी राजा श्रीराम सबसे ऊपर हैं, और उनके सारे कार्य आपने ही सिद्ध किए।",
+  "en": "Ram, the ascetic king, stands above all, and it was you who carried out all his work.",
+  "mt": "Rama, the king devoted to spiritual discipline, reigns supreme; you accomplish all his tasks.",
+  "ex": "“Tapasvi” describes someone who practises discipline and restraint. Hanuman’s service supports Rama’s righteous purpose."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 28,
+  "dev": [
+   "और मनोरथ जो कोई लावै।",
+   "सोई अमित जीवन फल पावै॥"
+  ],
+  "hing": [
+   "Aur manorath jo koee laavai",
+   "Soee amit jeevan phal paavai"
+  ],
+  "hi": "जो कोई भी सच्चे मन से कोई इच्छा लेकर आपके पास आता है, उसे जीवन में अपार फल मिलता है।",
+  "en": "Whoever comes to you with a heartfelt wish receives the fullest fruit in life.",
+  "mt": "Whoever brings their heartfelt wishes to you receives abundant fulfilment in life.",
+  "ex": "“Manorath” means a cherished wish or aspiration. This is the devotee’s expression of trust in Hanuman’s generosity and blessing."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 29,
+  "dev": [
+   "चारों जुग परताप तुम्हारा।",
+   "है परसिद्ध जगत उजियारा॥"
+  ],
+  "hing": [
+   "Chaaron jug parataap tumhaaraa",
+   "Hai parasiddh jagat ujiyaaraa"
+  ],
+  "hi": "चारों युगों में आपका प्रताप फैला है; आपकी कीर्ति पूरे जगत में प्रकाश की तरह प्रसिद्ध है।",
+  "en": "Your glory spans all four ages, and your fame lights up the world.",
+  "mt": "Your greatness extends through all four ages, and your renowned glory lights up the world.",
+  "ex": "The four ages are the traditional Hindu ages of Satya, Treta, Dvapara, and Kali. Hanuman’s significance is presented as enduring across time."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 30,
+  "dev": [
+   "साधु संत के तुम रखवारे।",
+   "असुर निकंदन राम दुलारे॥"
+  ],
+  "hing": [
+   "Saadhu sant ke tum rakhvaare",
+   "Asur nikandan Raam dulaare"
+  ],
+  "hi": "आप साधु-संतों की रक्षा करते हैं, राक्षसों का नाश करते हैं और श्रीराम के प्यारे हैं।",
+  "en": "You protect saints and sages, destroy the demons, and are dear to Ram.",
+  "mt": "You protect holy people, destroy demons, and are dearly loved by Rama.",
+  "ex": "This brings together three aspects of Hanuman: protection, courage against wrongdoing, and devotion. His strength serves those who need his care."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 31,
+  "dev": [
+   "अष्ट सिद्धि नौ निधि के दाता।",
+   "अस बर दीन जानकी माता॥"
+  ],
+  "hing": [
+   "Asht siddhi nau nidhi ke daataa",
+   "As bar deen Jaanakee maataa"
+  ],
+  "hi": "माता जानकी के वरदान से आप आठ सिद्धियों और नौ निधियों के दाता हैं।",
+  "en": "By Mother Janaki's boon, you can grant the eight powers and the nine treasures.",
+  "mt": "You can bestow the eight spiritual powers and the nine treasures, through a blessing given by Mother Sita.",
+  "ex": "“Janaki” is another name for Sita. The eight powers are extraordinary abilities described in spiritual traditions; the nine treasures represent forms of wealth and abundance. The verse honours Sita’s blessing and Hanuman’s ability to share it."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 32,
+  "dev": [
+   "राम रसायन तुम्हरे पासा।",
+   "सदा रहो रघुपति के दासा॥"
+  ],
+  "hing": [
+   "Raam rasaayan tumhare paasaa",
+   "Sadaa raho Raghupati ke daasaa"
+  ],
+  "hi": "आपके पास राम नाम का रसायन है, और आप सदा रघुपति के दास बने रहते हैं।",
+  "en": "You hold the elixir of Ram's name and remain forever Ram's devoted servant.",
+  "mt": "You possess the life-giving essence of devotion to Rama and remain forever his servant.",
+  "ex": "“Rasayan” means an elixir or rejuvenating substance. Here, love and remembrance of Rama are pictured as nourishment for the soul. Despite his powers, Hanuman remains devoted to service."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 33,
+  "dev": [
+   "तुम्हरे भजन राम को पावै।",
+   "जनम जनम के दुख बिसरावै॥"
+  ],
+  "hing": [
+   "Tumhare bhajan Raam ko paavai",
+   "Janam janam ke dukh bisraavai"
+  ],
+  "hi": "आपका भजन करने से श्रीराम की प्राप्ति होती है और जन्म-जन्म के दुख भूल जाते हैं।",
+  "en": "By worshipping you one reaches Ram, and the sorrows of many lifetimes are forgotten.",
+  "mt": "Through devotion to you, a person reaches Rama and is freed from the sorrows of countless lifetimes.",
+  "ex": "Hanuman leads the devotee towards the Lord he himself loves. “Countless lifetimes” places this promise within the Hindu understanding of rebirth and spiritual liberation."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 34,
+  "dev": [
+   "अंत काल रघुबर पुर जाई।",
+   "जहाँ जन्म हरि-भक्त कहाई॥"
+  ],
+  "hing": [
+   "Ant kaal Raghubar pur jaaee",
+   "Jahaan janm Hari-bhakt kahaaee"
+  ],
+  "hi": "अंत समय में भक्त श्रीराम के धाम जाता है, और यदि जन्म ले तो हरि-भक्त कहलाता है।",
+  "en": "At life's end the devotee reaches Ram's abode, and if reborn, is known as a devotee of Hari.",
+  "mt": "At life’s end, the devotee reaches Rama’s abode; wherever born, they are known as a devotee of God.",
+  "ex": "The verse expresses hope that devotion carries beyond death. Translations differ slightly in how they connect its two lines, but the central idea is an enduring relationship with God."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 35,
+  "dev": [
+   "और देवता चित्त न धरई।",
+   "हनुमत सेई सर्ब सुख करई॥"
+  ],
+  "hing": [
+   "Aur devtaa chitt na dharaee",
+   "Hanumat seee sarb sukh karaee"
+  ],
+  "hi": "फिर किसी और देवता को मन में रखने की आवश्यकता नहीं; हनुमान जी की सेवा से ही सब सुख मिल जाते हैं।",
+  "en": "No other deity need occupy the mind; serving Hanuman alone brings every happiness.",
+  "mt": "Even without turning the mind towards other deities, one who serves Hanuman receives every happiness.",
+  "ex": "This expresses confidence in wholehearted devotion to Hanuman. It is commonly understood as praising the completeness of that path, rather than requiring contempt for other forms of worship."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 36,
+  "dev": [
+   "संकट कटै मिटै सब पीरा।",
+   "जो सुमिरै हनुमत बलबीरा॥"
+  ],
+  "hing": [
+   "Sankat katai mitai sab peeraa",
+   "Jo sumirai Hanumat balbeeraa"
+  ],
+  "hi": "जो बलवीर हनुमान जी का स्मरण करता है, उसके संकट कट जाते हैं और सब पीड़ा मिट जाती है।",
+  "en": "Troubles are cut away and all pain ends for those who remember mighty Hanuman.",
+  "mt": "Troubles are overcome and suffering is removed for those who remember mighty Hanuman.",
+  "ex": "The promise returns to the hymn’s recurring theme of protection. Remembrance means keeping him present in the heart, especially in times of distress."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 37,
+  "dev": [
+   "जै जै जै हनुमान गोसाईं।",
+   "कृपा करहु गुरु देव की नाईं॥"
+  ],
+  "hing": [
+   "Jai jai jai Hanumaan Gosaaeen",
+   "Kripaa karahu guru dev kee naaeen"
+  ],
+  "hi": "हे स्वामी हनुमान जी, आपकी जय हो, जय हो, जय हो! गुरुदेव की तरह मुझ पर कृपा कीजिए।",
+  "en": "Victory, victory, victory to Lord Hanuman! Bless me with your grace, as a Guru would.",
+  "mt": "Glory, glory, glory to Lord Hanuman. Show me compassion as a revered teacher would.",
+  "ex": "The prayer now addresses Hanuman personally. It asks him to guide, support, and correct the devotee with a teacher’s care."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 38,
+  "dev": [
+   "जो सत बार पाठ कर कोई।",
+   "छूटहि बंदि महा सुख होई॥"
+  ],
+  "hing": [
+   "Jo sat baar paath kar koee",
+   "Chhootahi bandi mahaa sukh hoee"
+  ],
+  "hi": "जो इसका सौ बार पाठ करता है, वह बंधनों से छूट जाता है और उसे परम सुख मिलता है।",
+  "en": "Whoever recites this a hundred times is freed from bondage and finds great joy.",
+  "mt": "Whoever recites this prayer a hundred times is released from bondage and receives great happiness.",
+  "ex": "The common reading of “sat bar” here is “a hundred times.” Bondage can mean captivity and, in a spiritual reading, the attachments or fears that keep a person inwardly trapped. The verse expresses faith in sustained recitation."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 39,
+  "dev": [
+   "जो यह पढ़ै हनुमान चालीसा।",
+   "होय सिद्धि साखी गौरीसा॥"
+  ],
+  "hing": [
+   "Jo yah padhai Hanumaan Chaaleesaa",
+   "Hoy siddhi saakhee Gaureesaa"
+  ],
+  "hi": "जो हनुमान चालीसा पढ़ता है, उसे सिद्धि मिलती है; भगवान शिव इसके साक्षी हैं।",
+  "en": "Whoever reads the Hanuman Chalisa attains success; Lord Shiva himself is the witness.",
+  "mt": "Whoever reads the Hanuman Chalisa attains fulfilment, with Shiva as witness.",
+  "ex": "“Gaurisa” means the Lord of Gauri—Shiva. “Siddhi” here means accomplishment or fulfilment, which can include spiritual attainment."
+ },
+ {
+  "k": "चौपाई",
+  "kl": "Chaupai",
+  "n": 40,
+  "dev": [
+   "तुलसीदास सदा हरि चेरा।",
+   "कीजै नाथ हृदय महँ डेरा॥"
+  ],
+  "hing": [
+   "Tulseedaas sadaa Hari cheraa",
+   "Keejai Naath hriday mahan deraa"
+  ],
+  "hi": "तुलसीदास सदा श्रीहरि के सेवक हैं। हे नाथ, आप मेरे हृदय में निवास कीजिए।",
+  "en": "Tulsidas is forever Hari's servant. O Lord, please make my heart your home.",
+  "mt": "Tulsidas is forever God’s servant. O Lord, make your dwelling in my heart.",
+  "ex": "The hymn ends with a personal request for Hanuman’s presence. After praising his greatness, Tulsidas asks that his own inner life be filled with devotion."
+ },
+ {
+  "k": "दोहा",
+  "kl": "Closing Doha",
+  "n": 0,
+  "dev": [
+   "पवनतनय संकट हरन, मंगल मूरति रूप।",
+   "राम लखन सीता सहित, हृदय बसहु सुर भूप॥"
+  ],
+  "hing": [
+   "Pavantanay sankat haran, mangal moorat roop",
+   "Raam Lakhan Seetaa sahit, hriday basahu sur bhoop"
+  ],
+  "hi": "हे पवनपुत्र, संकटों को हरने वाले, मंगलमूर्ति देवराज! आप श्रीराम, लक्ष्मण और सीता जी सहित मेरे हृदय में निवास कीजिए।",
+  "en": "Son of the Wind, remover of troubles, embodiment of all that is auspicious, king of the gods: live in my heart together with Ram, Lakshman and Sita.",
+  "mt": "O son of the Wind God, remover of troubles and embodiment of blessing, dwell in my heart together with Rama, Lakshmana, and Sita.",
+  "ex": "The final prayer gathers the whole hymn into one wish: that Hanuman and those he loves remain present within the devotee. It asks for an inward life shaped by courage, compassion, loyalty, and faith."
+ }
+]

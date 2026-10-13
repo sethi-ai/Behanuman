@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Right-pointing monkey — moving tail</title>
+<link rel="stylesheet" href="monkey.css">
+<style>
+  * { box-sizing: border-box; }
+  html,body { margin:0; min-height:100%; }
+  body { background:#E3E3E1; min-height:100svh; display:grid; place-items:center; overflow-x:hidden; }
+  main { width:min(92vw,600px); padding:28px; }
+  .pointing-monkey { --monkey-size:480px; }
+  @media (prefers-color-scheme:dark) { body { background:#3A3A3A; } }
+</style>
+</head>
+<body>
+<main>
+  <!-- This decorative character remains separate from the future glass button. -->
+  <div class="pointing-monkey" role="img" aria-label="A smiling monkey pointing right with a gently swaying tail">
+    <img class="pointing-monkey__tail" src="tail.png" alt="" aria-hidden="true" draggable="false">
+    <img class="pointing-monkey__body" src="body.png" alt="" aria-hidden="true" draggable="false">
+  </div>
+</main>
+</body>
+</html>

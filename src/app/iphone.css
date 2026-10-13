@@ -1,0 +1,106 @@
+/* Keep the original design; these rules only address phone interaction and Safari. */
+html,body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent}
+#tabbar{-webkit-backdrop-filter:blur(22px) saturate(1.9)}
+#tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px}
+/* Three permanent tabs; Restart floats above Settings only while chanting. */
+#tabbar::before{width:calc((100% - 12px)/3)}
+#tabbar #tbRestart{display:none}
+html[data-tab=chant]:not(:has(#finish.open)) #tabbar #tbRestart{display:flex;flex-direction:row;gap:6px;position:absolute;left:calc(6px + (100% - 12px)*5/6);bottom:calc(100% + 10px);transform:translateX(-50%);width:104px;height:44px;margin:0;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,.4));box-shadow:0 4px 14px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.7);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+html[data-tab=chant] #tabbar #tbRestart:active{transform:translateX(-50%) scale(.94)}
+html.dk[data-tab=chant] #tabbar #tbRestart{background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.04));border-left-color:rgba(255,255,255,.2)}
+button,input,textarea{touch-action:manipulation}
+input,textarea{font-size:max(16px,1em)}
+#stage{touch-action:none}
+#settings,#trk,.hpg{scrollbar-width:none}
+#settings::-webkit-scrollbar,#trk::-webkit-scrollbar,.hpg::-webkit-scrollbar{display:none}
+.hpg{backface-visibility:hidden}
+#fcR.br{position:relative;isolation:isolate;display:flex;flex-direction:column;gap:4px;width:150px;height:150px;margin:10px auto;background:transparent!important;border:0!important;border-radius:50%;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;justify-content:center}
+#fcR::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:50%;background:radial-gradient(circle,#ffd27a 0%,#f08a2c 28%,#e06b0a66 48%,transparent 70%);transform:scale(.8);opacity:.6;transition:transform 4s ease-in-out,opacity 4s ease-in-out;will-change:transform,opacity}
+#fcR.inhale::before{transform:scale(1.16);opacity:1}
+#fcR.exhale::before{transform:scale(.8);opacity:.6}
+#fcR #brT{font:500 26px/1.2 Khand,Inter,sans-serif;text-align:center;min-width:0}
+.skw:has(#fcImg) .swipe{display:none!important}
+.skw:has(#fcImg){padding:84px 24px 150px!important;gap:12px;justify-content:center}
+.skw:has(#fcImg) .art{--ah:clamp(90px,18svh,150px)!important}
+#fcT{font-size:clamp(23px,6vw,28px)!important;line-height:1.15;margin-bottom:10px!important}
+#fcB{font:400 16px/1.45 Inter,sans-serif!important;margin:0!important;max-width:340px}
+#fcI{display:none!important}
+#fcR:disabled{cursor:default;opacity:1}
+#fcR.ready{width:220px;height:48px;border-radius:999px;background:var(--glass,linear-gradient(180deg,#ffffffaa,#ffffff55))!important;border:1px solid #ffffff66!important;box-shadow:0 4px 14px #0002!important}
+#fcR.ready::before{display:none}
+#fcR.ready #brT{font:500 17px/1.2 Inter,sans-serif}
+@media(max-height:700px){.skw:has(#fcImg){padding-top:72px!important;gap:8px}#fcB{font-size:14px!important}#fcT{font-size:22px!important}}
+@media(max-height:700px){#fcR.br{width:110px;height:110px;margin:4px auto}}
+@media(prefers-reduced-motion:reduce){#fcR::before{transform:none!important;transition:opacity 4s ease-in-out}.hpg{transition:none!important}}
+
+/* Minimal fact conversation and a softly animated, multicolour breathing light. */
+.skw:has(#fcImg) .art{display:none!important}
+html[data-tab=chant][data-chant-card="0"] #prog,html[data-tab=chant][data-chant-card="0"] #diya{visibility:hidden!important}
+.fact-chat{position:relative;padding:20px 22px;border-radius:20px 20px 20px 5px;background:rgba(255,255,255,.48);box-shadow:0 2px 10px #00000008;width:min(100%,330px);text-align:left;margin:0 auto 28px}
+html.dk .fact-chat{background:rgba(255,255,255,.07)}
+.fact-chat .dyk{font:400 21px/1.35 Kalam,cursive!important;color:var(--t1,#111);margin:0 0 12px!important;letter-spacing:0!important}
+.fact-chat #fcT{font:400 17px/1.45 Kalam,cursive!important;text-align:left;margin:0 0 7px!important}
+.fact-chat #fcB{font:400 14px/1.65 Kalam,cursive!important;color:var(--t1,#333)!important;text-align:left;opacity:.8}
+.skw .fcv{width:100%;max-width:350px}
+.breath-stage{height:225px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;gap:18px}
+#fcR.br:not(.ready){width:112px;height:112px;margin:0!important;padding:0!important}
+#fcR:not(.ready)::before{inset:5px;background:conic-gradient(from 30deg,#87dffe,#aca0ff,#f3a8e9,#ffc399,#91e9df,#87dffe);box-shadow:0 0 24px #a6a3ff55;opacity:.85;filter:blur(3px);animation:orb-arrive 1s ease both}
+#fcR:not(.ready)::after{content:"";position:absolute;inset:12px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffffffaa,transparent 65%);pointer-events:none}
+.breath-caption{font:400 17px/1.4 Kalam,cursive;text-align:center;color:var(--t1,#333);animation:orb-arrive 1s ease both}
+.breath-caption small{font-size:12px;opacity:0;display:inline-block}
+.exhaling .breath-caption small{animation:brief-exhale .8s ease both}
+.complete .breath-caption{display:none}
+#fcR.ready{width:180px;height:44px;margin:0!important;background:linear-gradient(180deg,#ffffffbb,#ffffff66)!important;animation:orb-arrive .5s ease both}
+html.dk #fcR.ready{background:linear-gradient(180deg,#ffffff26,#ffffff0a)!important;color:#f1f0ec}
+#fcR.ready #brT{font:500 14px/1.2 Inter,sans-serif}
+html[data-tab=chant]:not(:has(#finish.open)) #tabbar #tbRestart{width:52px;height:22px;min-height:22px;gap:3px;font-size:7px;bottom:calc(100% + 15px)}
+#tabbar #tbRestart svg{width:12px;height:12px}
+#tabbar #tbRestart::after{content:"";position:absolute;inset:-11px -10px;border-radius:999px}
+@keyframes brief-exhale{0%{opacity:0;transform:translateY(3px)}20%,60%{opacity:.7;transform:none}100%{opacity:0;transform:none}}
+@keyframes orb-arrive{from{opacity:0}to{opacity:1}}
+@media(max-height:700px){.fact-chat{padding:16px 18px;margin-bottom:16px}.breath-stage{height:180px}.fact-chat #fcB{font-size:13px!important}}
+@media(prefers-reduced-motion:reduce){#fcR:not(.ready)::before,#fcR.ready,.breath-caption{animation:none}.exhaling .breath-caption small{animation:none;opacity:.7}}
+
+/* Reference-inspired outline bubble and clearly alternating cues inside the orb. */
+.fact-chat{background:transparent;border:1px solid currentColor;border-radius:24px;padding:20px 22px;box-shadow:none;margin-bottom:30px}
+html.dk .fact-chat{background:transparent}
+.fact-chat::after{content:"";position:absolute;bottom:-10px;left:30px;width:18px;height:18px;border-left:1px solid currentColor;border-bottom:1px solid currentColor;background:var(--bg,#e3e3e1);transform:skewY(-25deg)}
+.fact-chat .dyk{font:500 26px/1.15 BHSerif,Georgia,serif!important;text-align:left;letter-spacing:-.02em!important}
+.breath-stage{height:260px;gap:0}
+#fcR.br:not(.ready){width:190px;height:190px;align-items:center;justify-content:center}
+#fcR:not(.ready) #brT{position:relative;z-index:2;display:block;width:100%;min-width:0;text-align:center;font:500 24px/1.3 Khand,Inter,sans-serif;letter-spacing:.01em;color:#8a3e18;white-space:nowrap}
+.breath-caption{display:none!important}
+#fcR:not(.ready)::after{z-index:0}
+@media(max-height:700px){.breath-stage{height:210px}#fcR.br:not(.ready){width:160px;height:160px}.fact-chat .dyk{font-size:23px!important}}
+
+/* Cool peach and muted saffron stay within the devotional palette. */
+#fcR:not(.ready)::before{background:conic-gradient(from 30deg,#ffd3b6,#f5ae83,#eeb697,#f9d6bb,#e8a37b,#ffd3b6);box-shadow:0 0 28px #efb18b44}
+/* Keep all intro content below the header, with one native vertical scroll surface. */
+.skw:has(#fcImg){padding:112px 24px 150px!important;justify-content:flex-start;gap:0;overflow-y:auto;overflow-x:hidden;touch-action:pan-y;overscroll-behavior-y:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.skw:has(#fcImg)::-webkit-scrollbar{display:none}
+html[data-tab=chant][data-chant-card="0"] #stage{touch-action:pan-y;cursor:auto}
+.skw:has(#fcImg) .fcv{margin:auto;flex:none;padding:14px 0}
+.fact-chat{margin-bottom:28px}
+@media(max-height:700px){.skw:has(#fcImg){padding-top:104px!important;padding-bottom:130px!important}.skw:has(#fcImg) .fcv{padding:8px 0}}
+@media(prefers-reduced-motion:reduce){.skw:has(#fcImg){scroll-behavior:auto}}
+.cloud-account{margin:16px 0 24px;padding:16px;border:1px solid #8d8d8b55;border-radius:18px;text-align:left}
+.cloud-account h4{margin:0 0 10px;font:500 19px Khand,Inter,sans-serif;color:#b95b20}
+.cloud-account p{font:400 13px/1.5 Inter,sans-serif;margin:8px 0;overflow-wrap:anywhere}
+.cloud-account button{min-height:44px;padding:9px 15px;margin:5px 7px 5px 0;border-radius:999px;border:1px solid #ffffff66;background:linear-gradient(180deg,#ffffffbb,#ffffff66);font:500 13px Inter,sans-serif;color:#8a3e18}
+.cloud-account button:disabled{opacity:.55;cursor:default}
+html.dk .cloud-account button{background:linear-gradient(180deg,#ffffff26,#ffffff0a);color:#ffae76}
+.cloud-account .cloud-note{opacity:.75}
+
+/* Personal reminders sit quietly below the breathing light. */
+#fcI{display:block!important;width:min(100%,330px);margin:0 auto 12px;text-align:center}
+#fcI[style*="display: none"],#fcI[style*="display:none"]{display:none!important}
+#fcI>div{margin:0 0 12px}
+#fcI>div[hidden]{display:none}
+#fcI span{font:500 12px/1.4 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#a45020}
+#fcI p{font:400 15px/1.45 Kalam,cursive;margin:4px 0 0;color:var(--t1,#333);overflow-wrap:anywhere}
+#fcI .reminder-note{display:block;font:400 11px/1.6 Inter,sans-serif;color:var(--t1,#555);opacity:.65;max-width:280px;margin:8px auto 0}
+html.dk #fcI span{color:#ffae76}
+html[data-tab=chant]:not(:has(#finish.open)) #tabbar #tbRestart{width:65px;height:27.5px;min-height:27.5px;font-size:8.75px;background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.28));border:1px solid rgba(255,255,255,.65);box-shadow:0 4px 12px rgba(0,0,0,.18),inset 0 1.5px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(0,0,0,.05);color:#55554f;-webkit-backdrop-filter:blur(22px) saturate(1.9);backdrop-filter:blur(22px) saturate(1.9)}
+html.dk[data-tab=chant]:not(:has(#finish.open)) #tabbar #tbRestart{background:linear-gradient(180deg,rgba(90,90,90,.55),rgba(60,60,60,.35));border-color:rgba(255,255,255,.18);box-shadow:0 4px 12px rgba(0,0,0,.45),inset 0 1.5px 0 rgba(255,255,255,.22);color:#c8c8c4}
+#tabbar #tbRestart svg{width:15px;height:15px}
+#tabbar #tbRestart::after{inset:-8.25px -8px}

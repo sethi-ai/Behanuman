@@ -1,0 +1,42 @@
+{
+ "op2": {
+  "k": "दोहा",
+  "kl": "Doha 2",
+  "n": 0,
+  "dev": [
+   "बुद्धिहीन तनु जानि कै, सुमिरौं पवन-कुमार।",
+   "बल बुद्धि बिद्या देहु मोहि, हरहु कलेस बिकार॥"
+  ],
+  "hing": [
+   "Buddhiheen tanu jaanike, sumirau Pavan Kumaar",
+   "Bal buddhi vidyaa dehu mohi, harahu kalesh vikaar"
+  ],
+  "mt": "Knowing the limits of my understanding, I remember Hanuman, the son of the Wind God. Give me strength, sound judgement, and knowledge, and remove my suffering and harmful tendencies.",
+  "ex": "The prayer asks for more than physical power. It asks for the courage to act, the wisdom to choose well, and the knowledge to understand. Calling oneself “without wisdom” expresses humility before the divine."
+ },
+ "jk": {
+  "lines": [
+   {
+    "dev": "सियावर रामचंद्र की जय।",
+    "hing": "Siyavar Ramchandra ki jai!",
+    "en": "Glory to Shri Rama, the husband of Sita!"
+   },
+   {
+    "dev": "पवनसुत हनुमान की जय॥",
+    "hing": "Pavansut Hanuman ki jai!",
+    "en": "Glory to Hanuman, the son of the Wind God!"
+   }
+  ],
+  "rn": {
+   "dev": [
+    "राम राम जय राजा राम",
+    "राम राम जय सीता राम"
+   ],
+   "hing": [
+    "Ram Ram Jai Raja Ram",
+    "Ram Ram Jai Sita Ram"
+   ],
+   "note": "Repeat 11 Times"
+  }
+ }
+}
