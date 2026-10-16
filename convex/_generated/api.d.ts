@@ -11,6 +11,8 @@
 import type * as accountDeletion from "../accountDeletion.js";
 import type * as auth from "../auth.js";
 import type * as http from "../http.js";
+import type * as learning from "../learning.js";
+import type * as learningValidators from "../learningValidators.js";
 import type * as practice from "../practice.js";
 import type * as redirects from "../redirects.js";
 
@@ -24,6 +26,8 @@ declare const fullApi: ApiFromModules<{
   accountDeletion: typeof accountDeletion;
   auth: typeof auth;
   http: typeof http;
+  learning: typeof learning;
+  learningValidators: typeof learningValidators;
   practice: typeof practice;
   redirects: typeof redirects;
 }>;

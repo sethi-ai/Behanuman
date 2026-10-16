@@ -33,6 +33,7 @@ export default function AccountPanel() {
   const bootstrap = useMutation(api.practice.bootstrap), save = useMutation(api.practice.save), recordRound = useMutation(api.practice.recordRound);
   const deleteAccount = useMutation(api.accountDeletion.request);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [syncVersion, setSyncVersion] = useState(0);
   const [slot, setSlot] = useState<HTMLElement | null>(null), [message, setMessage] = useState(""), [busy, setBusy] = useState(false), [ready, setReady] = useState(false), [mergeChoice, setMergeChoice] = useState(false);
   const base = useRef<State | null>(null), owner = useRef<string | null>(null), syncing = useRef(false), started = useRef(false), initializing = useRef(false), flushTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const flush = useCallback(async () => {
@@ -61,7 +62,7 @@ export default function AccountPanel() {
       localStorage.setItem(`bh_cloud_base_${userId}`, JSON.stringify(base.current.snapshot));
       setMessage("Practice saved to your account.");
     } catch { setMessage("Couldn’t connect. Your practice is kept on this device; tap Save to retry."); }
-    finally { syncing.current = false; }
+    finally { syncing.current = false; setSyncVersion(value => value + 1); }
   }, [recordRound, save]);
   const initialize = useCallback(async (merge: boolean) => {
     if (!account || initializing.current) return;
@@ -104,6 +105,16 @@ export default function AccountPanel() {
     });
     return () => cancelAnimationFrame(frame);
   }, [account, initialize, slot]);
+  // Apply updates from other sessions while preserving unsent edits.
+  useEffect(() => {
+    if (!ready || !account?.state || owner.current !== account.userId || !base.current || syncing.current) return;
+    if (account.state.revision <= base.current.revision) return;
+    const local = readSnapshot();
+    const pending = Object.fromEntries(Object.entries(local).filter(([key, value]) => key !== "bh_rounds" && value !== base.current!.snapshot[key]));
+    base.current = account.state;
+    localStorage.setItem(`bh_cloud_base_${account.userId}`, JSON.stringify(account.state.snapshot));
+    applySnapshot({ ...account.state.snapshot, ...pending }, readQueue(account.userId));
+  }, [account, ready, syncVersion]);
   useEffect(() => {
     const schedule = () => {
       if (flushTimer.current) clearTimeout(flushTimer.current);
@@ -116,6 +127,23 @@ export default function AccountPanel() {
     document.addEventListener("click", schedule); document.addEventListener("keyup", schedule); window.addEventListener("bh:round", round); window.addEventListener("online", schedule);
     return () => { document.removeEventListener("click", schedule); document.removeEventListener("keyup", schedule); window.removeEventListener("bh:round", round); window.removeEventListener("online", schedule); if (flushTimer.current) clearTimeout(flushTimer.current); };
   }, [flush]);
+  useEffect(() => {
+    const reset = async () => {
+      setBusy(true);
+      try {
+        await signOut();
+        owner.current = null; base.current = null; started.current = false;
+        if (flushTimer.current) clearTimeout(flushTimer.current);
+        for (const storage of [localStorage, sessionStorage]) {
+          const keys = Array.from({length: storage.length}, (_, i) => storage.key(i)).filter((key): key is string => !!key && key.startsWith('bh_'));
+          for (const key of keys) storage.removeItem(key);
+        }
+        window.location.reload();
+      } catch { setMessage('Could not reset this device. Please try again. Your account is unchanged.'); setBusy(false); }
+    };
+    window.addEventListener('bh:reset-device', reset);
+    return () => window.removeEventListener('bh:reset-device', reset);
+  }, [signOut]);
   const logout = async () => {
     await flush(); await signOut();
     owner.current = null; base.current = null; started.current = false; setReady(false); setMergeChoice(false); localStorage.removeItem(OWNER);

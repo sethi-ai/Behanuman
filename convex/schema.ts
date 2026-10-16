@@ -1,9 +1,12 @@
+import { learningValidator } from './learningValidators';
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 import { authTables } from "@convex-dev/auth/server";
 
 export default defineSchema({
   ...authTables,
+  learningProgress: defineTable({userId:v.id("users"),state:learningValidator}).index("by_userId",["userId"]),
+  learningImports: defineTable({userId:v.id("users"),deviceId:v.string()}).index("by_userId_and_deviceId",["userId","deviceId"]),
   authVerifiers: authTables.authVerifiers.index("by_sessionId", ["sessionId"]),
   accountDeletions: defineTable({ userId: v.id("users") }).index("by_userId", ["userId"]),
   practice: defineTable({
