@@ -388,10 +388,6 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     return p.replace(/[^\/]*$/,"");
   })();
   function pad(n){return(n<10?"0":"")+n}
-  function bio(t){return esc(t).replace(/([A-Za-z'\u2019]+)/g,function(w){var n=Math.max(1,Math.ceil(w.length*0.4));return '<span class="bn">'+w.slice(0,n)+'</span>'+w.slice(n)})}
-  function bioDev(t){var seg=window.Intl&&Intl.Segmenter?new Intl.Segmenter("hi",{granularity:"grapheme"}):null;return String(t).split(" ").map(function(w){
-    if(!w)return w;var g=seg?Array.from(seg.segment(w),function(x){return x.segment}):null;if(!g||g.length<2)return esc(w);
-    var n=Math.max(1,Math.ceil(g.length*0.4));return '<span class="bn">'+esc(g.slice(0,n).join(""))+'</span>'+esc(g.slice(n).join(""))}).join(" ")}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 
   // Test image (the sample Hanuman) shows until a real one exists at images/NN.jpg (.jpeg .png .webp also work)
@@ -419,7 +415,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     }
     if(c.t==="jaikara"){
       var L=JK.lines.map(function(l,q){
-        return '<div class="jv"><div class="v-hing">'+esc(l.hing)+'</div><div class="v-hi">'+esc(l.dev)+'</div><p class="mt mt-en">'+bio(l.en)+'</p><p class="mt mt-hi">'+esc(HI["J"+(q+1)]||l.en)+'</p></div>';
+        return '<div class="jv"><div class="v-hing">'+esc(l.hing)+'</div><div class="v-hi">'+esc(l.dev)+'</div><p class="mt mt-en">'+esc(l.en)+'</p><p class="mt mt-hi">'+esc(HI["J"+(q+1)]||l.en)+'</p></div>';
       }).join("");
       return '<section class="card"><div class="wrap jk">'+artHTML(c,i)+L+
         '<div class="jv rn"><div class="v-hing">'+esc(JK.rn.hing[0])+'<br>'+esc(JK.rn.hing[1])+'</div><div class="v-hi">'+esc(JK.rn.dev[0])+'<br>'+esc(JK.rn.dev[1])+'</div></div>'+
@@ -429,13 +425,13 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     var B='<i class="bar">||</i>';
     // Dohas and chaupais alike: line 1 ends with |, line 2 ends with ||. No leading bar.
     var S='<i class="bar">|</i>';
-    var h1=bio(c.hing[0])+' '+S, h2=bio(c.hing[1])+' '+B;
-    var d1=bioDev(strip(c.dev[0]))+' '+S, d2=bioDev(strip(c.dev[1]))+' '+B;
+    var h1=esc(c.hing[0])+' '+S, h2=esc(c.hing[1])+' '+B;
+    var d1=esc(strip(c.dev[0]))+' '+S, d2=esc(strip(c.dev[1]))+' '+B;
     var lh=Math.max(c.hing[0].length,c.hing[1].length)+3, ld=Math.max(strip(c.dev[0]).length,strip(c.dev[1]).length)+3;
     return '<section class="card'+(c.kl==="Chaupai"?' chp':' doh')+'" style="--lh:'+lh+';--ld:'+ld+'"><div class="wrap">'+artHTML(c,i)+
       '<div class="verse"><div class="v-hing"><span>'+h1+'</span><span>'+h2+'</span></div>'+
       '<div class="v-hi"><span>'+d1+'</span><span>'+d2+'</span></div></div>'+
-      '<div class="mean"><p class="mt mt-en">'+bio(c.mt)+'</p><p class="mt mt-hi">'+esc(hm(c))+'</p></div>'+
+      '<div class="mean"><p class="mt mt-en">'+esc(c.mt)+'</p><p class="mt mt-hi">'+esc(hm(c))+'</p></div>'+
       '</div></section>';
   }
 
@@ -596,10 +592,10 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   }
 
   // Settings: hide meaning / hide explanation / recitation volume (saved on the device)
-  var hideM=0,hideE=0,vol=100,theme="",fontSel=0,bionic=0,warm=0;
-  try{theme=localStorage.getItem("bh_theme")||"";warm=+localStorage.getItem("bh_wf")||0;if(theme==="wm"){theme="dk";warm=1;localStorage.setItem("bh_theme","dk");localStorage.setItem("bh_wf","1")}if(theme!=="dk")theme="";fontSel=+localStorage.getItem("bh_font")||0;bionic=+localStorage.getItem("bh_br")||0;if(fontSel!==2)bionic=0;var hmv=localStorage.getItem("bh_hm"),hev=localStorage.getItem("bh_he");hideM=hmv===null?0:+hmv;hideE=hev===null?1:+hev;var vv=parseInt(localStorage.getItem("bh_vol")||"100",10);if([10,25,50,75,100].indexOf(vv)>=0)vol=vv}catch(e){}
+  var hideM=0,hideE=0,vol=100,theme="",fontSel=0,warm=0;
+  try{theme=localStorage.getItem("bh_theme")||"";warm=+localStorage.getItem("bh_wf")||0;if(theme==="wm"){theme="dk";warm=1;localStorage.setItem("bh_theme","dk");localStorage.setItem("bh_wf","1")}if(theme!=="dk")theme="";fontSel=localStorage.getItem("bh_font")==="1"?1:0;localStorage.removeItem("bh_br");var hmv=localStorage.getItem("bh_hm"),hev=localStorage.getItem("bh_he");hideM=hmv===null?0:+hmv;hideE=hev===null?1:+hev;var vv=parseInt(localStorage.getItem("bh_vol")||"100",10);if([10,25,50,75,100].indexOf(vv)>=0)vol=vv}catch(e){}
   function applyPrefs(){
-    var h=document.documentElement;h.classList.toggle("hm",!!hideM);h.classList.toggle("br",!!bionic&&fontSel===2);var rb=document.getElementById("rowBr");if(rb)rb.style.display=fontSel===2?"":"none";[].forEach.call(document.querySelectorAll("[data-br]"),function(b){b.classList.toggle("on",+b.dataset.br===bionic)});h.classList.toggle("dk",theme==="dk");h.classList.toggle("wf",!!warm);[].forEach.call(document.querySelectorAll("[data-wf]"),function(b){b.classList.toggle("on",+b.dataset.wf===warm)});h.classList.toggle("fs",fontSel===1);h.classList.toggle("fl",fontSel===2);var tm=document.querySelector('meta[name="theme-color"]');if(tm)tm.setAttribute("content",theme==="dk"?"#3a3a3a":"#e3e3e1");[].forEach.call(document.querySelectorAll("[data-th]"),function(b){b.classList.toggle("on",b.dataset.th===theme)});[].forEach.call(document.querySelectorAll("[data-ft]"),function(b){b.classList.toggle("on",+b.dataset.ft===fontSel)});h.classList.toggle("he",!!hideE);
+    var h=document.documentElement;h.classList.toggle("hm",!!hideM);h.classList.remove("br","fl");h.classList.toggle("dk",theme==="dk");h.classList.toggle("wf",!!warm);[].forEach.call(document.querySelectorAll("[data-wf]"),function(b){b.classList.toggle("on",+b.dataset.wf===warm)});h.classList.toggle("fs",fontSel===1);var tm=document.querySelector('meta[name="theme-color"]');if(tm)tm.setAttribute("content",theme==="dk"?"#3a3a3a":"#e3e3e1");[].forEach.call(document.querySelectorAll("[data-th]"),function(b){b.classList.toggle("on",b.dataset.th===theme)});[].forEach.call(document.querySelectorAll("[data-ft]"),function(b){b.classList.toggle("on",+b.dataset.ft===fontSel)});h.classList.toggle("he",!!hideE);
     try{VO.volume=vol/100;NX.volume=vol/100;if(typeof MP!=="undefined"&&MP)MP.volume=vol/100}catch(e){}
     [].forEach.call(document.querySelectorAll("[data-hm]"),function(b){b.classList.toggle("on",+b.dataset.hm===hideM)});
     [].forEach.call(document.querySelectorAll("[data-he]"),function(b){b.classList.toggle("on",+b.dataset.he===hideE)});
@@ -629,7 +625,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function closeBubble(){bub.classList.remove("open");bubFor=null}
   function toggleBubble(btn){
     if(bubFor===btn){closeBubble();return}
-    var bc=D[+btn.dataset.i];if(mode==="hi")bubP.textContent=hx(bc);else bubP.innerHTML=bio(bc.ex);
+    var bc=D[+btn.dataset.i];if(mode==="hi")bubP.textContent=hx(bc);else bubP.innerHTML=esc(bc.ex);
     var r=btn.getBoundingClientRect();
     bub.style.bottom=(window.innerHeight-r.top+14)+"px";
     bub.classList.add("open");bubFor=btn;
@@ -866,8 +862,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     if(b.dataset.m){setMusic(b.dataset.m==="1");return}
     if(b.dataset.wf!==undefined){warm=+b.dataset.wf;setPref("bh_wf",warm);applyPrefs();return}
     if(b.dataset.th!==undefined){theme=b.dataset.th;setPref("bh_theme",theme);applyPrefs();return}
-    if(b.dataset.ft!==undefined){fontSel=+b.dataset.ft;if(fontSel!==2)bionic=0;setPref("bh_font",fontSel);applyPrefs();fit();return}
-    if(b.dataset.br!==undefined){bionic=+b.dataset.br;setPref("bh_br",bionic);applyPrefs();fit();return}
+    if(b.dataset.ft!==undefined){fontSel=+b.dataset.ft===1?1:0;setPref("bh_font",fontSel);applyPrefs();fit();return}
     if(b.dataset.hm!==undefined){hideM=+b.dataset.hm;setPref("bh_hm",hideM);applyPrefs();fit();return}
     if(b.dataset.he!==undefined){hideE=+b.dataset.he;setPref("bh_he",hideE);applyPrefs();return}
     if(b.dataset.vol){vol=+b.dataset.vol;setPref("bh_vol",vol);applyPrefs();return}
@@ -905,7 +900,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     sbHTML+='<button class="sb-i" data-i="'+i+'"><em>'+esc(lab)+'</em></button>';
   });
   sbHTML+='</div><div class="sb-f"><div class="sb-l"><button data-sl="hing">English</button><button data-sl="hi">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</button></div><button id="sbe" class="sb-sw" aria-label="Explanation"><span>Explanation</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbm" class="sb-sw" aria-label="Music on or off"><span>Recitation</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbu" class="sb-sw" aria-label="Mute or unmute"><span>Mute</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbp" class="sb-sw" aria-label="Play this verse again"><span>Replay</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbg" class="sb-sw" aria-label="Settings"><span>Settings</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbr" class="sb-sw" aria-label="Restart from the beginning"><span>Restart</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbs" class="sb-b">&#9825; Support us</button></div>';
-  sbHTML=sbHTML.replace('<div class="sb-list">','<div class="desktop-tabs" aria-label="Desktop navigation"><button data-sidebar-tab="chant">Chant</button><button data-sidebar-tab="home">Home</button><button data-sidebar-tab="learn">Learn</button><button data-sidebar-tab="settings">Settings</button></div><div class="sb-list">');side.innerHTML=sbHTML;side.addEventListener("click",function(e){var b=e.target.closest("[data-sidebar-tab]");if(b)showTab(b.dataset.sidebarTab)});document.documentElement.appendChild(side);
+  sbHTML=sbHTML.replace('<div class="sb-list">','<div class="desktop-tabs" aria-label="Desktop navigation"><button data-sidebar-tab="chant">Chant</button><button data-sidebar-tab="home">Feed</button><button data-sidebar-tab="learn">Learn</button><button data-sidebar-tab="settings">Settings</button></div><div class="sb-list">');side.innerHTML=sbHTML;side.addEventListener("click",function(e){var b=e.target.closest("[data-sidebar-tab]");if(b)showTab(b.dataset.sidebarTab)});document.documentElement.appendChild(side);
   function updateSide(){
     if(!side)return;
     var cs=side.querySelector(".sb-i.cur");if(cs)cs.classList.remove("cur");
@@ -1006,40 +1001,17 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   try{var u0=getUser();if(u0&&(u0.phone||u0.consent)){delete u0.phone;delete u0.consent;stset("bh_user",JSON.stringify(u0))}}catch(e){}
   if(LIVE){[].forEach.call(document.querySelectorAll("#settings .sg-n"),function(n){if(/live in Learn/.test(n.textContent))n.textContent="Turn on Meaning or Explanation to show them under each verse."});var lb0=document.querySelector("#onb [data-lm]");if(lb0)lb0.remove();var s2=document.querySelector("#onb .os[data-s=\"2\"]");if(s2){s2.querySelector("h2").textContent="How often will you chant?";s2.querySelector("p").textContent="Pick how many times a day. You can change this anytime."}}
 
-  // ---- onboarding ----
   var onbEl=document.getElementById("onb");
-  function onbShow(s){
-    [].forEach.call(onbEl.querySelectorAll(".os"),function(e){e.classList.toggle("on",+e.dataset.s===s)});
-    [].forEach.call(onbEl.querySelectorAll(".onb-dots i"),function(e,i){e.classList.toggle("on",i<=s)});
-    onbEl.setAttribute("role","dialog");onbEl.setAttribute("aria-modal","true");var heading=onbEl.querySelector(".os.on h2");if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true})}var f=onbEl.querySelector(".os.on input");if(f&&s===1)setTimeout(function(){try{f.focus({preventScroll:true})}catch(x){}},50);
-  }
-  document.getElementById("afterReadingSetup").onclick=function(){openOnb();onbShow(2)};
-  function openOnb(){onbEl.classList.add("open");onbShow(0);setMode(mode);dgPaint();[].forEach.call(onbEl.querySelectorAll("[data-dg]"),function(x){x.classList.remove("on")})}
-  function finishOnb(){stset("bh_onb","1");onbEl.classList.remove("open")}
-  function onbErr(m){document.getElementById("onErr").textContent=m||""}
-  var onDur=21;
-  function onbNext(){onbShow(2)}
-  onbEl.addEventListener("click",function(e){
-    var b=e.target.closest("button");if(!b)return;
-    if(b.dataset.l){setMode(b.dataset.l);return}
-    if(b.id==="introContinue"){onbShow(1);return}if(b.id==="introBack"){onbShow(0);return}if(b.id==="onExistingAccount"||b.id==="introAccount"){onbEl.classList.remove("open");showTab("settings");return}if(b.id==="onGuest"){onbShow(2);return}
-    if(b.id==="onReview"){var intention=document.getElementById("onI").value.trim(),promise=document.getElementById("onP").value.trim();if(!intention||!promise){document.getElementById("sankalpError").textContent="Add your intention and promise to begin.";return}document.getElementById("sankalpError").textContent="";document.getElementById("welcomeIntention").textContent=intention;document.getElementById("welcomePromise").textContent=promise;document.getElementById("welcomeRhythm").textContent=onDur+" days · "+dgGet()+" reading"+(dgGet()===1?"":"s")+" a day";onbShow(4);return}if(b.id==="onEditIntention"){onbShow(3);return}if(b.id==="onBackRhythm"){onbShow(2);return}if(b.id==="onGo1")onbNext();
-    else if(b.dataset.lm){stset("bh_lm",today0());finishOnb();postUser();showTab("learn")}
-    else if(b.dataset.dg){var v=+b.dataset.dg;stset("bh_lm","0");setDg(v);onbShow(3)}
-    else if(b.dataset.od){onDur=+b.dataset.od;[].forEach.call(onbEl.querySelectorAll("[data-od]"),function(x){x.classList.toggle("on",+x.dataset.od===onDur)})}
-    else if(b.id==="onBegin"||b.id==="onBeginLearn"){pendingSankalpTab=b.id==="onBeginLearn"?"learn":"chant";if(!document.getElementById("onI").value.trim()||!document.getElementById("onP").value.trim()){document.getElementById("sankalpError").textContent="Add your intention and promise to begin.";return}sk2Set({intent:document.getElementById("onI").value.trim(),promise:document.getElementById("onP").value.trim(),days:onDur,start:dkey(new Date()),ts:Date.now()});finishOnb();skInfoPaint();window.dispatchEvent(new Event("bh:sankalp-confirmed"));showTab(pendingSankalpTab||"chant")}
-    else if(b.id==="onSkip"){finishOnb();skInfoPaint();showTab("home")}
-  });
-  onbEl.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.tagName==="INPUT"&&e.target.type!=="checkbox"){e.preventDefault();onbNext()}});
-  window.__firstRun=function(){if(!hasSankalp()){pendingSankalpTab="chant";openOnb()}else maybeRemind()};
-  
-
-  // ---- Settings tiles (Control Center style) ----
+ function openOnb(){window.dispatchEvent(new Event("bh:open-onboarding"))}
+ document.getElementById("afterReadingSetup").onclick=openOnb;
+ window.__firstRun=function(){window.dispatchEvent(new Event("bh:first-run"))};
+ window.addEventListener("bh:navigate",function(e){var t=e.detail.tab;if(["chant","home","learn","settings"].indexOf(t)<0)return;showTab(t);if(t==="chant"&&e.detail.fresh)goTo(0)});
+ window.addEventListener("bh:welcome-complete",function(e){skInfoPaint();hpPaint();showTab(e.detail.journey||"chant");if((e.detail.journey||"chant")==="chant")goTo(0)});
+   // ---- Settings tiles (Control Center style) ----
   var PB={rec:{get:function(){return musicOn?"1":"0"},set:function(v){setMusic(v==="1")}},
     theme:{get:function(){return theme==="dk"?"dk":"lt"},set:function(v){theme=v==="dk"?"dk":"";setPref("bh_theme",theme);applyPrefs()}},
     tone:{get:function(){return warm?"w":"c"},set:function(v){warm=v==="w"?1:0;setPref("bh_wf",warm);applyPrefs()}},
-    font:{get:function(){return fontSel===2?"l":fontSel===1?"s":"m"},set:function(v){fontSel=v==="l"?2:v==="s"?1:0;if(fontSel!==2){bionic=0;setPref("bh_br",0)}setPref("bh_font",fontSel);applyPrefs();fit()}},
-    br:{get:function(){return bionic?"1":"0"},set:function(v){bionic=+v;setPref("bh_br",bionic);applyPrefs();fit()}},
+    font:{get:function(){return fontSel===1?"s":"m"},set:function(v){fontSel=v==="s"?1:0;setPref("bh_font",fontSel);applyPrefs();fit()}},
     mn:{get:function(){return hideM?"0":"1"},set:function(v){hideM=v==="1"?0:1;setPref("bh_hm",hideM);applyPrefs();fit()}},
     ex:{get:function(){return hideE?"0":"1"},set:function(v){hideE=v==="1"?0:1;setPref("bh_he",hideE);applyPrefs()}},
     fresh:{get:function(){return stg("bh_fresh","1")},set:function(v){stset("bh_fresh",v)}}};
@@ -1049,7 +1021,6 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     if(k==="dark"){theme=theme==="dk"?"":"dk";setPref("bh_theme",theme);applyPrefs()}
     else if(k==="wf"){warm=warm?0:1;setPref("bh_wf",warm);applyPrefs()}
     else if(k==="ft"){fontSel=fontSel===1?0:1;setPref("bh_font",fontSel);applyPrefs();fit()}
-    else if(k==="br"){bionic=bionic?0:1;setPref("bh_br",bionic);applyPrefs();fit()}
     else if(k==="fresh"){stset("bh_fresh",stg("bh_fresh","1")==="1"?"0":"1");tilePaint()}
     else if(k==="reset"){if(!t.classList.contains("arm")){t.classList.add("arm");t.textContent="Tap again to confirm";setTimeout(function(){t.classList.remove("arm");t.textContent="Reset this device"},3500)}else{window.dispatchEvent(new Event("bh:reset-device"))}}
     else if(k==="mn"){hideM=hideM?0:1;setPref("bh_hm",hideM);applyPrefs();fit()}
@@ -1061,7 +1032,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   // Settings toggles show only the current choice; tap to move to the next one.
   setEl.addEventListener("click",function(e){var b=e.target.closest(".pbs>button.on");if(!b)return;var bs=[].filter.call(b.parentNode.children,function(x){return x.tagName==="BUTTON"}),nx=bs[(bs.indexOf(b)+1)%bs.length];if(nx&&nx!==b){e.stopPropagation();e.preventDefault();nx.click()}},true);
   function tilePaint(){
-    var s2=sk2Get(),st={mysk:!!(s2&&skActive(s2)),dark:theme==="dk",wf:!!warm,ft:!!fontSel,br:!!bionic,mn:!hideM,ex:!hideE,m:!!musicOn,lm:lmActive(),fresh:stg("bh_fresh","1")==="1"};
+    var s2=sk2Get(),st={mysk:!!(s2&&skActive(s2)),dark:theme==="dk",wf:!!warm,ft:!!fontSel,mn:!hideM,ex:!hideE,m:!!musicOn,lm:lmActive(),fresh:stg("bh_fresh","1")==="1"};
     var tx={dark:["Off","On"],wf:["Off","On"],ft:["Modern","Serif"],br:["Off","On"],mn:["Hidden","Shown"],ex:["Hidden","Shown"],m:["Off","On"],lm:["Off","Day "+lmDay()+" of 21"],fresh:["Off","On"],reset:["Start over","Start over"],mysk:["Not set",s2&&skActive(s2)?"Day "+skDay(s2)+" of "+s2.days:"Set one"]};
     [].forEach.call(document.querySelectorAll("[data-tg]"),function(b){var k=b.dataset.tg,on=!!st[k];b.classList.toggle("on",on);var em=b.querySelector("em");if(em&&tx[k]&&!b.classList.contains("arm"))em.textContent=tx[k][on?1:0]});
     if(PB)[].forEach.call(document.querySelectorAll("[data-pb]"),function(b){var P=PB[b.dataset.pb];b.classList.toggle("on",!!P&&P.get()===b.dataset.v)});
@@ -1083,7 +1054,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function lmBanner(){
     var d=lmDay();
     if(lmActive()){var p=lmPlan(d);return '<div class="lm fd-card">'+uiImg("learn-mode","lm-img")+'<div class="lm-t"><b>Learning mode</b><span>Day '+d+' of 21</span></div><div class="lm-bar"><s style="width:'+Math.round(d/21*100)+'%"></s></div><p>Today: '+lnLabel(p[0])+(p[1]>p[0]?" to "+lnLabel(p[1]):"")+'</p><button data-act="lesson">Start today\'s lesson &#8250;</button><button class="lnk lm-off" data-act="lmoff">Stop learning mode</button></div>'}
-    if(lmStart()&&d>21)return '<div class="lm fd-card"><div class="lm-t"><b>21 days of learning done &#128591;</b></div><p>Set your sankalp on Home and begin reciting.</p><button data-act="set">Open Home &#8250;</button></div>';
+    if(lmStart()&&d>21)return '<div class="lm fd-card"><div class="lm-t"><b>21 days of learning done &#128591;</b></div><p>Set your sankalp on Feed and begin reciting.</p><button data-act="set">Open Home &#8250;</button></div>';
     return '<div class="lm fd-card">'+uiImg("learn-mode","lm-img")+'<div class="lm-t"><b>21-day learning mode</b></div><p>Learn the whole Chalisa in 21 days, two verses a day.</p><button data-act="lmon">Start learning mode &#8250;</button></div>';
   }
   var ICO={
@@ -1176,7 +1147,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function lnLabel(q){var c=D[q];return q===1?"Doha 1":q===2?"Doha 2":q===43?"Closing Doha":"Chaupai "+c.n}
   function lnVerse(c){
     var B='<i class="bar">||</i>',S='<i class="bar">|</i>';
-    return '<div class="verse"><div class="v-hing"><span>'+bio(c.hing[0])+' '+S+'</span><span>'+bio(c.hing[1])+' '+B+'</span></div><div class="v-hi"><span>'+bioDev(strip(c.dev[0]))+' '+S+'</span><span>'+bioDev(strip(c.dev[1]))+' '+B+'</span></div></div>';
+    return '<div class="verse"><div class="v-hing"><span>'+esc(c.hing[0])+' '+S+'</span><span>'+esc(c.hing[1])+' '+B+'</span></div><div class="v-hi"><span>'+esc(strip(c.dev[0]))+' '+S+'</span><span>'+esc(strip(c.dev[1]))+' '+B+'</span></div></div>';
   }
   function renderLearn(h){
     var q=lrn+1,c=D[q],opts="";
@@ -1184,8 +1155,8 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     h.innerHTML='<div class="fd-in ln"><div class="ln-top"><span>Verse by verse</span><select id="lnSel" aria-label="Jump to verse">'+opts+'</select></div>'+
       '<div class="ln-art">'+artHTML(c,q)+'</div><div class="ln-lab">'+lnLabel(q)+'</div>'+lnVerse(c)+
       '<button class="ln-listen" data-act="listen">&#9654; Listen</button>'+
-      '<div class="ln-sec"><h4>Meaning</h4><p class="mt mt-en">'+bio(c.mt)+'</p><p class="mt mt-hi">'+esc(hm(c))+'</p></div>'+
-      '<div class="ln-sec"><h4>Explanation</h4><p class="lnx mt-en">'+bio(c.ex||"")+'</p><p class="lnx mt-hi">'+esc(hx(c)||"")+'</p></div>'+
+      '<div class="ln-sec"><h4>Meaning</h4><p class="mt mt-en">'+esc(c.mt)+'</p><p class="mt mt-hi">'+esc(hm(c))+'</p></div>'+
+      '<div class="ln-sec"><h4>Explanation</h4><p class="lnx mt-en">'+esc(c.ex||"")+'</p><p class="lnx mt-hi">'+esc(hx(c)||"")+'</p></div>'+
       '<div class="ln-nav"><button data-act="prev"'+(lrn===0?" disabled":"")+'>&#8249; Previous</button><span>'+q+' / 43</span><button data-act="next" class="pri">'+(q===43?"Start reciting &#8250;":"Next &#8250;")+'</button></div></div>';
     h.scrollTop=0;
     h.onclick=function(e){
@@ -1269,7 +1240,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function skStreak(s){var st=skStartD(s),d=new Date(),n=0;d=new Date(d.getFullYear(),d.getMonth(),d.getDate());if(!sk[dkey(d)])d.setDate(d.getDate()-1);while(d>=st&&sk[dkey(d)]){n++;d.setDate(d.getDate()-1)}return n}
   function skLine(s){return "Day "+Math.min(skDay(s),s.days)+" of "+s.days}
   function skTotal(s){var st=skStartD(s),n=0;for(var i=0;i<s.days;i++){var d=new Date(st.getFullYear(),st.getMonth(),st.getDate()+i);if(d.getTime()>today0())break;n+=stk[dkey(d)]||0}return n}
-  function skInfoPaint(){
+  function skInfoPaint(){var finishButton=document.getElementById("complete");if(finishButton)finishButton.textContent=sk2Get()?"Complete Sankalp":"Complete reading";
     var s=sk2Get(),box=document.getElementById("skInfo"),w=stage.querySelector(".skw"),fp=document.getElementById("finPr"),h="",act=skActive(s);
     if(s&&act){h='<div class="ski"><div class="ski-d">'+skLine(s)+'</div>'+(s.intent?'<p><b>Intention</b>'+esc(s.intent)+'</p>':"")+(s.promise?'<p><b>Promise</b>'+esc(s.promise)+'</p>':"")+'<button class="lnk" data-go="sk">My sankalp &#8250;</button></div>'}
     else if(s){h='<div class="ski"><div class="ski-d">Sankalp complete \u{1F64F}</div><button class="lnk" data-go="sk">Start a new one &#8250;</button></div>'}
@@ -1307,7 +1278,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     skDur=s?s.days:21;var ha1=document.getElementById("hpAct");if(ha1)ha1.innerHTML="";
     h.innerHTML='<div class="fd-in"><div class="skf fd-card"><h3>'+(s?"Edit sankalp":"New sankalp")+'</h3>'+
       '<label>Times a day<div class="seg"><button data-dg="1">1</button><button data-dg="3">3</button><button data-dg="7">7</button><button data-dg="11">11</button></div></label>'+
-      '<label>For how long<div class="seg" id="skDurSeg"><button data-sd="11">11 days</button><button data-sd="21">21 days</button><button data-sd="40">40 days</button></div></label>'+
+      '<label>For how long<div class="seg" id="skDurSeg"><button data-sd="3">3 days</button><button data-sd="7">7 days</button><button data-sd="11">11 days</button><button data-sd="21">21 days</button></div></label>'+
       '<label>My intention<textarea id="skI" rows="2" maxlength="140" placeholder="e.g. To overcome my fear about the upcoming interview"></textarea></label>'+
       '<label>My promise<textarea id="skP" rows="2" maxlength="140" placeholder="e.g. I will prepare for the interview 3 hours every day"></textarea></label>'+
       '<button class="cbtn" id="skSave">'+(s?"Save changes":"Begin sankalp")+'</button>'+(s?'<button class="onb-skip" id="skCancel">Cancel</button>':"")+'</div></div>';
@@ -1329,7 +1300,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   // ---- once a day: remind the reader of their intention and promise ----
   var rmEl=document.getElementById("remind");
   function maybeRemind(force){if(!force)return;
-    var s=sk2Get();if(!s||!skActive(s)||!(s.intent||s.promise)||!onbDone()||onbEl.classList.contains("open"))return;
+    var s=sk2Get();if(!s||!skActive(s)||!(s.intent||s.promise)||!onbDone()||document.documentElement.classList.contains("welcome-open"))return;
     var t=dkey(new Date());if(!force&&stg("bh_remd","")===t)return;stset("bh_remd",t);
     rmEl.innerHTML='<div class="rm-c"><span class="rm-k">'+skLine(s)+'</span><h2>Your sankalp</h2>'+(s.intent?'<h5>Intention</h5><p>'+esc(s.intent)+'</p>':"")+(s.promise?'<h5>Promise</h5><p>'+esc(s.promise)+'</p>':"")+'<p class="rm-n">Keep this in mind as you chant today.</p><button class="cbtn" id="rmGo">Chant now</button></div>';
     rmEl.classList.add("open");return true;
@@ -1410,7 +1381,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   document.addEventListener("click",function(e){var b=e.target.closest(".cc-i");if(!b)return;ccOpen=!ccOpen;b.setAttribute("aria-expanded",ccOpen);var d=document.querySelector(".cc-d");if(d)d.hidden=!ccOpen});
   var diyaEl=document.getElementById("diya");
   if(diyaEl)diyaEl.addEventListener("click",function(){PB.theme.set(theme==="dk"?"lt":"dk");tilePaint()});
-  var pendingSankalpTab="chant";function hasSankalp(){var s=sk2Get();return !!(s&&s.intent&&s.intent.trim()&&s.promise&&s.promise.trim())}function startChant(){if(!hasSankalp()){pendingSankalpTab="chant";openOnb();return}showTab("chant");if(cur===0||stg("bh_fresh","1")==="1"){var w0=cur===0;goTo(0);if(w0&&window.__fact)window.__fact()}else{var p1=parseInt(stg("bh_pos","0"),10);goTo(p1>0&&p1<N?p1:0)}}
+  var pendingSankalpTab="chant";function hasSankalp(){var s=sk2Get();return onbDone()||!!s}function startChant(){if(!hasSankalp()){pendingSankalpTab="chant";openOnb();return}showTab("chant");if(cur===0||stg("bh_fresh","1")==="1"){var w0=cur===0;goTo(0);if(w0&&window.__fact)window.__fact()}else{var p1=parseInt(stg("bh_pos","0"),10);goTo(p1>0&&p1<N?p1:0)}}
   function goPaint(){var e=document.getElementById("hpGo"),e2=document.getElementById("hpGo2");if(e2&&sk2Get()){e2.innerHTML='<button class="sc"><span class="sc-mk"><img alt="" src="'+BASE+'images/ui/monkey-point.webp" onerror="this.remove()"><i class="ht h1">\u2665</i><i class="ht h2">\u2665</i><i class="ht h3">\u2665</i></span><span>Chant now</span></button>';e2.querySelector("button").onclick=startChant}else if(e2)e2.innerHTML="";if(!e)return;e.innerHTML='<button id="startChant" class="sc"><span class="sc-mk"><img alt="" src="'+BASE+'images/ui/monkey-point.webp" onerror="this.remove()"><i class="ht h1">\u2665</i><i class="ht h2">\u2665</i><i class="ht h3">\u2665</i></span><span>Chant now</span></button>';e.querySelector("button").onclick=startChant}
   // ---- Support us, Add to Home, Instagram post ----
   var SHARE_TXT="Chant the Hanuman Chalisa verse by verse with Be Hanuman. Free, no ads.\nhttps://hanuman.dyut.si/";
@@ -1471,7 +1442,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   var MU_IDS=(window.FEEDMUSIC&&window.FEEDMUSIC.length)?window.FEEDMUSIC:["L4SWfzTeyN4"],muI=0,muWant=false,muPl=null,muReady=false,muNames={};
   (function(){var pg=document.getElementById("hpPager"),h2=document.getElementById("hp2");if(!pg||!h2)return;
     var m=document.createElement("div");m.id="hpMu";m.className="hpg";
-    m.innerHTML='<div class="ip-g">Chalisa music</div><div class="ipc big mu"><img class="ip-art" data-pose="diya" alt=""><div class="mu-eq" id="muEq"><i></i><i></i><i></i><i></i><i></i></div><div class="mu-t" id="muT">Hanuman Chalisa</div><div class="mu-s" id="muS">Plays while you are on Home. Pauses when you chant.</div><div class="mu-b"><button class="pb" data-mu="prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M6 5v14M19 5L9 12l10 7z"/></svg></button><button class="pb mu-play" data-mu="play" id="muPlay" aria-label="Play"><svg viewBox="0 0 24 24" id="muIc"><path d="M8 5l11 7-11 7z"/></svg></button><button class="pb" data-mu="next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M18 5v14M5 5l10 7-10 7z"/></svg></button></div><div class="mu-v"><button class="pb mu-m" data-mu="mute" id="muMute" aria-label="Mute"><svg viewBox="0 0 24 24" id="muMi"></svg></button><div class="knob" id="muKnob" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100" tabindex="0"><i></i><b id="muVL">70%</b></div><button class="pb mu-m" data-mu="rep" id="muRep" aria-label="Repeat this track" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M17 3l3 3-3 3"/><path d="M4 11V9a3 3 0 0 1 3-3h13"/><path d="M7 21l-3-3 3-3"/><path d="M20 13v2a3 3 0 0 1-3 3H4"/></svg><em>1</em></button></div></div><div id="muYTw"><div id="muYT"></div></div>';
+    m.innerHTML='<div class="ip-g">Chalisa music</div><div class="ipc big mu"><img class="ip-art" data-pose="diya" alt=""><div class="mu-eq" id="muEq"><i></i><i></i><i></i><i></i><i></i></div><div class="mu-t" id="muT">Hanuman Chalisa</div><div class="mu-s" id="muS">Plays while you are on Feed. Pauses when you chant.</div><div class="mu-b"><button class="pb" data-mu="prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M6 5v14M19 5L9 12l10 7z"/></svg></button><button class="pb mu-play" data-mu="play" id="muPlay" aria-label="Play"><svg viewBox="0 0 24 24" id="muIc"><path d="M8 5l11 7-11 7z"/></svg></button><button class="pb" data-mu="next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M18 5v14M5 5l10 7-10 7z"/></svg></button></div><div class="mu-v"><button class="pb mu-m" data-mu="mute" id="muMute" aria-label="Mute"><svg viewBox="0 0 24 24" id="muMi"></svg></button><div class="knob" id="muKnob" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100" tabindex="0"><i></i><b id="muVL">70%</b></div><button class="pb mu-m" data-mu="rep" id="muRep" aria-label="Repeat this track" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M17 3l3 3-3 3"/><path d="M4 11V9a3 3 0 0 1 3-3h13"/><path d="M7 21l-3-3 3-3"/><path d="M20 13v2a3 3 0 0 1-3 3H4"/></svg><em>1</em></button></div></div><div id="muYTw"><div id="muYT"></div></div>';
     pg.insertBefore(m,h2);var dots=document.getElementById("hpDots");if(dots)dots.appendChild(document.createElement("i"));
     var su=document.getElementById("hpSup");if(su&&!su.querySelector("[data-pose]")){var im=document.createElement("img");im.className="ip-art su-art";im.alt="";im.dataset.pose="om-gift";su.insertBefore(im,su.firstChild)}
     posePaint()})();
@@ -1518,7 +1489,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     if(hpEd){
       skDur=s.days;
       h+='<div class="ip-h">Edit sankalp</div><label class="ipl">Times a day<div class="seg"><button data-dg="1">1</button><button data-dg="3">3</button><button data-dg="7">7</button><button data-dg="11">11</button></div></label>'+
-        '<label class="ipl">For how long<div class="seg" id="skDurSeg"><button data-sd="11">11 days</button><button data-sd="21">21 days</button><button data-sd="40">40 days</button></div></label>'+
+        '<label class="ipl">For how long<div class="seg" id="skDurSeg"><button data-sd="3">3 days</button><button data-sd="7">7 days</button><button data-sd="11">11 days</button><button data-sd="21">21 days</button></div></label>'+
         '<label class="ipl">\u{1F3AF} My intention<textarea id="skI" rows="2" maxlength="140" placeholder="e.g. To overcome my fear about the upcoming interview"></textarea></label>'+
         '<label class="ipl">\u{1F91D} My promise<textarea id="skP" rows="2" maxlength="140" placeholder="e.g. I will prepare for the interview 3 hours every day"></textarea></label>'+
         '<div class="ipa"><button class="pb" data-ip="save">Save changes</button><button class="pb" data-ip="cancel">Cancel</button></div></div>';
@@ -1557,4 +1528,4 @@ document.getElementById("recitationChoice").addEventListener("click",function(e)
 })();
 
 
-window.dispatchEvent(new Event("bh:ready"));
+document.querySelectorAll("#hpDots i").forEach(function(dot,i){dot.setAttribute("role","button");dot.setAttribute("tabindex","0");dot.setAttribute("aria-label","Feed page "+(i+1));dot.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();dot.click()}})});window.dispatchEvent(new Event("bh:ready"));

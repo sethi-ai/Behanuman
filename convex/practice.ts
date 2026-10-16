@@ -3,7 +3,7 @@ import { getAuthUserId } from "@convex-dev/auth/server";
 import { query, mutation, type MutationCtx, type QueryCtx } from "./_generated/server";
 import type { Id } from "./_generated/dataModel";
 
-const KEYS = new Set(["bh_user", "bh_sk2", "bh_dg", "bh_onb", "bh_rounds", "bh_sank"]);
+const KEYS = new Set(["bh_user", "bh_sk2", "bh_dg", "bh_onb", "bh_rounds", "bh_sank", "bh_journey"]);
 const snapshotValidator = v.record(v.string(), v.string());
 const stateValidator = v.object({ snapshot: snapshotValidator, revision: v.number() });
 const datePattern = /^\d{4}-\d{2}-\d{2}$/;
@@ -18,11 +18,12 @@ function validate(snapshot: Record<string, string>) {
   for (const [key, value] of Object.entries(snapshot)) {
     if (!KEYS.has(key) || value.length > 80_000) throw new ConvexError("Invalid practice data.");
     if (key === "bh_rounds" || key === "bh_sank") counts(value);
-    if (key === "bh_user" && value) { const user = JSON.parse(value); if (typeof user.name !== "string" || user.name.length > 60) throw new ConvexError("Invalid profile."); }
+    if (key === "bh_user" && value) { const user = JSON.parse(value); if (typeof user.name !== "string" || user.name.length > 60 || Object.keys(user).some(key=>key!=="name")) throw new ConvexError("Invalid profile."); }
     if (key === "bh_sk2" && value) {
       const sankalp = JSON.parse(value);
-      if (!sankalp || typeof sankalp !== "object" || ![11, 21, 40].includes(sankalp.days) || typeof sankalp.start !== "string" || !datePattern.test(sankalp.start) || typeof sankalp.intent !== "string" || sankalp.intent.length > 140 || typeof sankalp.promise !== "string" || sankalp.promise.length > 140) throw new ConvexError("Invalid sankalp.");
+      if (!sankalp || typeof sankalp !== "object" || ![3, 7, 11, 21, 40].includes(sankalp.days) || typeof sankalp.start !== "string" || !datePattern.test(sankalp.start) || typeof sankalp.intent !== "string" || sankalp.intent.length > 140 || typeof sankalp.promise !== "string" || sankalp.promise.length > 140) throw new ConvexError("Invalid sankalp.");
     }
+    if(key === "bh_journey"){const j=JSON.parse(value);if(!j||!Object.keys(j).every(k=>["tab","days","start"].includes(k))||!["chant","learn"].includes(j.tab)||!(j.days===null||[3,7,11,21].includes(j.days))||(j.tab==="learn"&&j.days!==null&&j.days!==21)||!(j.start===null||typeof j.start==="string"&&datePattern.test(j.start)))throw new ConvexError("Invalid journey.");}
     if (key === "bh_dg" && !["1", "3", "7", "11", "21"].includes(value)) throw new ConvexError("Invalid daily goal.");
   }
 }

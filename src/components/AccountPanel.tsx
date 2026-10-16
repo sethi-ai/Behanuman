@@ -8,9 +8,9 @@ import { api } from "../../convex/_generated/api";
 type Snapshot = Record<string, string>;
 type State = { snapshot: Snapshot; revision: number };
 type Round = { eventId: string; date: string };
-const KEYS = ["bh_user", "bh_sk2", "bh_dg", "bh_onb", "bh_rounds", "bh_sank"];
+const KEYS = ["bh_user", "bh_sk2", "bh_dg", "bh_onb", "bh_rounds", "bh_sank", "bh_journey"];
 const OWNER = "bh_cloud_owner", GUEST = "bh_cloud_guest_backup", DEVICE = "bh_cloud_device";
-function readSnapshot(): Snapshot { const result: Snapshot = {}; for (const key of KEYS) { const value = localStorage.getItem(key); if (value !== null) result[key] = value; } return result; }
+function readSnapshot(): Snapshot { const result: Snapshot = {}; for (const key of KEYS) { const value = localStorage.getItem(key); if (value !== null) result[key] = key === "bh_user" ? JSON.stringify({name:String(JSON.parse(value).name||"").slice(0,60)}) : value; } return result; }
 function readQueue(owner: string): Round[] { try { return JSON.parse(localStorage.getItem(`bh_cloud_rounds_${owner}`) ?? "[]"); } catch { return []; } }
 function writeQueue(owner: string, queue: Round[]) { localStorage.setItem(`bh_cloud_rounds_${owner}`, JSON.stringify(queue)); }
 function baseSnapshot(snapshot: Snapshot, queue: Round[]) {
@@ -76,15 +76,16 @@ export default function AccountPanel() {
       const queue = [...readQueue(account.userId), ...(merge ? guestQueue : [])];
       const deviceId = localStorage.getItem(DEVICE) || crypto.randomUUID(); localStorage.setItem(DEVICE, deviceId);
       const snapshot = baseSnapshot(local, queue);
-      const state = await bootstrap({ snapshot, deviceId, merge });
+      let state = await bootstrap({ snapshot, deviceId, merge });
+      if(sessionStorage.getItem("bh_welcome_auth")){const changes:Snapshot={bh_onb:"1",bh_journey:local.bh_journey};if(local.bh_sk2)changes.bh_sk2=local.bh_sk2;if(local.bh_user)changes.bh_user=local.bh_user;const result=await save({changes,revision:state.revision});if(!result.saved)throw Error("Practice changed during welcome");state=result.state;}
       writeQueue(account.userId, queue); writeQueue("guest", []);
       localStorage.setItem(OWNER, account.userId); owner.current = account.userId; base.current = state;
       localStorage.setItem(`bh_cloud_base_${account.userId}`, JSON.stringify(state.snapshot));
       applySnapshot({ ...state.snapshot, ...offlineChanges }, queue); setReady(true); setMergeChoice(false);
-      setMessage("Practice saved to your account."); void flush();
-    } catch { started.current = false; setMessage("Couldn’t load your account. Your device’s practice is unchanged."); }
+      setMessage("Practice saved to your account."); window.dispatchEvent(new Event("bh:account-ready")); void flush();
+    } catch { started.current = false; setMessage("Couldn’t load your account. Your device’s practice is unchanged.");window.dispatchEvent(new Event("bh:open-account")); }
     finally { initializing.current = false; setBusy(false); }
-  }, [account, bootstrap, flush]);
+  }, [account, bootstrap, flush, save]);
   useEffect(() => {
     const attach = () => setSlot(document.getElementById("cloud-account"));
     const frame = requestAnimationFrame(attach); window.addEventListener("bh:ready", attach);
@@ -99,7 +100,7 @@ export default function AccountPanel() {
       started.current = true;
       const priorOwner = localStorage.getItem(OWNER);
       if (priorOwner && priorOwner !== account.userId) { const guest = JSON.parse(localStorage.getItem(GUEST) || "{}"); applySnapshot(guest); localStorage.removeItem(OWNER); }
-      if (account.state && priorOwner !== account.userId && Object.keys(readSnapshot()).some(k => k === "bh_sk2" || k === "bh_rounds")) {
+      if (!sessionStorage.getItem("bh_welcome_auth") && account.state && priorOwner !== account.userId && Object.keys(readSnapshot()).some(k => k === "bh_sk2" || k === "bh_rounds")) {
         setMergeChoice(true); window.dispatchEvent(new Event("bh:open-account"));
       } else void initialize(true);
     });
@@ -163,6 +164,7 @@ export default function AccountPanel() {
     <h4>Account & saved practice</h4>
     {isLoading ? <p>Checking your account…</p> : isAuthenticated ? <>
       <p>Signed in{account?.email ? ` as ${account.email}` : ""}.</p>
+      {!ready&&!mergeChoice&&!busy&&<button onClick={()=>void initialize(true)}>Retry loading practice</button>}
       {mergeChoice ? <><p>This device also has practice saved. Would you like to keep it in this account?</p><button onClick={() => void initialize(true)} disabled={busy}>Keep this device’s practice</button><button onClick={() => void initialize(false)} disabled={busy}>Use account practice</button></> : <button onClick={() => void flush()} disabled={!ready || busy}>Save practice</button>}
       <button onClick={() => void logout()} disabled={busy}>Sign out</button>
       <button onClick={() => setConfirmDelete(true)} disabled={busy}>Delete account</button>

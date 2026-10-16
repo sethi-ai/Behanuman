@@ -1,11 +1,12 @@
+import { upgradeWelcome } from './welcome-upgrade.mjs';
 // Read-only import of the frozen live renderer. All output stays in the test project.
 import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
-const source = path.resolve('../Be Hanuman App/live-site');
+const source = path.resolve('history/html-v1');
 const html = readFileSync(path.join(source, 'index.html'), 'utf8');
 const hash = createHash('sha256').update(html).digest('hex');
-const styles = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi)].map(m=>m[1]).join('\n');
+let styles = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi)].map(m=>m[1]).join('\n');
 let engine = [...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]).join('\n');
 let body = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i)[1].replace(/<script[^>]*>[\s\S]*?<\/script>/gi,'');
 body=body.replace('<p id="setHi"></p>', '<p id="setHi"></p><div id="cloud-account"></div>');
@@ -111,11 +112,12 @@ body=body.replaceAll('<span>Feed</span>','<span>Home</span>');
 engine=engine.replaceAll('on Feed','on Home').replaceAll('This Feed has','This collection has');
 replaceOnce('side.innerHTML=sbHTML;', `sbHTML=sbHTML.replace('<div class="sb-list">','<div class="desktop-tabs" aria-label="Desktop navigation"><button data-sidebar-tab="chant">Chant</button><button data-sidebar-tab="home">Home</button><button data-sidebar-tab="learn">Learn</button><button data-sidebar-tab="settings">Settings</button></div><div class="sb-list">');side.innerHTML=sbHTML;side.addEventListener("click",function(e){var b=e.target.closest("[data-sidebar-tab]");if(b)showTab(b.dataset.sidebarTab)});`);
 replaceOnce('curTab=t;document.documentElement.dataset.tab=t;', 'curTab=t;document.documentElement.dataset.tab=t;document.querySelectorAll("[data-sidebar-tab]").forEach(function(b){b.setAttribute("aria-current",b.dataset.sidebarTab===t?"page":"false")});');
+({body,engine,styles}=upgradeWelcome({body,engine,styles}));
 mkdirSync('src/restored',{recursive:true});
 mkdirSync('public/restored',{recursive:true});
 writeFileSync('src/restored/body.html',body);
 writeFileSync('src/restored/styles.css',styles);
 writeFileSync('public/restored/engine.js',engine);
-writeFileSync('src/restored/provenance.json',JSON.stringify({source:'Be Hanuman App/live-site/index.html',sha256:hash,mode:'original DOM renderer in Next shell'},null,2));
+writeFileSync('src/restored/provenance.json',JSON.stringify({source:'history/html-v1/index.html',sha256:hash,mode:'original DOM renderer in Next shell'},null,2));
 for(const name of ['images','audio']){const folder=existsSync(path.join(source,name))?path.join(source,name):path.join(source,'..',name);if(existsSync(folder))cpSync(folder,path.join('public',name),{recursive:true});}
 console.log('Restored frozen live renderer:',hash,'; body',body.length,'; styles',styles.length,'; engine',engine.length);
