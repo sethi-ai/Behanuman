@@ -48,3 +48,20 @@ html[data-simple=true] #tabbar{--simple-full-nav-width:min(calc(100vw - 32px),38
 html[data-simple=true] #tabbar #tbRestart{right:calc(82px - var(--simple-full-nav-width)/2)}
 @media(min-width:1000px) and (hover:hover) and (pointer:fine){html[data-simple=true] #tabbar{--simple-full-nav-width:440px}}
 html[data-simple=true] #tabbar #tbRestart{left:auto!important;transform:none!important}
+/* Chat uses the same shared surfaces and saffron as Chant, Home and Learn. */
+#hi-screen.hi-dialog{background:var(--bg);color:var(--t1)}
+#hi-screen .hi-content button,#hi-screen .hi-content textarea{background:var(--s1);color:var(--t1);border-color:var(--rule,#8d8d8b);border-radius:24px}
+#hi-screen .hi-content button:focus-visible,#hi-screen .hi-content textarea:focus-visible,#hi-screen a:focus-visible{outline-color:var(--ac)}
+#hi-screen .hi-source a,#hi-screen .hi-eyebrow{color:var(--ac)}
+#hi-screen .hi-chat-disclosure{background:transparent}
+#hi-screen .hi-avatar{background:var(--s1);border-color:var(--rule,#8d8d8b);color:var(--ac)}
+#hi-screen .hi-message-row{border:0;padding:12px 0}
+#hi-screen .hi-reader-message{display:flex;justify-content:flex-end;padding-left:44px}
+#hi-screen .hi-reader-message>.hi-avatar{display:none}
+#hi-screen .hi-reader-message>div{max-width:85%;background:var(--s1);border-radius:22px 22px 5px 22px;padding:10px 16px}
+#hi-screen .hi-message-body{background:var(--s2);border-radius:22px 22px 22px 5px;padding:10px 16px}
+#hi-screen .hi-message-body .hi-reflection{border:0;background:transparent;padding:0;margin:12px 0}
+#hi-screen .hi-citation{font-size:12px;color:var(--t2)}
+#hi-screen .hi-citation>summary{cursor:pointer;display:flex;align-items:center;min-height:44px;color:var(--ac)}
+#hi-screen .hi-composer-controls button{background:linear-gradient(#ffb257,#ff861a)!important;border-color:#ffce9a!important;color:#fff!important}
+#hi-screen .hi-stream-inner{padding-bottom:24px}

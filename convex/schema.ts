@@ -6,6 +6,9 @@ import { authTables } from "@convex-dev/auth/server";
 
 export default defineSchema({
   ...authTables,
+  hiQuotaConfig:defineTable({key:v.literal('test-rollout-2026-10'),startedAt:v.number(),priorReservedCents:v.literal(0)}).index('by_key',['key']),
+  hiUserQuotas:defineTable({userId:v.id('users'),used:v.number(),activeRequestId:v.optional(v.string()),activeUntil:v.optional(v.number())}).index('by_userId',['userId']),
+  hiReflectionRequests:defineTable({userId:v.id('users'),requestId:v.string(),admittedAt:v.number()}).index('by_user_request',['userId','requestId']),
   hiBudget:defineTable({key:v.literal('test-rollout-2026-10'),reservedCents:v.number()}).index('by_key',['key']),
   launchConfig:defineTable({key:v.literal('main'),startedAt:v.number(),qaUserIds:v.array(v.id('users'))}).index('by_key',['key']),
   launchTotals:defineTable({launchId:v.id('launchConfig'),qa:v.boolean(),counts:launchTotalsValidator}).index('by_launch_and_qa',['launchId','qa']),

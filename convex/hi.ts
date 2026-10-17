@@ -1,4 +1,4 @@
-import {v} from 'convex/values';
+import {v,type Infer} from 'convex/values';
 import {RateLimiter, HOUR, MINUTE} from '@convex-dev/rate-limiter';
 import {action, query, internalQuery, internalAction} from './_generated/server';
 import {components,internal} from './_generated/api';
@@ -26,9 +26,10 @@ function config(){
   return {provider,model,configured,preview};
 }
 export const status=query({args:{},returns:v.object({available:v.boolean(),preview:v.boolean()}),handler:async()=>{const c=config();return {available:c.configured&&!!selectHiContext('knowledge service','test'),preview:c.preview};}});
-const result=v.object({status:v.union(v.literal('reflection'),v.literal('safety'),v.literal('no_match'),v.literal('unavailable'),v.literal('limited'),v.literal('error'),v.literal('invalid'),v.literal('auth_required'),v.literal('budget_exhausted')),storyId:v.union(v.string(),v.null()),reflection:v.union(v.string(),v.null()),question:v.union(v.string(),v.null())});
-export const reflect=action({args:{input:v.string()},returns:result,handler:async(ctx,{input})=>{
-  const response=(status:'safety'|'no_match'|'unavailable'|'limited'|'error'|'invalid'|'auth_required'|'budget_exhausted',storyId:string|null=null)=>({status,storyId,reflection:null,question:null});
+const result=v.object({status:v.union(v.literal('reflection'),v.literal('safety'),v.literal('no_match'),v.literal('unavailable'),v.literal('limited'),v.literal('error'),v.literal('invalid'),v.literal('auth_required'),v.literal('budget_exhausted'),v.literal('quota_exhausted'),v.literal('in_progress'),v.literal('already_submitted')),storyId:v.union(v.string(),v.null()),reflection:v.union(v.string(),v.null()),question:v.union(v.string(),v.null())});
+export const reflect=action({args:{input:v.string(),requestId:v.optional(v.string())},returns:result,handler:async(ctx,{input,requestId}):Promise<Infer<typeof result>>=>{
+  const response=(status:'safety'|'no_match'|'unavailable'|'limited'|'error'|'invalid'|'auth_required'|'budget_exhausted'|'quota_exhausted'|'in_progress'|'already_submitted',storyId:string|null=null)=>({status,storyId,reflection:null,question:null});
+  if(requestId&&!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(requestId))return response('invalid');
   if(input.length>INPUT_LIMIT||!input.trim())return response('invalid');
   if(needsSupport(input))return response('safety');
   let userId;try{userId=await ctx.runQuery(internal.hi.viewer,{});}catch{return response('unavailable');}
@@ -40,15 +41,19 @@ export const reflect=action({args:{input:v.string()},returns:result,handler:asyn
   const c=config();
   // Preview is never a bypass: editorial AND rights clearance apply to every provider request.
   if(!c.configured)return response('unavailable',story.id);
+  const id=requestId??crypto.randomUUID();
+  let admission: 'allowed'|'quota_exhausted'|'budget_exhausted'|'in_progress'|'already_submitted'|'auth_required'|'unavailable';
+  try{admission=await ctx.runMutation(internal.hiQuota.begin,{userId,requestId:id});}catch{return response('unavailable',story.id);}
+  if(admission!=='allowed')return response(admission,story.id);
   try{
     for(const name of ['hiUserBurst','hiUserHour','hiUserDay'] as const)if(!(await limiter.limit(ctx,name,{key:userId})).ok)return response('limited',story.id);
     // Shared caps bound provider requests across all accounts; rejected attempts cannot spend tokens.
     for(const name of ['hiBurst','hiHour','hiDay'] as const)if(!(await limiter.limit(ctx,name)).ok)return response('limited',story.id);
-    if(!await ctx.runMutation(internal.hiBudget.reserve,{}))return response('budget_exhausted',story.id);
-    const output=await requestHiReflection(context,input,{model:c.model,key:process.env.ANTHROPIC_API_KEY!});
+    const output=await requestHiReflection(context,input,{model:c.model,key:process.env.ANTHROPIC_API_KEY!,admit:()=>ctx.runMutation(internal.hiQuota.admit,{userId,requestId:id})});
     if(output.status!=='reflection')return response(output.status,story.id);
     return {status:'reflection' as const,storyId:story.id,reflection:output.reflection,question:output.question};
   }catch{return response('error',story.id);}
+  finally{try{await ctx.runMutation(internal.hiQuota.finish,{userId,requestId:id});}catch{/* Lease expiry safely clears an interrupted request. */}}
 }});
 
 export const viewer=internalQuery({args:{},returns:v.union(v.id('users'),v.null()),handler:async ctx=>{const id=await getAuthUserId(ctx);if(!id||!await ctx.db.get(id))return null;if(await ctx.db.query('accountDeletions').withIndex('by_userId',q=>q.eq('userId',id)).unique())return null;return id;}});
@@ -61,7 +66,7 @@ export const providerCheck=internalAction({args:{},returns:v.object({keyPresent:
 
 // Admin-only one-shot synthetic test. It cannot be called by a website visitor.
 export const canary=internalAction({args:{approvalId:v.literal('owner-retry-2026-10-17')},returns:result,handler:async(ctx)=>{
- const empty=(status:'unavailable'|'limited'|'error'|'invalid'|'safety')=>({status,storyId:null,reflection:null,question:null});
+ const empty=(status:'unavailable'|'limited'|'error'|'invalid'|'safety'|'quota_exhausted'|'budget_exhausted'|'in_progress'|'already_submitted'|'auth_required')=>({status,storyId:null,reflection:null,question:null});
  if(process.env.HI_CANARY_ENABLED!=='true'||process.env.HI_MODE!=='preview'||process.env.HI_MODEL!=='claude-haiku-5-5'||process.env.HI_PROVIDER!=='anthropic'||!process.env.ANTHROPIC_API_KEY)return empty('unavailable');
  const input='I feel overwhelmed preparing for an interview';
  const context=selectHiContext(input,'test');if(!context)return empty('unavailable');

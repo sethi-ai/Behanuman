@@ -2,7 +2,7 @@
 
 Test URL: https://www.behanuman.com/ . Original app https://hanuman.dyut.si/ remains separate.
 
-Current tested frontend is rd7ylcy2l / dpl_AwcAdeiTy9wtszkLc6YSQSHycsv4. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
+Current tested frontend is aou2rx439 / dpl_2UTBWtheK9P1o1FZgFehJWWAq1FA. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
 
 ## Phone journey
 
@@ -24,3 +24,6 @@ Claude is enabled only on the separate test backend for all signed-in users afte
 The copied source dataset is retained separately under its upstream ODbL1.0 notice and pinned commit. All seven supplied kanda files are present; this does not establish critical-edition accuracy. Keep ancient original text, new paraphrase, modern reflection and any translation clearly distinct.
 
 Rollout checks use mocked provider responses; no additional paid end-to-end call was made for the public-access update. Anonymous/deleted identities remain blocked; non-QA authentication is covered by tests. The persistent app allowance reserves one cent per attempt, stops at500, keeps failed reservations and has no time-based reset. This is not an account-wide invoice cap.
+
+
+Latest targeted test release: three lifetime Claude attempts per account, across devices, with paid errors counting and free story lookup unchanged. All 66 automated tests pass; no new paid end-to-end call. Chat uses shared themes and in-memory conversation bubbles; Learn no longer has the h.i banner. Explicit Find a story then Reflect with Claude remains. See the final targeted update in RELEASE-2026-10-17.md.

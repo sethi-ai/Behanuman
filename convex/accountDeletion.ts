@@ -16,7 +16,8 @@ export const purge = internalMutation({
   handler: async (ctx, { jobId }) => {
     const job = await ctx.db.get(jobId); if (!job) return null; const userId = job.userId;
     const again = async () => { await ctx.scheduler.runAfter(0, internal.accountDeletion.purge, { jobId }); return null; };
-    for(const table of ['launchPeople','launchEvents'] as const){const rows=await ctx.db.query(table).withIndex('by_userId',q=>q.eq('userId',userId)).take(100);for(const row of rows)await ctx.db.delete(row._id);if(rows.length===100)return again();}
+    for(const table of ['launchPeople','launchEvents','hiUserQuotas'] as const){const rows=await ctx.db.query(table).withIndex('by_userId',q=>q.eq('userId',userId)).take(100);for(const row of rows)await ctx.db.delete(row._id);if(rows.length===100)return again();}
+    const hiRequests=await ctx.db.query('hiReflectionRequests').withIndex('by_user_request',q=>q.eq('userId',userId)).take(100);for(const row of hiRequests)await ctx.db.delete(row._id);if(hiRequests.length===100)return again();
     const launchGuests=await ctx.db.query('launchGuests').withIndex('by_userId',q=>q.eq('userId',userId)).take(100);for(const row of launchGuests)await ctx.db.patch(row._id,{userId:undefined});if(launchGuests.length===100)return again();
     const learningImports = await ctx.db.query("learningImports").withIndex("by_userId_and_deviceId", q => q.eq("userId", userId)).take(100);
     for (const row of learningImports) await ctx.db.delete(row._id); if (learningImports.length === 100) return again();
