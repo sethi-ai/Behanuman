@@ -1,5 +1,5 @@
 export type LearningState = { start: string | null; current: number; learned: number[]; revisit: number[]; favourites: number[]; hidden: boolean; milestone: boolean };
-export type LearningChange = { field: 'start' | 'current' | 'learned' | 'revisit' | 'favourites' | 'hidden' | 'milestone'; verse?: number; value?: boolean; date?: string };
+export type LearningChange = { field: 'start' | 'current' | 'learned' | 'revisit' | 'favourites' | 'hidden' | 'milestone'; verse?: number; value?: boolean; date?: string;origin?:string;occurredAt?:number;qa?:boolean };
 export const emptyLearning = (): LearningState => ({ start:null,current:0,learned:[],revisit:[],favourites:[],hidden:false,milestone:false });
 export const lessons = Array.from({length:21},(_,i)=>Array.from({length:i===20?3:2},(_,j)=>i*2+j));
 export function elapsedDays(start: string | null, today: string) { return start ? Math.max(1,Math.floor((Date.parse(today+'T00:00:00Z')-Date.parse(start+'T00:00:00Z'))/86400000)+1) : 0; }

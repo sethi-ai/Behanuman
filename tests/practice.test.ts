@@ -67,3 +67,5 @@ test("new journey commitments sync safely and demo phone fields are rejected", a
  await expect(a.mutation(api.practice.save,{changes:{bh_journey:'{"tab":"learn","days":7,"start":null}'},revision:state.revision})).rejects.toThrow('Invalid journey');
  expect(await t.query(api.practice.get,{})).toBeNull();
 });
+
+test("all wheel durations sync; invalid durations are rejected",async()=>{const {a}=await fixture();let state=await a.mutation(api.practice.bootstrap,{snapshot:initial,deviceId:'wheel',merge:true});for(let days=1;days<=21;days++){const result=await a.mutation(api.practice.save,{changes:{bh_journey:JSON.stringify({tab:'chant',days,start:'2026-10-16'}),bh_sk2:JSON.stringify({days,start:'2026-10-16',intent:'',promise:''})},revision:state.revision});expect(result.saved).toBe(true);state=result.state;}for(const days of [0,22,2.5])await expect(a.mutation(api.practice.save,{changes:{bh_journey:JSON.stringify({tab:'chant',days,start:'2026-10-16'})},revision:state.revision})).rejects.toThrow('Invalid journey');});

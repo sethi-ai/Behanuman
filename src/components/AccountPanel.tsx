@@ -1,4 +1,5 @@
 "use client";
+import {launchContext,markLaunchLogin} from '@/lib/launchContext';
 import { useAuthActions } from "@convex-dev/auth/react";
 import { useConvexAuth, useMutation, useQuery } from "convex/react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -7,7 +8,7 @@ import { api } from "../../convex/_generated/api";
 
 type Snapshot = Record<string, string>;
 type State = { snapshot: Snapshot; revision: number };
-type Round = { eventId: string; date: string };
+type Round = { eventId: string; date: string;origin?:string;occurredAt?:number;qa?:boolean };
 const KEYS = ["bh_user", "bh_sk2", "bh_dg", "bh_onb", "bh_rounds", "bh_sank", "bh_journey"];
 const OWNER = "bh_cloud_owner", GUEST = "bh_cloud_guest_backup", DEVICE = "bh_cloud_device";
 function readSnapshot(): Snapshot { const result: Snapshot = {}; for (const key of KEYS) { const value = localStorage.getItem(key); if (value !== null) result[key] = key === "bh_user" ? JSON.stringify({name:String(JSON.parse(value).name||"").slice(0,60)}) : value; } return result; }
@@ -123,7 +124,7 @@ export default function AccountPanel() {
     };
     const round = (event: Event) => {
       const detail = (event as CustomEvent<Round>).detail, key = owner.current || "guest";
-      const queue = readQueue(key); if (!queue.some(r => r.eventId === detail.eventId)) writeQueue(key, [...queue, detail]); schedule();
+      const queue = readQueue(key); if (!queue.some(r => r.eventId === detail.eventId)) writeQueue(key, [...queue, {...detail,...launchContext()}]); schedule();
     };
     document.addEventListener("click", schedule); document.addEventListener("keyup", schedule); window.addEventListener("bh:round", round); window.addEventListener("online", schedule);
     return () => { document.removeEventListener("click", schedule); document.removeEventListener("keyup", schedule); window.removeEventListener("bh:round", round); window.removeEventListener("online", schedule); if (flushTimer.current) clearTimeout(flushTimer.current); };
@@ -148,7 +149,10 @@ export default function AccountPanel() {
   const logout = async () => {
     await flush(); await signOut();
     owner.current = null; base.current = null; started.current = false; setReady(false); setMergeChoice(false); localStorage.removeItem(OWNER);
-    applySnapshot(JSON.parse(localStorage.getItem(GUEST) || "{}")); setMessage("Signed out. You can keep chanting as a guest.");
+    applySnapshot(JSON.parse(localStorage.getItem(GUEST) || "{}"));
+    sessionStorage.removeItem('bh_welcome_auth');sessionStorage.removeItem('bh_welcome_return');
+    window.dispatchEvent(new Event('bh:session-ended'));
+    setMessage("Signed out. Your previous guest practice is kept on this device.");
   };
   const removeAccount = async () => {
     setBusy(true);
@@ -169,7 +173,7 @@ export default function AccountPanel() {
       <button onClick={() => void logout()} disabled={busy}>Sign out</button>
       <button onClick={() => setConfirmDelete(true)} disabled={busy}>Delete account</button>
       {confirmDelete && <div role="alert"><p>Delete your account and all practice saved to it? This cannot be undone.</p><button onClick={() => void removeAccount()} disabled={busy}>Yes, delete my account</button><button onClick={() => setConfirmDelete(false)} disabled={busy}>Cancel</button></div>}
-    </> : <><p>Chant as a guest, or sign in to save your practice across devices.</p><button disabled={!status?.googleReady || busy} onClick={async () => { setBusy(true); try { await signIn("google", { redirectTo: window.location.origin + "/" }); } catch { setMessage("Google sign-in couldn’t start. Please try again."); setBusy(false); } }}>Continue with Google</button>{status && !status.googleReady && <p className="cloud-note">Google sign-in is being connected. Guest chanting is ready to use.</p>}</>}
+    </> : <><p>Chant as a guest, or sign in to save your practice across devices.</p><button disabled={!status?.googleReady || busy} onClick={async () => { setBusy(true); try { markLaunchLogin();await signIn("google", { redirectTo: window.location.origin + "/" }); } catch { setMessage("Google sign-in couldn’t start. Please try again."); setBusy(false); } }}>Continue with Google</button>{status && !status.googleReady && <p className="cloud-note">Google sign-in is being connected. Guest chanting is ready to use.</p>}</>}
     {message && <p role="status">{message}</p>}
   </section>, slot);
 }

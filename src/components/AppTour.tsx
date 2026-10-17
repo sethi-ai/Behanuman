@@ -1,7 +1,7 @@
 "use client";
 import {useEffect,useRef,useState} from 'react';
 import {createPortal} from 'react-dom';
-const steps=[{tab:'chant',name:'Chant',copy:'Read and chant the Chalisa.'},{tab:'learn',name:'Learn',copy:'Understand every verse.'},{tab:'home',name:'Feed',copy:'Explore devotional content.'},{tab:'settings',name:'Settings',copy:'Manage your practice and preferences.'}];
+const steps=[{tab:'chant',name:'Chant',copy:'Read and chant the Chalisa.'},{tab:'learn',name:'Learn',copy:'Understand every verse.'},{tab:'home',name:'Home',copy:'Return to your daily practice.'},{tab:'hi',name:'h.i',copy:'Explore stories and fixed sample reflections.'},{tab:'settings',name:'Settings',copy:'Manage your practice and preferences.'}];
 type Box={left:number;top:number;width:number;height:number};
 export default function AppTour(){
  const [hosts,setHosts]=useState<{body:HTMLElement;settings:HTMLElement}|null>(null),[step,setStep]=useState<number|null>(null),[box,setBox]=useState<Box|null>(null),[height,setHeight]=useState(800);const heading=useRef<HTMLHeadingElement>(null);

@@ -1,4 +1,6 @@
 const allowedOrigins = new Set([
+  "https://behanuman.com",
+  "https://www.behanuman.com",
   "https://hanuman.dyut.si",
   "https://be-hanuman-next.vercel.app",
 ]);

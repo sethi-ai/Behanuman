@@ -406,7 +406,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function cardHTML(c,i){
     if(c.t==="sankalp"){
       return '<section class="card"><div class="wrap skw"><div class="art"><img id="fcImg" class="tp" alt="" draggable="false" onerror="this.style.visibility=\'hidden\'"></div>'+
-        '<div class="sk fcv"><div class="fact-chat"><h3 class="dyk">Did You Know</h3><h2 id="fcT"></h2><p class="mt" id="fcB"></p></div><div class="breath-stage"><button type="button" class="br" id="fcR"><span id="brT"></span></button><button type="button" class="breath-skip" id="breathSkip">Skip breathing · Start chanting</button><div class="breath-caption" aria-live="polite"><span>breathe in</span><small>, breathe out</small></div></div><div class="brI" id="fcI"><div id="fcIntentBlock"><span>Intention</span><p id="fcIt"></p></div><div id="fcPromiseBlock"><span>Promise</span><p id="fcPt"></p></div><small class="reminder-note">Hold your intention and promise in mind as you breathe in and out.</small></div></div>'+
+        '<div class="sk fcv"><div class="fact-chat"><h3 class="dyk">Did You Know</h3><h2 id="fcT"></h2><p class="mt" id="fcB"></p></div><div class="breath-stage"><button type="button" class="br" id="fcR"><span id="brT"></span></button><button type="button" class="breath-skip" id="breathSkip">Start Chanting Now</button><div class="breath-caption" aria-live="polite"><span>breathe in</span><small>, breathe out</small></div></div><div class="brI" id="fcI"><div id="fcIntentBlock"><span>Intention</span><p id="fcIt"></p></div><div id="fcPromiseBlock"><span>Promise</span><p id="fcPt"></p></div><small class="reminder-note">Hold your intention and promise in mind as you breathe in and out.</small></div></div>'+
         '<div class="sk" style="display:none"><h2>Sankalp</h2><p class="mt">Your sankalp for today</p>'+
         '<div class="sk-goal"><b id="skg">1</b><span id="skw">times today</span></div><div id="skInfo"></div>'+
         '<button id="install" class="lnk" style="display:none">Add to Home Screen</button></div>'+
@@ -698,7 +698,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     var r=stkRun(),td=stk[dkey(t)]||0;
     return '<div class="wk-t"><b>'+(r?r+"-day sankalp streak":"Sankalp streak: start today")+'</b></div><div class="wk-d">'+h+'</div><div class="wk-s"><span><b>'+td+'</b>today</span><span><b>'+monthRounds()+'</b>this month</span><span><b>'+allRounds()+'</b>all time</span></div>'+mileHTML()+'<button class="wk-more" data-tr="1">See trends &#8250;</button><div class="wk-n">Number = rounds read (D1 to J1). Ring = sankalp completed that day.</div>'
   }
-  function stkRender(){
+  function stkRender(){paintGadaGoal();
     ["wkFin","wkSet"].forEach(function(id){var e=document.getElementById(id);if(e)e.innerHTML=stkWeekHTML()});
     var f=document.getElementById("fire");if(f){var n=stk[dkey(new Date())]||0;f.querySelector("b").textContent=n;f.classList.toggle("on",n>0);f.classList.toggle("burn",n>=5);if(!n)f.classList.remove("num")}
   }
@@ -786,28 +786,8 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     else if(b.id==="install")installApp();
   });
 
-  // Add to Home Screen. Android Chrome can install in one tap; iPhone Safari cannot, so we show the two steps.
-  var deferred=null,a2=document.getElementById("a2hs");
-  var standalone=window.matchMedia&&matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
-  var iOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
-  function showInstall(){var b=document.getElementById("install");if(b&&!standalone&&(deferred||iOS))b.style.display=""}
-  window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferred=e;showInstall()});
-  window.addEventListener("appinstalled",function(){standalone=true;var b=document.getElementById("install");if(b)b.style.display="none"});
-  function installApp(){
-    if(deferred){deferred.prompt();deferred=null;return}
-    var ua=navigator.userAgent,other=/CriOS|FxiOS|EdgiOS|OPiOS/.test(ua),and=/Android/.test(ua),mac=/Macintosh/.test(ua)&&!iOS,saf=/Safari/.test(ua)&&!/Chrome|Chromium|Edg|OPR/.test(ua),ttl="Add Be Hanuman to your Home Screen",st,arr="";
-    var SH='<svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px" fill="none" stroke="#f08a2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M8 7l4-4 4 4M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg>';
-    if(iOS&&!other){st='1. Tap the <i>Share</i> button '+SH+' in Safari\'s toolbar (it is just below this card).<br>2. Scroll down and tap <i>Add to Home Screen</i>, then <i>Add</i>.';arr='<div class="a2arr">&#8595;</div>'}
-    else if(iOS){st='1. Tap the <i>Share</i> button '+SH+' in your browser (near the address bar or under the &middot;&middot;&middot; menu).<br>2. Tap <i>Add to Home Screen</i>, then <i>Add</i>. For the easiest way, open this page in Safari.'}
-    else if(and){st='1. Tap the menu <i>&#8942;</i> at the top right of Chrome.<br>2. Tap <i>Install app</i> or <i>Add to Home screen</i>, then <i>Install</i>.'}
-    else if(mac&&saf){ttl="Add Be Hanuman to your Dock";st='In the menu bar choose <i>File</i>, then <i>Add to Dock</i>.'}
-    else{ttl="Install Be Hanuman";st='Click the <i>install</i> icon at the right end of the address bar, or open the browser menu and choose <i>Install Be Hanuman</i>.'}
-    a2.querySelector(".in").innerHTML='<b>'+ttl+'</b><p>'+st+'</p>'+arr+'<button id="a2close">Got it</button>';
-    document.getElementById("a2close").onclick=function(){a2.classList.remove("open")};
-    a2.classList.add("open");
-  }
-  document.getElementById("a2close").onclick=function(){a2.classList.remove("open")};
-  showInstall();
+  function installApp(){window.dispatchEvent(new Event("bh:install"))}
+  var standalone=window.matchMedia&&matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;var installButton=document.getElementById("install");if(installButton)installButton.style.display=standalone?"none":"";window.addEventListener("appinstalled",function(){if(installButton)installButton.style.display="none"});
   var mf=document.createElement("link");mf.rel="manifest";mf.href=BASE+"manifest.webmanifest";document.head.appendChild(mf);
 
   var ai=document.createElement("link");ai.rel="apple-touch-icon";ai.href=BASE+"icon-180.png";document.head.appendChild(ai);
@@ -900,7 +880,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     sbHTML+='<button class="sb-i" data-i="'+i+'"><em>'+esc(lab)+'</em></button>';
   });
   sbHTML+='</div><div class="sb-f"><div class="sb-l"><button data-sl="hing">English</button><button data-sl="hi">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</button></div><button id="sbe" class="sb-sw" aria-label="Explanation"><span>Explanation</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbm" class="sb-sw" aria-label="Music on or off"><span>Recitation</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbu" class="sb-sw" aria-label="Mute or unmute"><span>Mute</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbp" class="sb-sw" aria-label="Play this verse again"><span>Replay</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbg" class="sb-sw" aria-label="Settings"><span>Settings</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbr" class="sb-sw" aria-label="Restart from the beginning"><span>Restart</span><i class="sw-tr"><b class="sw-th"></b></i></button><button id="sbs" class="sb-b">&#9825; Support us</button></div>';
-  sbHTML=sbHTML.replace('<div class="sb-list">','<div class="desktop-tabs" aria-label="Desktop navigation"><button data-sidebar-tab="chant">Chant</button><button data-sidebar-tab="home">Feed</button><button data-sidebar-tab="learn">Learn</button><button data-sidebar-tab="settings">Settings</button></div><div class="sb-list">');side.innerHTML=sbHTML;side.addEventListener("click",function(e){var b=e.target.closest("[data-sidebar-tab]");if(b)showTab(b.dataset.sidebarTab)});document.documentElement.appendChild(side);
+  sbHTML=sbHTML.replace('<div class="sb-list">','<div class="desktop-tabs" aria-label="Desktop navigation"><button data-sidebar-tab="chant">Chant</button><button data-sidebar-tab="home">Home</button><button data-sidebar-tab="learn">Learn</button><button data-sidebar-tab="hi" aria-label="h.i — Hanuman Intelligence">h.i</button><button data-sidebar-tab="settings">Settings</button></div><div class="sb-list">');side.innerHTML=sbHTML;side.addEventListener("click",function(e){var b=e.target.closest("[data-sidebar-tab]");if(b)showTab(b.dataset.sidebarTab)});document.documentElement.appendChild(side);
   function updateSide(){
     if(!side)return;
     var cs=side.querySelector(".sb-i.cur");if(cs)cs.classList.remove("cur");
@@ -953,15 +933,15 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function stset(k,v){try{localStorage.setItem(k,String(v))}catch(e){}}
 
   // ---- tabs ----
-  var TABN=["chant","home","learn","settings"];
+  var TABN=["chant","home","learn","hi","settings"];
   
   document.getElementById("tabbar").style.setProperty("--n",document.querySelectorAll("#tabbar [data-tab]").length);
-  function showTab(t,sub){if((t==="chant"||t==="learn")&&!hasSankalp()){pendingSankalpTab=t;openOnb();return}
+  function showTab(t,sub){if(localStorage.getItem("bh_simple")==="1"&&t!=="settings")t="chant";if((t==="chant"||t==="learn")&&!hasSankalp()){pendingSankalpTab=t;openOnb();return}
     curTab=t;document.documentElement.dataset.tab=t;document.querySelectorAll("[data-sidebar-tab]").forEach(function(b){b.setAttribute("aria-current",b.dataset.sidebarTab===t?"page":"false")});
     finEl.classList.remove("open");sp2.classList.remove("open");closeBubble();
     feedEl.classList.toggle("open",t==="learn");trEl.classList.toggle("open",t==="home");setEl.classList.toggle("open",t==="settings");
-    var tb=document.getElementById("tabbar");tb.style.setProperty("--i",Math.max(0,TABN.indexOf(t)));
-    [].forEach.call(tb.querySelectorAll("[data-tab]"),function(b){b.classList.toggle("on",b.dataset.tab===t)});
+    var tb=document.getElementById("tabbar");tb.style.setProperty("--n",localStorage.getItem("bh_simple")==="1"?2:TABN.length);tb.style.setProperty("--i",localStorage.getItem("bh_simple")==="1"?(t==="settings"?1:0):Math.max(0,TABN.indexOf(t)));
+    [].forEach.call(tb.querySelectorAll("[data-tab]"),function(b){b.classList.toggle("on",b.dataset.tab===t);b.setAttribute("aria-current",b.dataset.tab===t?"page":"false")});
     if(t==="learn")fdOpen(sub||"");
     if(t==="home"){trO=0;hpPaint()}
     if(t==="settings"){var sa=document.getElementById("setArt");if(sa&&!sa.firstChild)sa.innerHTML=uiImg("settings","set-hero");updateMusicUI();setMode(mode);tilePaint();var u=getUser(),h=document.getElementById("setHi");if(h)h.textContent=u&&u.name?"Jai Hanuman, "+u.name:"Jai Hanuman"}
@@ -1005,8 +985,8 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
  function openOnb(){window.dispatchEvent(new Event("bh:open-onboarding"))}
  document.getElementById("afterReadingSetup").onclick=openOnb;
  window.__firstRun=function(){window.dispatchEvent(new Event("bh:first-run"))};
- window.addEventListener("bh:navigate",function(e){var t=e.detail.tab;if(["chant","home","learn","settings"].indexOf(t)<0)return;showTab(t);if(t==="chant"&&e.detail.fresh)goTo(0)});
- window.addEventListener("bh:welcome-complete",function(e){skInfoPaint();hpPaint();showTab(e.detail.journey||"chant");if((e.detail.journey||"chant")==="chant")goTo(0)});
+ window.addEventListener("bh:navigate",function(e){var t=e.detail.tab;if(["chant","home","learn","hi","settings"].indexOf(t)<0)return;showTab(t);if(t==="chant"&&e.detail.fresh)goTo(0)});
+ window.addEventListener("bh:guest-read",function(){showTab("chant");if(cur===0)goTo(1)});window.addEventListener("bh:welcome-complete",function(e){skInfoPaint();hpPaint();showTab(e.detail.journey||"chant");if((e.detail.journey||"chant")==="chant")goTo(0)});
    // ---- Settings tiles (Control Center style) ----
   var PB={rec:{get:function(){return musicOn?"1":"0"},set:function(v){setMusic(v==="1")}},
     theme:{get:function(){return theme==="dk"?"dk":"lt"},set:function(v){theme=v==="dk"?"dk":"";setPref("bh_theme",theme);applyPrefs()}},
@@ -1016,7 +996,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     ex:{get:function(){return hideE?"0":"1"},set:function(v){hideE=v==="1"?0:1;setPref("bh_he",hideE);applyPrefs()}},
     fresh:{get:function(){return stg("bh_fresh","1")},set:function(v){stset("bh_fresh",v)}}};
   setEl.addEventListener("click",function(e){
-    var pb=e.target.closest("[data-pb]");if(pb){var P=PB[pb.dataset.pb];if(P){P.set(pb.dataset.v);tilePaint()}return}
+    var pb=e.target.closest("[data-pb]");if(pb&&pb.dataset.pb==="theme"){openThemePicker();return}if(pb){var P=PB[pb.dataset.pb];if(P){P.set(pb.dataset.v);tilePaint()}return}
     var t=e.target.closest("[data-tg]");if(!t)return;var k=t.dataset.tg;
     if(k==="dark"){theme=theme==="dk"?"":"dk";setPref("bh_theme",theme);applyPrefs()}
     else if(k==="wf"){warm=warm?0:1;setPref("bh_wf",warm);applyPrefs()}
@@ -1054,7 +1034,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function lmBanner(){
     var d=lmDay();
     if(lmActive()){var p=lmPlan(d);return '<div class="lm fd-card">'+uiImg("learn-mode","lm-img")+'<div class="lm-t"><b>Learning mode</b><span>Day '+d+' of 21</span></div><div class="lm-bar"><s style="width:'+Math.round(d/21*100)+'%"></s></div><p>Today: '+lnLabel(p[0])+(p[1]>p[0]?" to "+lnLabel(p[1]):"")+'</p><button data-act="lesson">Start today\'s lesson &#8250;</button><button class="lnk lm-off" data-act="lmoff">Stop learning mode</button></div>'}
-    if(lmStart()&&d>21)return '<div class="lm fd-card"><div class="lm-t"><b>21 days of learning done &#128591;</b></div><p>Set your sankalp on Feed and begin reciting.</p><button data-act="set">Open Home &#8250;</button></div>';
+    if(lmStart()&&d>21)return '<div class="lm fd-card"><div class="lm-t"><b>21 days of learning done &#128591;</b></div><p>Set your sankalp on Home and begin reciting.</p><button data-act="set">Open Home &#8250;</button></div>';
     return '<div class="lm fd-card">'+uiImg("learn-mode","lm-img")+'<div class="lm-t"><b>21-day learning mode</b></div><p>Learn the whole Chalisa in 21 days, two verses a day.</p><button data-act="lmon">Start learning mode &#8250;</button></div>';
   }
   var ICO={
@@ -1340,7 +1320,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   window.__fpose=function(){var im=document.getElementById("fcImg");if(!im)return;var dk=/\b(dk|wm)\b/.test(document.documentElement.className);im.style.visibility="";im.src=BASE+"images/dyk/"+POSE[window.__fi||0]+(dk?"-dark":"-light")+".webp"};
   if(window.MutationObserver)new MutationObserver(function(){window.__fpose()}).observe(document.documentElement,{attributes:true,attributeFilter:["class"]});
   var brT0=null,brStep=0;
-  function brPaint(){var orb=document.getElementById("fcR"),text=document.getElementById("brT");if(!orb||!text)return;var done=brStep===6;orb.disabled=!done;orb.classList.toggle("ready",done);orb.classList.toggle("inhale",!done&&brStep%2===0);orb.classList.toggle("exhale",!done&&brStep%2===1);orb.parentElement.classList.toggle("complete",done);var skip=document.getElementById("breathSkip");if(skip)skip.hidden=done;orb.parentElement.classList.toggle("exhaling",!done&&brStep%2===1);text.textContent=done?"Start chanting":brStep%2?"Breathe out":"Breathe in";orb.setAttribute("aria-label",text.textContent);}
+  function brPaint(){var orb=document.getElementById("fcR"),text=document.getElementById("brT");if(!orb||!text)return;var done=brStep===6;orb.disabled=!done;orb.classList.toggle("ready",done);orb.classList.toggle("inhale",!done&&brStep%2===0);orb.classList.toggle("exhale",!done&&brStep%2===1);orb.parentElement.classList.toggle("complete",done);var skip=document.getElementById("breathSkip");if(skip)skip.hidden=done;orb.parentElement.classList.toggle("exhaling",!done&&brStep%2===1);text.textContent=done?"Start Chanting Now":brStep%2?"Breathe out":"Breathe in";orb.setAttribute("aria-label",text.textContent);}
   window.__brStart=function(){clearInterval(brT0);brStep=0;brPaint();brT0=setInterval(function(){if(cur!==0||!homeTab()){clearInterval(brT0);return;}brStep++;brPaint();if(brStep===6)clearInterval(brT0);},4000);};
   document.addEventListener("click",function(e){if(e.target.closest("#breathSkip")||(e.target.closest("#fcR")&&brStep===6)){clearInterval(brT0);goTo(1);}});
   window.__fact=function(){
@@ -1380,8 +1360,8 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function skKept2(s){var st=skStartD(s),n=0;for(var i=0;i<s.days;i++){var d=new Date(st.getFullYear(),st.getMonth(),st.getDate()+i);if(d.getTime()>today0())break;if(stk[dkey(d)]>0)n++}return n}
   document.addEventListener("click",function(e){var b=e.target.closest(".cc-i");if(!b)return;ccOpen=!ccOpen;b.setAttribute("aria-expanded",ccOpen);var d=document.querySelector(".cc-d");if(d)d.hidden=!ccOpen});
   var diyaEl=document.getElementById("diya");
-  if(diyaEl)diyaEl.addEventListener("click",function(){PB.theme.set(theme==="dk"?"lt":"dk");tilePaint()});
-  var pendingSankalpTab="chant";function hasSankalp(){var s=sk2Get();return onbDone()||!!s}function startChant(){if(!hasSankalp()){pendingSankalpTab="chant";openOnb();return}showTab("chant");if(cur===0||stg("bh_fresh","1")==="1"){var w0=cur===0;goTo(0);if(w0&&window.__fact)window.__fact()}else{var p1=parseInt(stg("bh_pos","0"),10);goTo(p1>0&&p1<N?p1:0)}}
+  if(diyaEl){diyaEl.setAttribute("aria-label","Choose appearance");diyaEl.addEventListener("click",openThemePicker)}
+  var pendingSankalpTab="chant";function hasSankalp(){var s=sk2Get();return stg("bh_guest_read","")==="1"||onbDone()||!!s}function startChant(){if(!hasSankalp()){pendingSankalpTab="chant";openOnb();return}showTab("chant");if(cur===0||stg("bh_fresh","1")==="1"){var w0=cur===0;goTo(0);if(w0&&window.__fact)window.__fact()}else{var p1=parseInt(stg("bh_pos","0"),10);goTo(p1>0&&p1<N?p1:0)}}
   function goPaint(){var e=document.getElementById("hpGo"),e2=document.getElementById("hpGo2");if(e2&&sk2Get()){e2.innerHTML='<button class="sc"><span class="sc-mk"><img alt="" src="'+BASE+'images/ui/monkey-point.webp" onerror="this.remove()"><i class="ht h1">\u2665</i><i class="ht h2">\u2665</i><i class="ht h3">\u2665</i></span><span>Chant now</span></button>';e2.querySelector("button").onclick=startChant}else if(e2)e2.innerHTML="";if(!e)return;e.innerHTML='<button id="startChant" class="sc"><span class="sc-mk"><img alt="" src="'+BASE+'images/ui/monkey-point.webp" onerror="this.remove()"><i class="ht h1">\u2665</i><i class="ht h2">\u2665</i><i class="ht h3">\u2665</i></span><span>Chant now</span></button>';e.querySelector("button").onclick=startChant}
   // ---- Support us, Add to Home, Instagram post ----
   var SHARE_TXT="Chant the Hanuman Chalisa verse by verse with Be Hanuman. Free, no ads.\nhttps://hanuman.dyut.si/";
@@ -1428,8 +1408,7 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
     },"image/png")}catch(x){}
   };
   (function(){var sk0=document.querySelector(".stk"),root=document.getElementById("trends");if(!sk0)return;if(!window.IntersectionObserver){sk0.classList.add("in");return}new IntersectionObserver(function(en){en.forEach(function(x){sk0.classList.toggle("in",x.isIntersecting)})},{root:root,threshold:.25}).observe(sk0)})();
-  function hpPaint(){if(window.__hpReset&&document.documentElement.dataset.tab!=="home")window.__hpReset();
-    if(iOS&&!standalone&&stg("bh_a2n","")!=="1"&&sk2Get()&&skTotal(sk2Get())>0){stset("bh_a2n","1");setTimeout(installApp,1200)}
+  function hpPaint(){paintDailyHome();if(window.__hpReset&&document.documentElement.dataset.tab!=="home")window.__hpReset();
     goPaint();
     var u=getUser(),e=document.getElementById("hpHi");if(e)e.textContent=u&&u.name?"Jai Hanuman, "+u.name:"Jai Hanuman";
     var h=document.getElementById("hpSk");if(h)renderSk(h);
@@ -1439,48 +1418,24 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   function poseSrc(n){var dk=/\b(dk|wm)\b/.test(document.documentElement.className);return BASE+"images/dyk/"+n+(dk?"-dark":"-light")+".webp"}
   function posePaint(){[].forEach.call(document.querySelectorAll("img[data-pose]"),function(im){im.src=poseSrc(im.dataset.pose)})}
   if(window.MutationObserver)new MutationObserver(posePaint).observe(document.documentElement,{attributes:true,attributeFilter:["class"]});
-  var MU_IDS=(window.FEEDMUSIC&&window.FEEDMUSIC.length)?window.FEEDMUSIC:["L4SWfzTeyN4"],muI=0,muWant=false,muPl=null,muReady=false,muNames={};
-  (function(){var pg=document.getElementById("hpPager"),h2=document.getElementById("hp2");if(!pg||!h2)return;
-    var m=document.createElement("div");m.id="hpMu";m.className="hpg";
-    m.innerHTML='<div class="ip-g">Chalisa music</div><div class="ipc big mu"><img class="ip-art" data-pose="diya" alt=""><div class="mu-eq" id="muEq"><i></i><i></i><i></i><i></i><i></i></div><div class="mu-t" id="muT">Hanuman Chalisa</div><div class="mu-s" id="muS">Plays while you are on Feed. Pauses when you chant.</div><div class="mu-b"><button class="pb" data-mu="prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M6 5v14M19 5L9 12l10 7z"/></svg></button><button class="pb mu-play" data-mu="play" id="muPlay" aria-label="Play"><svg viewBox="0 0 24 24" id="muIc"><path d="M8 5l11 7-11 7z"/></svg></button><button class="pb" data-mu="next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M18 5v14M5 5l10 7-10 7z"/></svg></button></div><div class="mu-v"><button class="pb mu-m" data-mu="mute" id="muMute" aria-label="Mute"><svg viewBox="0 0 24 24" id="muMi"></svg></button><div class="knob" id="muKnob" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100" tabindex="0"><i></i><b id="muVL">70%</b></div><button class="pb mu-m" data-mu="rep" id="muRep" aria-label="Repeat this track" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M17 3l3 3-3 3"/><path d="M4 11V9a3 3 0 0 1 3-3h13"/><path d="M7 21l-3-3 3-3"/><path d="M20 13v2a3 3 0 0 1-3 3H4"/></svg><em>1</em></button></div></div><div id="muYTw"><div id="muYT"></div></div>';
-    pg.insertBefore(m,h2);var dots=document.getElementById("hpDots");if(dots)dots.appendChild(document.createElement("i"));
-    var su=document.getElementById("hpSup");if(su&&!su.querySelector("[data-pose]")){var im=document.createElement("img");im.className="ip-art su-art";im.alt="";im.dataset.pose="om-gift";su.insertBefore(im,su.firstChild)}
-    posePaint()})();
-  var muVol=Math.max(0,Math.min(100,parseInt(stg("bh_muvol","70"),10)||0));
-  function muVPaint(){var k=document.getElementById("muKnob");if(!k)return;k.style.setProperty("--v",muVol/100);k.style.setProperty("--a",(-135+muVol*2.7)+"deg");k.setAttribute("aria-valuenow",muVol);var l=document.getElementById("muVL");if(l)l.textContent=muVol+"%"}
-  var muRep=stg("bh_murep","0")==="1";
-  function muRPaint(){var b=document.getElementById("muRep");if(b){b.classList.toggle("on",muRep);b.setAttribute("aria-pressed",muRep)}}
-  var muMu=stg("bh_mumute","0")==="1";
-  var SP_ON='<path d="M4 9.5v5h4l5 4v-13l-5 4z"/><path d="M16.5 9a4.5 4.5 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/>',SP_OFF='<path d="M4 9.5v5h4l5 4v-13l-5 4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/>';
-  function muMPaint(){var i=document.getElementById("muMi"),b=document.getElementById("muMute"),k=document.getElementById("muKnob");if(i)i.innerHTML=muMu?SP_OFF:SP_ON;if(b){b.classList.toggle("on",muMu);b.setAttribute("aria-pressed",muMu)}if(k)k.classList.toggle("off",muMu);if(muPl&&muReady){try{muMu?muPl.mute():muPl.unMute()}catch(e){}}}
-  function muVSet(v,sv){if(muMu&&sv!==undefined&&v!==muVol){muMu=false;stset("bh_mumute","0");muMPaint()}muVol=Math.max(0,Math.min(100,Math.round(v)));muVPaint();if(muPl&&muReady){try{muPl.setVolume(muVol)}catch(e){}}if(sv)stset("bh_muvol",muVol)}
-  (function(){var k=document.getElementById("muKnob");if(!k)return;muVPaint();var drag=false;
-    function at(e){var r=k.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),a=Math.atan2(dx,-dy)*180/Math.PI;if(a>135||a<-135)a=a>0?(a<157?135:-135):(a>-157?-135:135);if(a>135)a=135;muVSet((a+135)/270*100,0)}
-    k.addEventListener("pointerdown",function(e){drag=true;try{k.setPointerCapture(e.pointerId)}catch(x){}at(e);e.preventDefault()});
-    k.addEventListener("pointermove",function(e){if(drag)at(e)});
-    k.addEventListener("pointerup",function(){drag=false;stset("bh_muvol",muVol)});k.addEventListener("pointercancel",function(){drag=false});
-    k.addEventListener("keydown",function(e){var d=e.key==="ArrowUp"||e.key==="ArrowRight"?5:e.key==="ArrowDown"||e.key==="ArrowLeft"?-5:0;if(d){muVSet(muVol+d,1);e.preventDefault()}});
-    k.addEventListener("wheel",function(e){muVSet(muVol+(e.deltaY<0?5:-5),1);e.preventDefault()},{passive:false})})();
-  muMPaint();muRPaint();
-  function muTab(){return document.documentElement.dataset.tab==="home"}
-  function muLoad(){if(window.YT&&YT.Player){muInit();return}if(document.getElementById("yt-api"))return;var s=document.createElement("script");s.id="yt-api";s.src="https://www.youtube.com/iframe_api";document.head.appendChild(s);var o=window.onYouTubeIframeAPIReady;window.onYouTubeIframeAPIReady=function(){if(o)o();muInit()}}
-  function muInit(){if(muPl)return;muPl=new YT.Player("muYT",{height:"2",width:"2",videoId:MU_IDS[muI],playerVars:{playsinline:1,controls:0,rel:0,modestbranding:1,disablekb:1},events:{onReady:function(){muReady=true;try{muPl.setVolume(muVol)}catch(e){}muMPaint();muSync();muName()},onStateChange:function(e){if(e.data===0){if(muRep){try{muPl.seekTo(0);muPl.playVideo()}catch(x){}}else muGo(1)}muPaint()}}})}
-  function muName(){var id=MU_IDS[muI];if(muNames[id]){muPaint();return}try{fetch("https://www.youtube.com/oembed?format=json&url="+encodeURIComponent("https://www.youtube.com/watch?v="+id)).then(function(r){return r.json()}).then(function(j){muNames[id]=j.title;muPaint()}).catch(function(){})}catch(e){}}
-  function muSync(){if(!muReady||!muPl)return;try{if(muWant&&muTab())muPl.playVideo();else muPl.pauseVideo()}catch(e){}muPaint()}
-  function muPaint(){var t=document.getElementById("muT");if(!t)return;t.textContent=muNames[MU_IDS[muI]]||"Hanuman Chalisa";var on=muWant&&muTab();var eq=document.getElementById("muEq");if(eq)eq.classList.toggle("on",on);var ic=document.getElementById("muIc");if(ic)ic.innerHTML=on?'<path d="M8 5v14M16 5v14"/>':'<path d="M8 5l11 7-11 7z"/>'}
-  function muGo(d){muI=(muI+d+MU_IDS.length)%MU_IDS.length;if(muPl&&muReady){muPl.loadVideoById(MU_IDS[muI]);if(!(muWant&&muTab()))muPl.pauseVideo()}muName();muPaint()}
-  document.addEventListener("click",function(e){var b=e.target.closest("[data-mu]");if(!b)return;var k=b.dataset.mu;
-    if(k==="play"){muWant=!muWant;if(muWant&&!muPl)muLoad();else muSync();muPaint()}else if(k==="next")muGo(1);else if(k==="prev")muGo(-1);else if(k==="rep"){muRep=!muRep;stset("bh_murep",muRep?"1":"0");muRPaint()}else if(k==="mute"){muMu=!muMu;stset("bh_mumute",muMu?"1":"0");muMPaint()}});
-  if(window.MutationObserver)new MutationObserver(function(){muSync()}).observe(document.documentElement,{attributes:true,attributeFilter:["data-tab"]});
+  (function(){var pg=document.getElementById("hpPager"),m=document.createElement("section");m.id="hpMu";m.className="hpg spotify-card";m.innerHTML='<div class="spotify-heading"><b>Listen on Spotify</b><a href="https://open.spotify.com/playlist/42Uv8NmQ9j0UwFWZRDREHg?si=19834eb429294463" target="_blank" rel="noopener noreferrer">Open in Spotify ↗</a></div><iframe id="homeSpotify" title="Be Hanuman playlist on Spotify" width="100%" height="152" loading="lazy" allow="encrypted-media; fullscreen; picture-in-picture" style="border:0;border-radius:12px"></iframe><p class="spotify-note">Optional listening. Playback availability is managed by Spotify.</p>';pg.insertBefore(m,pg.firstChild);function syncSpotify(){var f=document.getElementById("homeSpotify");if(document.documentElement.dataset.tab==="home"){if(!f.getAttribute("src"))f.src="https://open.spotify.com/embed/playlist/42Uv8NmQ9j0UwFWZRDREHg?utm_source=generator";}else f.removeAttribute("src");}new MutationObserver(syncSpotify).observe(document.documentElement,{attributes:true,attributeFilter:["data-tab"]});syncSpotify();})();
+
+ function openThemePicker(){var d=document.getElementById("themePicker");if(!d)return;var selected=(theme==="dk"?"dk":"lt")+"-"+(warm?"w":"c");d.querySelectorAll("[data-theme-choice]").forEach(function(b){b.setAttribute("aria-checked",String(b.dataset.themeChoice===selected));b.tabIndex=b.dataset.themeChoice===selected?0:-1});if(!d.open)d.showModal();d.querySelector('[aria-checked="true"]').focus();}
+ var themeDialog=document.getElementById("themePicker");if(themeDialog){themeDialog.addEventListener("click",function(e){var b=e.target.closest("[data-theme-choice]");if(!b)return;theme=b.dataset.themeChoice.indexOf("dk")===0?"dk":"";warm=b.dataset.themeChoice.endsWith("w")?1:0;setPref("bh_theme",theme);setPref("bh_wf",warm);applyPrefs();openThemePicker();});themeDialog.addEventListener("keydown",function(e){if(!["ArrowDown","ArrowRight","ArrowUp","ArrowLeft"].includes(e.key))return;var bs=Array.from(themeDialog.querySelectorAll("[data-theme-choice]")),i=bs.indexOf(document.activeElement);if(i<0)return;e.preventDefault();bs[(i+(["ArrowDown","ArrowRight"].includes(e.key)?1:3))%4].click();});document.getElementById("themePickerClose").onclick=function(){themeDialog.close()};}
+ function paintDailyHome(){paintGadaGoal();var panel=document.getElementById("dailyPractice");if(!panel)return;var count=+(stk[dkey(new Date())]||0),resume=cur>0&&cur<N-1;document.getElementById("homeChantStart").textContent=resume?"Continue chanting":"Start chanting";document.getElementById("homeTodayCount").textContent=count+" completed "+(count===1?"reading":"readings")+" today";}
+ function paintGadaGoal(){if(!stk)return;var date=dkey(new Date()),count=+(stk[date]||0),target=goal||1,p=document.getElementById("prog"),button=document.getElementById("gadaGoal");if(!p)return;p.style.setProperty("--verse-progress",(Math.min(1,count/target)*100)+"%");p.classList.toggle("goal-kept",count>=target);if(!button){button=document.createElement("button");button.id="gadaGoal";button.type="button";button.innerHTML='<span aria-hidden="true">✧</span><span class="gada-caption" hidden></span>';p.querySelector(".mark").appendChild(button);button.onclick=function(){var caption=button.querySelector(".gada-caption");caption.hidden=!caption.hidden;};}var detail=count+" of "+target+" readings completed today";button.setAttribute("aria-label",detail+". Show daily goal details");button.querySelector(".gada-caption").textContent=detail+(count>=target?" · A little stronger today":"");var stamp="bh_gada_celebrated_"+date;if(count>=target&&sessionStorage.getItem(stamp)!=="1"){sessionStorage.setItem(stamp,"1");p.classList.remove("goal-sparkle");requestAnimationFrame(function(){p.classList.add("goal-sparkle")});}}
+ var pager=document.getElementById("hpPager"),music=document.getElementById("hpMu");
+ if(pager&&music){pager.insertBefore(music,pager.firstChild);var daily=document.createElement("section");daily.id="dailyPractice";daily.innerHTML='<p class="home-eyebrow">YOUR DAILY PRACTICE</p><div class="home-welcome-art">'+uiImg("x01-meditate","home-lotus").replace('alt=""','alt="Hanuman sitting on a lotus"')+'<h2>A little time with Hanuman</h2></div><button id="homeChantStart" class="home-chant">Start chanting</button><p id="homeTodayCount" aria-live="polite"></p><div class="home-secondary"><button data-home-link="learn">Learn the Chalisa</button><button data-home-link="hi">h.i · Stories to reflect with</button></div>';music.after(daily);document.getElementById("homeChantStart").onclick=function(){if(cur>0&&cur<N-1)showTab("chant");else startChant()};daily.addEventListener("click",function(e){var b=e.target.closest("[data-home-link]");if(b)showTab(b.dataset.homeLink)});paintDailyHome();}
+ window.addEventListener("bh:home-refresh",paintDailyHome);
   // ---- Home pager: 3 looping cards ----
   var hpI=0,hpBusy=0;
-  function hpPos(nt){var pg=document.querySelectorAll("#hpPager .hpg"),ds=document.querySelectorAll("#hpDots i");
+  function hpPos(nt){return;var pg=document.querySelectorAll("#hpPager .hpg"),ds=document.querySelectorAll("#hpDots i");
     [].forEach.call(pg,function(e,k){var d=((k-hpI+pg.length+1)%pg.length)-1,old=e._d;e._d=d;
       if(nt||(old!==undefined&&Math.abs(d-old)>1)){e.classList.add("nt");e.style.transform="translateY("+d*100+"%)";void e.offsetHeight;e.classList.remove("nt")}
       else e.style.transform="translateY("+d*100+"%)";
       e.style.opacity=d===0?1:0;e.style.pointerEvents=d===0?"auto":"none";if(d===0)e.scrollTop=0});
     [].forEach.call(ds,function(e,k){e.classList.toggle("on",k===hpI)})}
-  function hpGo(dir){if(hpBusy||document.documentElement.dataset.tab!=="home")return;hpBusy=1;hpI=(hpI+dir+document.querySelectorAll("#hpPager .hpg").length)%document.querySelectorAll("#hpPager .hpg").length;hpPos();setTimeout(function(){hpBusy=0},520)}
+  function hpGo(dir){return;if(hpBusy||document.documentElement.dataset.tab!=="home")return;hpBusy=1;hpI=(hpI+dir+document.querySelectorAll("#hpPager .hpg").length)%document.querySelectorAll("#hpPager .hpg").length;hpPos();setTimeout(function(){hpBusy=0},520)}
   var hpEd=false,hpRT=null;
   var IC_ED='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9a2.1 2.1 0 0 0-3-3L5 17v3z"/><path d="M14.5 7.5l3 3"/></svg>',IC_RS='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5M4.5 4.5v4h4"/></svg>';
   function hpSplit(){var ip=document.getElementById("hpIP");if(!ip)return;var s=sk2Get();
@@ -1524,8 +1479,8 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   if(onbDone()&&cur>0)setTimeout(maybeRemind,500);
   skgPaint();applyPrefs();
 
-document.getElementById("recitationChoice").addEventListener("click",function(e){var b=e.target.closest("[data-recitation]");if(!b)return;stset("bh_recitationChosen","1");var on=b.dataset.recitation==="on";setMusic(on);if(on){muted=false;label()}var rc=document.getElementById("recitationChoice"),next=+rc.dataset.next||1;rc.close();goTo(next);});window.addEventListener("bh:open-learn",function(){showTab("learn")});window.addEventListener("bh:learn-visibility",function(e){var hidden=!!e.detail.hidden;document.documentElement.dataset.learnHidden=String(hidden);TABN=hidden?["chant","home","settings"]:["chant","home","learn","settings"];var tb=document.getElementById("tabbar");tb.style.setProperty("--n",TABN.length);tb.style.setProperty("--i",Math.max(0,TABN.indexOf(curTab)));});window.addEventListener("bh:restore",function(){try{stk=JSON.parse(localStorage.getItem("bh_rounds")||"{}");sk=JSON.parse(localStorage.getItem("bh_sank")||"{}");goal=dgGet();round=parseInt(localStorage.getItem("bh_round")||"1",10);skInfoPaint();hpPaint();stkRender();updateRounds();}catch(e){}});window.addEventListener("bh:open-account",function(){showTab("settings")});
+document.getElementById("recitationChoice").addEventListener("click",function(e){var b=e.target.closest("[data-recitation]");if(!b)return;stset("bh_recitationChosen","1");var on=b.dataset.recitation==="on";setMusic(on);if(on){muted=false;label()}var rc=document.getElementById("recitationChoice"),next=+rc.dataset.next||1;rc.close();goTo(next);});window.addEventListener("bh:open-learn",function(){showTab("learn")});window.addEventListener("bh:learn-visibility",function(e){var hidden=!!e.detail.hidden;document.documentElement.dataset.learnHidden=String(hidden);TABN=hidden?["chant","home","hi","settings"]:["chant","home","learn","hi","settings"];var tb=document.getElementById("tabbar");tb.style.setProperty("--n",TABN.length);tb.style.setProperty("--i",Math.max(0,TABN.indexOf(curTab)));});window.addEventListener("bh:restore",function(){try{stk=JSON.parse(localStorage.getItem("bh_rounds")||"{}");sk=JSON.parse(localStorage.getItem("bh_sank")||"{}");goal=dgGet();round=parseInt(localStorage.getItem("bh_round")||"1",10);skInfoPaint();hpPaint();stkRender();updateRounds();}catch(e){}});window.addEventListener("bh:open-account",function(){showTab("settings")});
 })();
 
 
-document.querySelectorAll("#hpDots i").forEach(function(dot,i){dot.setAttribute("role","button");dot.setAttribute("tabindex","0");dot.setAttribute("aria-label","Feed page "+(i+1));dot.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();dot.click()}})});window.dispatchEvent(new Event("bh:ready"));
+document.querySelectorAll("#hpDots i").forEach(function(dot,i){dot.setAttribute("role","button");dot.setAttribute("tabindex","0");dot.setAttribute("aria-label","Home section "+(i+1));dot.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();dot.click()}})});document.documentElement.dataset.rendererReady="1";window.dispatchEvent(new Event("bh:ready"));

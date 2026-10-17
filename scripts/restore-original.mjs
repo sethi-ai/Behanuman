@@ -1,3 +1,4 @@
+import { upgradeHome } from './home-upgrade.mjs';
 import { upgradeWelcome } from './welcome-upgrade.mjs';
 // Read-only import of the frozen live renderer. All output stays in the test project.
 import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync } from 'node:fs';
@@ -60,14 +61,14 @@ replaceOnce('<i class="br-r"><b id="brN">1</b></i>','');
 replaceOnce('<h3 class="dyk">Did you know?</h3>','');
 replaceOnce('<div class="sk fcv"><h2 id="fcT">','<div class="sk fcv"><div class="fact-chat"><h3 class="dyk">Did You Know</h3><h2 id="fcT">');
 replaceOnce('<p class="mt" id="fcB"></p><button','<p class="mt" id="fcB"></p></div><div class="breath-stage"><button');
-replaceOnce('<span id="brT">Breathe in</span></button>','<span id="brT"></span></button><button type="button" class="breath-skip" id="breathSkip">Skip breathing · Start chanting</button><div class="breath-caption" aria-live="polite"><span>breathe in</span><small>, breathe out</small></div></div>');
+replaceOnce('<span id="brT">Breathe in</span></button>','<span id="brT"></span></button><button type="button" class="breath-skip" id="breathSkip">Start Chanting Now</button><div class="breath-caption" aria-live="polite"><span>breathe in</span><small>, breathe out</small></div></div>');
 replaceOnce('<span>Read your intention</span><p id="fcIt"></p>','<div id="fcIntentBlock"><span>Intention</span><p id="fcIt"></p></div><div id="fcPromiseBlock"><span>Promise</span><p id="fcPt"></p></div><small class="reminder-note">Hold your intention and promise in mind as you breathe in and out.</small>');
 replaceOnce('ii.style.display=sk&&sk.intent?"":"none";document.getElementById("fcIt").textContent=sk&&sk.intent?"\\u201c"+sk.intent+"\\u201d":""','ii.style.display=sk&&(sk.intent||sk.promise)?"":"none";document.getElementById("fcIntentBlock").hidden=!(sk&&sk.intent);document.getElementById("fcPromiseBlock").hidden=!(sk&&sk.promise);document.getElementById("fcIt").textContent=sk&&sk.intent?sk.intent:"";document.getElementById("fcPt").textContent=sk&&sk.promise?sk.promise:""');
 replaceOnce('var c=D[cur];fl.textContent','document.documentElement.dataset.chantCard=String(cur);var c=D[cur];fl.textContent');
 const breathingBlock=/  var brT0=null,brPh=0,brCt=1;[\s\S]*?(?=  window\.__fact=function)/;
 if(!breathingBlock.test(engine))throw Error('Missing original breathing controller');
 engine=engine.replace(breathingBlock,`  var brT0=null,brStep=0;
-  function brPaint(){var orb=document.getElementById("fcR"),text=document.getElementById("brT");if(!orb||!text)return;var done=brStep===6;orb.disabled=!done;orb.classList.toggle("ready",done);orb.classList.toggle("inhale",!done&&brStep%2===0);orb.classList.toggle("exhale",!done&&brStep%2===1);orb.parentElement.classList.toggle("complete",done);var skip=document.getElementById("breathSkip");if(skip)skip.hidden=done;orb.parentElement.classList.toggle("exhaling",!done&&brStep%2===1);text.textContent=done?"Start chanting":brStep%2?"Breathe out":"Breathe in";orb.setAttribute("aria-label",text.textContent);}
+  function brPaint(){var orb=document.getElementById("fcR"),text=document.getElementById("brT");if(!orb||!text)return;var done=brStep===6;orb.disabled=!done;orb.classList.toggle("ready",done);orb.classList.toggle("inhale",!done&&brStep%2===0);orb.classList.toggle("exhale",!done&&brStep%2===1);orb.parentElement.classList.toggle("complete",done);var skip=document.getElementById("breathSkip");if(skip)skip.hidden=done;orb.parentElement.classList.toggle("exhaling",!done&&brStep%2===1);text.textContent=done?"Start Chanting Now":brStep%2?"Breathe out":"Breathe in";orb.setAttribute("aria-label",text.textContent);}
   window.__brStart=function(){clearInterval(brT0);brStep=0;brPaint();brT0=setInterval(function(){if(cur!==0||!homeTab()){clearInterval(brT0);return;}brStep++;brPaint();if(brStep===6)clearInterval(brT0);},4000);};
   document.addEventListener("click",function(e){if(e.target.closest("#breathSkip")||(e.target.closest("#fcR")&&brStep===6)){clearInterval(brT0);goTo(1);}});
 `);
@@ -113,8 +114,10 @@ engine=engine.replaceAll('on Feed','on Home').replaceAll('This Feed has','This c
 replaceOnce('side.innerHTML=sbHTML;', `sbHTML=sbHTML.replace('<div class="sb-list">','<div class="desktop-tabs" aria-label="Desktop navigation"><button data-sidebar-tab="chant">Chant</button><button data-sidebar-tab="home">Home</button><button data-sidebar-tab="learn">Learn</button><button data-sidebar-tab="settings">Settings</button></div><div class="sb-list">');side.innerHTML=sbHTML;side.addEventListener("click",function(e){var b=e.target.closest("[data-sidebar-tab]");if(b)showTab(b.dataset.sidebarTab)});`);
 replaceOnce('curTab=t;document.documentElement.dataset.tab=t;', 'curTab=t;document.documentElement.dataset.tab=t;document.querySelectorAll("[data-sidebar-tab]").forEach(function(b){b.setAttribute("aria-current",b.dataset.sidebarTab===t?"page":"false")});');
 ({body,engine,styles}=upgradeWelcome({body,engine,styles}));
+({body,engine,styles}=upgradeHome({body,engine,styles}));
 mkdirSync('src/restored',{recursive:true});
 mkdirSync('public/restored',{recursive:true});
+const gadaAsset=body.match(/<div id="prog"><div class="mark"><img alt="" src="data:image\/png;base64,([^"]+)"/);if(!gadaAsset)throw Error('Existing gada PNG missing');mkdirSync('public/images/ui',{recursive:true});writeFileSync('public/images/ui/gada-brand.png',Buffer.from(gadaAsset[1],'base64'));
 writeFileSync('src/restored/body.html',body);
 writeFileSync('src/restored/styles.css',styles);
 writeFileSync('public/restored/engine.js',engine);
