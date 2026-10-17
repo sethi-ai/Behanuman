@@ -380,13 +380,8 @@ window.FACTS=[{"id":1,"s":"Origin story","t":"Born of the wind's blessing","st":
   var goal=0,round=1;
   try{goal=parseInt(localStorage.getItem("bh_goal")||"0",10)||0;round=parseInt(localStorage.getItem("bh_round")||"1",10)||1}catch(e){}
   function saveRounds(){try{localStorage.setItem("bh_goal",String(goal));localStorage.setItem("bh_round",String(round))}catch(e){}}
-  // Folder this page lives in, so images load from /BeHanuman/images/ even when the URL has no trailing slash.
-  var BASE=(function(){
-    if(location.protocol==="file:")return "";
-    var p=location.pathname;
-    if(!/\/$/.test(p)&&!/\.[a-z0-9]+$/i.test(p))p+="/";
-    return p.replace(/[^\/]*$/,"");
-  })();
+  // Next serves public assets from the root, including when the reader is at /app.
+  var BASE=location.protocol==="file:"?"":"/";
   function pad(n){return(n<10?"0":"")+n}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 

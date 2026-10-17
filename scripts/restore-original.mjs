@@ -15,6 +15,10 @@ body=body.replaceAll('Reset profile','Reset this device');
 body=body.replace(/<p class="setver">[\s\S]*?<\/p>/g,'');
 if (!engine.includes('var LIVE=/*LIVE*/true')) throw Error('Expected the frozen live variant, not the Learn prototype');
 function replaceOnce(from,to){if(!engine.includes(from))throw Error('Missing source anchor: '+from.slice(0,80));engine=engine.replace(from,to)}
+// Preserve the frozen HTML source; adapt only the generated Next renderer asset base.
+const assetBase=engine.match(/  \/\/ Folder this page lives in[^]*?\n  function pad/);
+if(!assetBase)throw Error('Missing original asset base');
+engine=engine.replace(assetBase[0],"  // Next serves public assets from the root, including when the reader is at /app.\n  var BASE=location.protocol===\"file:\"?\"\":\"/\";\n  function pad");
 body+='<div id="learning-screen"></div>';
 body=body.replace('<div id="cloud-account"></div>','<div id="cloud-account"></div><div id="learning-settings"></div>');
 // P-009 guest-first reading and restored original Learn controller.

@@ -12,7 +12,7 @@ const card=h('div',{style:{display:'flex',width:'100%',height:'100%',background:
   h('div',{style:{fontSize:112,lineHeight:1}},'Be Hanuman'),
   h('div',{style:{fontSize:30,marginTop:28,color:'#5b5852'}},'Chant. Learn. Reflect.'),
   h('div',{style:{fontSize:23,marginTop:42,color:'#77716a'}},'behanuman.com')),
- h('div',{style:{display:'flex',alignItems:'center',justifyContent:'center',width:200,height:430,borderRadius:100,background:'linear-gradient(160deg, #fff7e6, #e9dfce)',border:'1px solid #cfbfa5'}},h('img',{src:gada,width:147,height:350,style:{objectFit:'contain'}})));
+ h('div',{style:{display:'flex',alignItems:'center',justifyContent:'center',width:200,height:430}},h('img',{src:gada,width:147,height:350,style:{objectFit:'contain'}})));
 await fs.writeFile('public/social-preview.png',await image(card,1200,630));
 for(const size of [32,180,192,512]){
  const height=Math.round(size*.76),width=Math.round(height*125/300);

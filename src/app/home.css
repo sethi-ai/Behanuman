@@ -65,3 +65,5 @@ html[data-simple=true] #tabbar #tbRestart{left:auto!important;transform:none!imp
 #hi-screen .hi-citation>summary{cursor:pointer;display:flex;align-items:center;min-height:44px;color:var(--ac)}
 #hi-screen .hi-composer-controls button{background:linear-gradient(#ffb257,#ff861a)!important;border-color:#ffce9a!important;color:#fff!important}
 #hi-screen .hi-stream-inner{padding-bottom:24px}
+/* Keep the original moving gada; remove the added oval progress ring. */
+#prog .mark::after{display:none}

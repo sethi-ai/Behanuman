@@ -2,7 +2,7 @@
 
 Test URL: https://www.behanuman.com/ . Original app https://hanuman.dyut.si/ remains separate.
 
-Current tested frontend is aou2rx439 / dpl_2UTBWtheK9P1o1FZgFehJWWAq1FA. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
+Current tested frontend is gqzcpw32y / dpl_4MLgq13veaxKb5oo6So2fH7KYWUJ. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
 
 ## Phone journey
 
@@ -26,4 +26,6 @@ The copied source dataset is retained separately under its upstream ODbL1.0 noti
 Rollout checks use mocked provider responses; no additional paid end-to-end call was made for the public-access update. Anonymous/deleted identities remain blocked; non-QA authentication is covered by tests. The persistent app allowance reserves one cent per attempt, stops at500, keeps failed reservations and has no time-based reset. This is not an account-wide invoice cap.
 
 
-Latest targeted test release: three lifetime Claude attempts per account, across devices, with paid errors counting and free story lookup unchanged. All 66 automated tests pass; no new paid end-to-end call. Chat uses shared themes and in-memory conversation bubbles; Learn no longer has the h.i banner. Explicit Find a story then Reflect with Claude remains. See the final targeted update in RELEASE-2026-10-17.md.
+Latest targeted test release: three lifetime Claude attempts per account, across devices, with paid errors counting and free story lookup unchanged. All 69 automated tests pass; no new paid end-to-end call. Chat uses shared themes and in-memory conversation bubbles; Learn no longer has the h.i banner. Explicit Find a story then Reflect with Claude remains. See the final targeted update in RELEASE-2026-10-17.md.
+
+Artwork correction: /app now uses root assets; distinct Chaupai1/2 and all44 dark images checked in the published browser. Reader gada oval and wide-share capsule removed; square WhatsApp icon unchanged. Archive consolidation remains pending clarification.
