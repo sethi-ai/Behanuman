@@ -67,3 +67,6 @@ html[data-simple=true] #tabbar #tbRestart{left:auto!important;transform:none!imp
 #hi-screen .hi-stream-inner{padding-bottom:24px}
 /* Keep the original moving gada; remove the added oval progress ring. */
 #prog .mark::after{display:none}
+
+/* Spotify is temporarily hidden; its configuration remains available to restore. */
+#hpPager #hpMu[hidden]{display:none!important}
