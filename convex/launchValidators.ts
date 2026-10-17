@@ -1,0 +1,3 @@
+import {v} from 'convex/values';
+export const launchTotalsValidator=v.object({authenticatedAccounts:v.number(),loginCompletions:v.number(),meaningfulAccounts:v.number(),completedReadings:v.number(),learnedVerseActions:v.number(),guestDevices:v.number(),linkedGuestDevices:v.optional(v.number()),emailBackedMeaningfulAccounts:v.optional(v.number()),newAccountFirstUses:v.optional(v.number())});
+export const emptyLaunchTotals=()=>({authenticatedAccounts:0,loginCompletions:0,meaningfulAccounts:0,completedReadings:0,learnedVerseActions:0,guestDevices:0,linkedGuestDevices:0,emailBackedMeaningfulAccounts:0,newAccountFirstUses:0});

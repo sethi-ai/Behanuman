@@ -10,7 +10,15 @@
 
 import type * as accountDeletion from "../accountDeletion.js";
 import type * as auth from "../auth.js";
+import type * as hi from "../hi.js";
+import type * as hiGatewayCheck from "../hiGatewayCheck.js";
+import type * as hiPolicy from "../hiPolicy.js";
 import type * as http from "../http.js";
+import type * as launchTracking from "../launchTracking.js";
+import type * as launchValidators from "../launchValidators.js";
+import type * as learning from "../learning.js";
+import type * as learningValidators from "../learningValidators.js";
+import type * as onboardingMetrics from "../onboardingMetrics.js";
 import type * as practice from "../practice.js";
 import type * as redirects from "../redirects.js";
 
@@ -23,7 +31,15 @@ import type {
 declare const fullApi: ApiFromModules<{
   accountDeletion: typeof accountDeletion;
   auth: typeof auth;
+  hi: typeof hi;
+  hiGatewayCheck: typeof hiGatewayCheck;
+  hiPolicy: typeof hiPolicy;
   http: typeof http;
+  launchTracking: typeof launchTracking;
+  launchValidators: typeof launchValidators;
+  learning: typeof learning;
+  learningValidators: typeof learningValidators;
+  onboardingMetrics: typeof onboardingMetrics;
   practice: typeof practice;
   redirects: typeof redirects;
 }>;
@@ -54,4 +70,6 @@ export declare const internal: FilterApi<
   FunctionReference<any, "internal">
 >;
 
-export declare const components: {};
+export declare const components: {
+  rateLimiter: import("@convex-dev/rate-limiter/_generated/component.js").ComponentApi<"rateLimiter">;
+};

@@ -54,3 +54,18 @@ test("account deletion blocks stale tokens and preserves other accounts", async 
     expect((await b.query(api.practice.get, {}))?.state?.snapshot.bh_user).toBe(initial.bh_user);
   } finally { vi.useRealTimers(); }
 });
+
+test("new journey commitments sync safely and demo phone fields are rejected", async()=>{
+ const {a,t}=await fixture();
+ const journey=JSON.stringify({tab:'learn',days:21,start:'2026-10-16'});
+ const sankalp=JSON.stringify({days:3,start:'2026-10-16',intent:'',promise:''});
+ const state=await a.mutation(api.practice.bootstrap,{snapshot:{...initial,bh_journey:journey,bh_sk2:sankalp},deviceId:'welcome-v3',merge:true});
+ expect(state.snapshot.bh_journey).toBe(journey);
+ expect(JSON.parse(state.snapshot.bh_sk2).days).toBe(3);
+ await expect(a.mutation(api.practice.save,{changes:{bh_demo_profile:'{"phone":"9999999999"}'},revision:state.revision})).rejects.toThrow('Invalid practice data');
+ await expect(a.mutation(api.practice.save,{changes:{bh_user:'{"name":"A","phone":"9999999999"}'},revision:state.revision})).rejects.toThrow('Invalid profile');
+ await expect(a.mutation(api.practice.save,{changes:{bh_journey:'{"tab":"learn","days":7,"start":null}'},revision:state.revision})).rejects.toThrow('Invalid journey');
+ expect(await t.query(api.practice.get,{})).toBeNull();
+});
+
+test("all wheel durations sync; invalid durations are rejected",async()=>{const {a}=await fixture();let state=await a.mutation(api.practice.bootstrap,{snapshot:initial,deviceId:'wheel',merge:true});for(let days=1;days<=21;days++){const result=await a.mutation(api.practice.save,{changes:{bh_journey:JSON.stringify({tab:'chant',days,start:'2026-10-16'}),bh_sk2:JSON.stringify({days,start:'2026-10-16',intent:'',promise:''})},revision:state.revision});expect(result.saved).toBe(true);state=result.state;}for(const days of [0,22,2.5])await expect(a.mutation(api.practice.save,{changes:{bh_journey:JSON.stringify({tab:'chant',days,start:'2026-10-16'})},revision:state.revision})).rejects.toThrow('Invalid journey');});

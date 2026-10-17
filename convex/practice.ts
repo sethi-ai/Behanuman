@@ -1,9 +1,10 @@
+import {recordLaunchUse} from './launchTracking';
 import { v, ConvexError } from "convex/values";
 import { getAuthUserId } from "@convex-dev/auth/server";
 import { query, mutation, type MutationCtx, type QueryCtx } from "./_generated/server";
 import type { Id } from "./_generated/dataModel";
 
-const KEYS = new Set(["bh_user", "bh_sk2", "bh_dg", "bh_onb", "bh_rounds", "bh_sank"]);
+const KEYS = new Set(["bh_user", "bh_sk2", "bh_dg", "bh_onb", "bh_rounds", "bh_sank", "bh_journey"]);
 const snapshotValidator = v.record(v.string(), v.string());
 const stateValidator = v.object({ snapshot: snapshotValidator, revision: v.number() });
 const datePattern = /^\d{4}-\d{2}-\d{2}$/;
@@ -18,11 +19,12 @@ function validate(snapshot: Record<string, string>) {
   for (const [key, value] of Object.entries(snapshot)) {
     if (!KEYS.has(key) || value.length > 80_000) throw new ConvexError("Invalid practice data.");
     if (key === "bh_rounds" || key === "bh_sank") counts(value);
-    if (key === "bh_user" && value) { const user = JSON.parse(value); if (typeof user.name !== "string" || user.name.length > 60) throw new ConvexError("Invalid profile."); }
+    if (key === "bh_user" && value) { const user = JSON.parse(value); if (typeof user.name !== "string" || user.name.length > 60 || Object.keys(user).some(key=>key!=="name")) throw new ConvexError("Invalid profile."); }
     if (key === "bh_sk2" && value) {
       const sankalp = JSON.parse(value);
-      if (!sankalp || typeof sankalp !== "object" || ![11, 21, 40].includes(sankalp.days) || typeof sankalp.start !== "string" || !datePattern.test(sankalp.start) || typeof sankalp.intent !== "string" || sankalp.intent.length > 140 || typeof sankalp.promise !== "string" || sankalp.promise.length > 140) throw new ConvexError("Invalid sankalp.");
+      if (!sankalp || typeof sankalp !== "object" || !(sankalp.days===40||(Number.isInteger(sankalp.days)&&sankalp.days>=1&&sankalp.days<=21)) || typeof sankalp.start !== "string" || !datePattern.test(sankalp.start) || typeof sankalp.intent !== "string" || sankalp.intent.length > 140 || typeof sankalp.promise !== "string" || sankalp.promise.length > 140) throw new ConvexError("Invalid sankalp.");
     }
+    if(key === "bh_journey"){const j=JSON.parse(value);if(!j||!Object.keys(j).every(k=>["tab","days","start"].includes(k))||!["chant","learn"].includes(j.tab)||!(j.days===null||(Number.isInteger(j.days)&&j.days>=1&&j.days<=21))||(j.tab==="learn"&&j.days!==null&&j.days!==21)||!(j.start===null||typeof j.start==="string"&&datePattern.test(j.start)))throw new ConvexError("Invalid journey.");}
     if (key === "bh_dg" && !["1", "3", "7", "11", "21"].includes(value)) throw new ConvexError("Invalid daily goal.");
   }
 }
@@ -93,7 +95,7 @@ export const save = mutation({
   },
 });
 export const recordRound = mutation({
-  args: { eventId: v.string(), date: v.string() }, returns: stateValidator,
+  args: { eventId: v.string(), date: v.string(),origin:v.optional(v.string()),occurredAt:v.optional(v.number()),qa:v.optional(v.boolean()) }, returns: stateValidator,
   handler: async (ctx, args) => {
     const userId = await currentUser(ctx); if (!userId) throw new ConvexError("Please sign in.");
     if (!datePattern.test(args.date) || args.eventId.length < 8 || args.eventId.length > 100) throw new ConvexError("Invalid round.");
@@ -101,11 +103,12 @@ export const recordRound = mutation({
     if (!state) throw new ConvexError("Load your account first.");
     const prior = await ctx.db.query("roundEvents").withIndex("by_userId_and_eventId", q => q.eq("userId", userId).eq("eventId", args.eventId)).unique();
     if (prior) return { snapshot: state.snapshot, revision: state.revision };
-    await ctx.db.insert("roundEvents", { userId, ...args });
+    await ctx.db.insert("roundEvents", { userId, eventId:args.eventId, date:args.date });
     const rounds = counts(state.snapshot.bh_rounds); rounds[args.date] = (rounds[args.date] ?? 0) + 1;
     const snapshot = { ...state.snapshot, bh_rounds: JSON.stringify(rounds) }, revision = state.revision + 1; validate(snapshot);
     await ctx.db.patch(state._id, { snapshot, revision, updatedAt: Date.now() });
     await activity(ctx, userId, false);
+    await recordLaunchUse(ctx,userId,'round:'+args.eventId,'round',args.origin,args.occurredAt,args.qa);
     const date = today(), metric = await ctx.db.query("dailyMetrics").withIndex("by_date", q => q.eq("date", date)).unique();
     if (metric) await ctx.db.patch(metric._id, { rounds: metric.rounds + 1 });
     return { snapshot, revision };

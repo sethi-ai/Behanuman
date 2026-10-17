@@ -1,0 +1,53 @@
+/* Desktop workspace; shared mobile colours, type and glass surfaces. */
+@media (min-width:1000px) and (hover:hover) and (pointer:fine){
+ html,body{overflow:hidden;background:var(--bg,#eeede8)}
+ body{width:100%;margin:0;transform:none!important;box-shadow:none}
+ #side{display:flex!important;left:16px;top:16px;bottom:16px;width:232px;border:1px solid #ffffff88;border-radius:28px;background:linear-gradient(155deg,#ffffff66,#ffffff22);backdrop-filter:blur(24px) saturate(1.8);box-shadow:0 10px 34px #0000000d,inset 0 1px 0 #ffffffbb;color:var(--t1);overflow:hidden}
+ #side .sb-h{padding:22px 20px 16px}#side .sb-h b{color:var(--t1);font:500 29px Khand,sans-serif}#side .sb-h span{color:var(--t2)}
+ #side .sb-list{padding:4px 12px;box-shadow:none;scrollbar-width:thin}
+ #side .sb-i{min-height:38px;padding:9px 12px 9px 32px;margin:3px 0;border:1px solid transparent;border-radius:16px;color:var(--t1);box-shadow:none}
+ #side .sb-i em{font:500 12px/1.4 Inter,sans-serif;letter-spacing:.04em;color:inherit}
+ #side .sb-i:before{width:7px;height:7px;margin-top:-3.5px;left:13px;background:#a0958844;box-shadow:none}
+ #side .sb-i:hover{background:#ffffff55}#side .sb-i.cur{background:linear-gradient(#ffffffaa,#ffffff55);border-color:#ffffff88;box-shadow:0 3px 10px #00000008;color:#a45020}
+ #side .sb-i.cur:before{background:#ed8734;box-shadow:0 0 7px #ed873433}
+ #side .sb-f{padding:12px 14px 16px;border-top:1px solid #ffffff66}#side .sb-l button,#side .sb-b{border:1px solid #ffffff88;border-radius:18px;background:linear-gradient(#ffffff77,#ffffff22);box-shadow:inset 0 1px 0 #ffffff99,0 3px 10px #00000008;color:var(--t1)}
+ #side .sb-l button.on{background:linear-gradient(#ffa34e,#f58216);color:white;border-color:#ffbb77}
+ #side .sb-sw{min-height:34px;color:var(--t1);font:400 12px Inter,sans-serif}
+ #stage{left:280px}.wrap{max-width:860px}
+ #top{left:280px;right:0;width:auto;margin:0;padding-top:22px}
+ #tabbar{left:calc(50% + 140px);width:440px;bottom:18px}
+ #foot,#nudge{left:calc(50% + 140px)}#prog{left:292px}
+ html #trends,html #settings,html #learning-screen,html #feed{left:280px!important}
+ #navbtns{left:auto;right:28px;gap:12px}
+ #navbtns button{width:46px;height:46px;border:1px solid #ffffff99;border-radius:50%;background:linear-gradient(#ffffff88,#ffffff33);box-shadow:inset 0 1px 0 #ffffffbb,0 4px 14px #00000012;color:#a45020;font:500 20px Inter,sans-serif;backdrop-filter:blur(22px)}
+ #onb .onb-card{width:min(100%,740px);max-width:740px;padding:30px;box-sizing:border-box}#onb .intro-features{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}#onb .intro-features>div{padding:20px}
+ #settings{padding:32px 36px 120px}#settings>*{width:min(100%,860px);max-width:860px;box-sizing:border-box}
+ .hpg{padding-left:36px;padding-right:36px}.hpg>*{width:min(100%,800px)}
+ #hp1b{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-content:center;justify-content:center;gap:28px}#hp1b>*{width:100%;max-width:520px}#hp1b #hpIP{justify-self:end}#hp1b .hgrp{justify-self:start}
+ #hpSup .hs-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.support-policies{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}.support-policies details{margin:0}
+ .learning-content{max-width:960px;padding:44px 40px 130px}.learning-lessons{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.learning-lessons button{min-height:102px;padding:18px}
+ .learning-verse .learning-art{float:right;width:220px;height:220px;margin:18px 0 24px 36px}.learning-verse h4:nth-of-type(4){clear:both}.learning-reflection{clear:both}
+ html.dk #side{background:linear-gradient(#ffffff14,#ffffff06);border-color:#ffffff22;box-shadow:0 10px 34px #0003,inset 0 1px 0 #ffffff22}html.dk #side .sb-i.cur{background:linear-gradient(#ffffff22,#ffffff0a);border-color:#ffffff33;color:#ffae76}html.dk #side .sb-l button:not(.on),html.dk #side .sb-b,html.dk #navbtns button{background:linear-gradient(#ffffff22,#ffffff08);border-color:#ffffff33;color:var(--t1);box-shadow:inset 0 1px 0 #ffffff22,0 3px 12px #0002}
+ button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid #df8039;outline-offset:3px}
+}
+@media (min-width:1000px) and (max-width:1199px) and (pointer:fine){.learning-lessons{grid-template-columns:repeat(2,minmax(0,1fr))}.support-policies{grid-template-columns:1fr}#hp1b{display:flex}.learning-verse .learning-art{width:170px;height:170px}}
+
+.desktop-tabs{display:none}
+@media (min-width:1000px) and (hover:hover) and (pointer:fine){
+ #side{width:272px}#stage,#top{left:312px}html #trends,html #learning-screen,html #feed{left:312px!important}#tabbar,#foot,#nudge{left:calc(50% + 156px)}#prog{left:320px}
+ .desktop-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 14px 14px}
+ .desktop-tabs button,#side .sb-sw{min-height:44px;border-radius:22px;border:1px solid #ffffff88;background:linear-gradient(#ffffff88,#ffffff33);box-shadow:inset 0 1px 0 #fff9,0 3px 10px #00000008;font:500 13px Inter,sans-serif;color:var(--t1)}
+ .desktop-tabs button[aria-current=page]{color:#ac531f;background:linear-gradient(#fff9,#fff4);border-color:#e9974d88}
+ #side .sb-sw .sw-tr{display:none}#side .sb-sw{justify-content:center;width:100%;margin-top:6px}#side .sb-l{display:none}#sbe,#sbm,#sbu,#sbp,#sbr,#sbs{display:none!important}
+ html[data-tab=settings] #side .sb-list,html[data-tab=settings] #side .sb-f{visibility:hidden}
+ html #settings{left:16px!important;right:auto!important;top:224px!important;bottom:16px!important;width:272px!important;height:auto!important;z-index:550;padding:10px 16px 24px!important;box-sizing:border-box;border-radius:0 0 28px 28px;background:var(--bg);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+ #settings>*{max-width:100%;width:100%}#settings #setArt,#settings #setHi,#settings>h2{display:none}#settings .set2{width:100%;padding:0!important}#settings .sg{padding:12px 0!important}#settings .row{gap:6px;flex-wrap:wrap}#settings .row>span{font:500 13px/1.5 Inter,sans-serif!important}#settings .pbs>button.on{min-height:44px!important;height:44px!important}#settings .cloud-account{margin:0 0 16px;padding:0}#settings p{font-size:12px;line-height:1.6;overflow-wrap:anywhere}#settings button{min-height:44px}#settings h4{font:500 16px Khand,sans-serif}#settings .cloud-account button,#settings #learning-settings button{width:100%;margin:4px 0}#settings .sg-n{display:none}
+ html.dk .desktop-tabs button,html.dk #side .sb-sw{background:linear-gradient(#ffffff22,#ffffff08);border-color:#ffffff33;color:var(--t1)}html.dk .desktop-tabs button[aria-current=page]{color:#ffae76;border-color:#ffae7677}
+ html[data-learn-hidden=true] .desktop-tabs [data-sidebar-tab=learn]{display:none}
+}
+@media (min-width:1000px) and (hover:hover) and (pointer:fine){
+ html #settings{justify-content:flex-start}
+ #stage .wrap{box-sizing:border-box;padding-left:36px;padding-right:76px}
+ #stage .verse span{white-space:normal!important;overflow-wrap:break-word}
+ #onb h2:focus{outline:none}
+}

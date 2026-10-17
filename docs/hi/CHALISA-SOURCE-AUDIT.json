@@ -1,0 +1,1039 @@
+{
+  "work": "Hanuman Chalisa",
+  "status": "pending_source_review",
+  "runtimeEligible": false,
+  "verses": [
+    {
+      "id": "D0",
+      "work": "Hanuman Chalisa",
+      "label": "Doha 1",
+      "originalText": [
+        "श्रीगुरु चरन सरोज रज, निज मनु मुकुरु सुधारि।",
+        "बरनउँ रघुबर बिमल जसु, जो दायकु फल चारि॥"
+      ],
+      "transliteration": [
+        "Shri guru charan saroj raj, nij manu mukuru sudhaari",
+        "Baranau Raghubar bimal jasu, jo daayaku phal chaari"
+      ],
+      "existingMeaning": "Having cleaned the mirror of my mind with the dust of my teacher’s lotus feet, I describe the pure glory of Lord Rama, which grants the four aims of life.",
+      "existingExplanation": "The “mirror” is the mind: pride, confusion, and selfishness can cloud our understanding. Honouring the teacher represents humility and readiness to learn. The four aims are dharma, living rightly; artha, earning and sustaining life; kama, love and fulfilment; and moksha, spiritual freedom.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "D2",
+      "work": "Hanuman Chalisa",
+      "label": "Doha 2",
+      "originalText": [
+        "बुद्धिहीन तनु जानि कै, सुमिरौं पवन-कुमार।",
+        "बल बुद्धि बिद्या देहु मोहि, हरहु कलेस बिकार॥"
+      ],
+      "transliteration": [
+        "Buddhiheen tanu jaanike, sumirau Pavan Kumaar",
+        "Bal buddhi vidyaa dehu mohi, harahu kalesh vikaar"
+      ],
+      "existingMeaning": "Knowing the limits of my understanding, I remember Hanuman, the son of the Wind God. Give me strength, sound judgement, and knowledge, and remove my suffering and harmful tendencies.",
+      "existingExplanation": "The prayer asks for more than physical power. It asks for the courage to act, the wisdom to choose well, and the knowledge to understand. Calling oneself “without wisdom” expresses humility before the divine.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C1",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 1",
+      "originalText": [
+        "जय हनुमान ज्ञान गुन सागर।",
+        "जय कपीस तिहुँ लोक उजागर॥"
+      ],
+      "transliteration": [
+        "Jai Hanumaan gyaan gun saagar",
+        "Jai Kapees tihun lok ujaagar"
+      ],
+      "existingMeaning": "Glory to Hanuman, whose knowledge and virtues are as vast as an ocean. Glory to the lord of the vanaras, whose greatness shines through the three worlds.",
+      "existingExplanation": "The vanaras are the monkey-like beings who help Rama in the Ramayana. The three worlds broadly mean the heavenly, earthly, and lower realms. Hanuman is praised first for wisdom and character, showing that his greatness includes much more than strength.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C2",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 2",
+      "originalText": [
+        "राम दूत अतुलित बल धामा।",
+        "अंजनि-पुत्र पवनसुत नामा॥"
+      ],
+      "transliteration": [
+        "Raam doot atulit bal dhaamaa",
+        "Anjani-putra Pavansut naamaa"
+      ],
+      "existingMeaning": "You are Rama’s messenger and the home of incomparable strength. You are Anjana’s son, also known as the son of the Wind God.",
+      "existingExplanation": "These names describe Hanuman’s parentage and divine connection. “Rama’s messenger” also expresses his purpose: he uses his abilities to serve Rama faithfully.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C3",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 3",
+      "originalText": [
+        "महावीर बिक्रम बजरंगी।",
+        "कुमति निवार सुमति के संगी॥"
+      ],
+      "transliteration": [
+        "Mahaabeer bikram Bajrangee",
+        "Kumati nivaar sumati ke sangee"
+      ],
+      "existingMeaning": "You are a great hero of extraordinary courage, with a body strong as a thunderbolt. You dispel harmful thinking and support good judgement.",
+      "existingExplanation": "“Bajrangi” refers to his thunderbolt-like strength. The second line turns attention inward: a person may need help overcoming confused or destructive thoughts as much as an outside enemy.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C4",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 4",
+      "originalText": [
+        "कंचन बरन बिराज सुबेसा।",
+        "कानन कुंडल कुंचित केसा॥"
+      ],
+      "transliteration": [
+        "Kanchan baran biraaj subesaa",
+        "Kaanan kundal kunchit kesaa"
+      ],
+      "existingMeaning": "Your golden form shines in beautiful attire. You wear earrings, and your hair is curly.",
+      "existingExplanation": "This verse describes Hanuman’s appearance for devotional contemplation. It gives the person praying a vivid image on which to rest their attention.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C5",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 5",
+      "originalText": [
+        "हाथ बज्र औ ध्वजा बिराजै।",
+        "काँधे मूँज जनेऊ साजै॥"
+      ],
+      "transliteration": [
+        "Haath bajra au dhvajaa biraajai",
+        "Kaandhe moonj janeoo saajai"
+      ],
+      "existingMeaning": "A thunderbolt-like weapon and a flag adorn your hands, while a sacred thread made of munja grass rests across your shoulder.",
+      "existingExplanation": "The weapon expresses strength, and the flag suggests his sacred mission. The sacred thread represents religious discipline and learning. Together, these features portray a warrior whose power is guided by spiritual commitment.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C6",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 6",
+      "originalText": [
+        "शंकर सुवन केसरी नंदन।",
+        "तेज प्रताप महा जग बंदन॥"
+      ],
+      "transliteration": [
+        "Shankar suvan Kesaree nandan",
+        "Tej prataap mahaa jag bandan"
+      ],
+      "existingMeaning": "You are Shankar’s offspring and Kesari’s son. Your radiance and greatness are honoured throughout the world.",
+      "existingExplanation": "Shankar is Shiva. This line expresses Hanuman’s connection with Shiva; many traditions understand Hanuman as a manifestation of Shiva. Kesari is his earthly father.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C7",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 7",
+      "originalText": [
+        "विद्यावान गुनी अति चातुर।",
+        "राम काज करिबे को आतुर॥"
+      ],
+      "transliteration": [
+        "Vidyaavaan gunee ati chaatur",
+        "Raam kaaj karibe ko aatur"
+      ],
+      "existingMeaning": "You are learned, virtuous, and exceptionally capable. You are always eager to carry out Rama’s work.",
+      "existingExplanation": "Hanuman combines knowledge with practical judgement. His learning becomes useful through action, and his eagerness comes from devotion.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C8",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 8",
+      "originalText": [
+        "प्रभु चरित्र सुनिबे को रसिया।",
+        "राम लखन सीता मन बसिया॥"
+      ],
+      "transliteration": [
+        "Prabhu charitra sunibe ko rasiyaa",
+        "Raam Lakhan Seetaa man basiyaa"
+      ],
+      "existingMeaning": "You delight in hearing about the Lord’s deeds. Rama, Lakshmana, and Sita dwell within your heart.",
+      "existingExplanation": "Hanuman’s devotion is a source of joy. Their presence in his heart means that love for them continually shapes his thoughts and actions.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C9",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 9",
+      "originalText": [
+        "सूक्ष्म रूप धरि सियहिं दिखावा।",
+        "बिकट रूप धरि लंक जरावा॥"
+      ],
+      "transliteration": [
+        "Sookshma roop dhari Siyahin dikhaavaa",
+        "Bikat roop dhari Lank jaraavaa"
+      ],
+      "existingMeaning": "You took a small form to appear before Sita, and a fearsome form to burn Lanka.",
+      "existingExplanation": "When meeting Sita, Hanuman approaches in a way that will reassure her. When confronting Ravana’s forces, he reveals his power. A personal lesson is that wisdom includes knowing when gentleness is needed and when firmness is needed.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C10",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 10",
+      "originalText": [
+        "भीम रूप धरि असुर सँहारे।",
+        "रामचंद्र के काज सँवारे॥"
+      ],
+      "transliteration": [
+        "Bheem roop dhari asur sanhaare",
+        "Raamchandra ke kaaj sanvaare"
+      ],
+      "existingMeaning": "Taking a mighty form, you defeated the demons and accomplished Rama’s tasks.",
+      "existingExplanation": "This recalls Hanuman’s role in the struggle against Ravana. His courage serves the rescue of Sita and Rama’s cause.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C11",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 11",
+      "originalText": [
+        "लाय सजीवन लखन जियाये।",
+        "श्रीरघुबीर हरषि उर लाये॥"
+      ],
+      "transliteration": [
+        "Laay sajeevan Lakhan jiyaaye",
+        "Shree Raghubeer harashi ur laaye"
+      ],
+      "existingMeaning": "You brought the life-restoring herb and revived Lakshmana. Rama joyfully embraced you.",
+      "existingExplanation": "This refers to Hanuman’s rescue of Lakshmana after he is gravely wounded. Rama’s embrace expresses love and gratitude for Hanuman’s service.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C12",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 12",
+      "originalText": [
+        "रघुपति कीन्ही बहुत बड़ाई।",
+        "तुम मम प्रिय भरतहि सम भाई॥"
+      ],
+      "transliteration": [
+        "Raghupati keenhee bahut badaaee",
+        "Tum mam priya Bharatahi sam bhaaee"
+      ],
+      "existingMeaning": "Rama praised you greatly, saying, “You are as dear to me as my brother Bharata.”",
+      "existingExplanation": "Bharata is deeply beloved by Rama. Comparing Hanuman with him recognises Hanuman as someone held close in love, beyond his role as a servant or messenger.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C13",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 13",
+      "originalText": [
+        "सहस बदन तुम्हरो जस गावैं।",
+        "अस कहि श्रीपति कंठ लगावैं॥"
+      ],
+      "transliteration": [
+        "Sahas badan tumharo jas gaavain",
+        "As kahi Shreepati kanth lagaavain"
+      ],
+      "existingMeaning": "Rama declares that the thousand-headed serpent sings your glory, and embraces you.",
+      "existingExplanation": "The thousand-headed serpent is Shesha, also called Ananta. The image suggests that Hanuman’s greatness deserves praise from countless mouths. “Shripati” is a name of Vishnu, used here for Rama.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C14",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 14",
+      "originalText": [
+        "सनकादिक ब्रह्मादि मुनीसा।",
+        "नारद सारद सहित अहीसा॥"
+      ],
+      "transliteration": [
+        "Sanakaadik Brahmaadi muneesaa",
+        "Naarad Saarad sahit Aheesaa"
+      ],
+      "existingMeaning": "Sages such as Sanaka, Brahma, Narada, Saraswati, and Shesha praise your greatness.",
+      "existingExplanation": "This verse names beings associated with spiritual wisdom, creation, music, and learning. Its thought continues into the next verse.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C15",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 15",
+      "originalText": [
+        "जम कुबेर दिगपाल जहाँ ते।",
+        "कबि कोबिद कहि सके कहाँ ते॥"
+      ],
+      "transliteration": [
+        "Jam Kuber digpaal jahaan te",
+        "Kabi kobid kahi sake kahaan te"
+      ],
+      "existingMeaning": "Even Yama, Kubera, the guardians of the directions, and accomplished poets and scholars cannot fully describe your glory.",
+      "existingExplanation": "Yama is associated with death and justice; Kubera with wealth. Taken with verse 14, the meaning is that even the wisest and most powerful beings cannot exhaust Hanuman’s praise.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C16",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 16",
+      "originalText": [
+        "तुम उपकार सुग्रीवहिं कीन्हा।",
+        "राम मिलाय राज पद दीन्हा॥"
+      ],
+      "transliteration": [
+        "Tum upkaar Sugreevahin keenhaa",
+        "Raam milaay raaj pad deenhaa"
+      ],
+      "existingMeaning": "You helped Sugriva by bringing him to Rama, leading to his recovery of the throne.",
+      "existingExplanation": "Sugriva had lost his kingdom to his brother Vali. Hanuman helped establish the friendship through which Rama restored Sugriva’s position. The verse praises Hanuman as someone who brings help to another person.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C17",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 17",
+      "originalText": [
+        "तुम्हरो मंत्र बिभीषन माना।",
+        "लंकेस्वर भए सब जग जाना॥"
+      ],
+      "transliteration": [
+        "Tumharo mantra Bibheeshan maanaa",
+        "Lankeshwar bhaye sab jag jaanaa"
+      ],
+      "existingMeaning": "Vibhishana accepted your counsel and became king of Lanka, as the whole world knows.",
+      "existingExplanation": "Vibhishana is Ravana’s brother, who chooses Rama’s side. “Mantra” here means advice or counsel. The verse honours guidance that helps someone choose a righteous path.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C18",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 18",
+      "originalText": [
+        "जुग सहस्र जोजन पर भानू।",
+        "लील्यो ताहि मधुर फल जानू॥"
+      ],
+      "transliteration": [
+        "Jug sahasra jojan par bhaanoo",
+        "Leelyo taahi madhur phal jaanoo"
+      ],
+      "existingMeaning": "Though the sun was an immense distance away, you swallowed it, thinking it was a sweet fruit.",
+      "existingExplanation": "This recalls the traditional childhood story of Hanuman reaching for the sun. The enormous distance is expressed through traditional terms and measures. The verse celebrates his astonishing childhood power.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C19",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 19",
+      "originalText": [
+        "प्रभु मुद्रिका मेलि मुख माहीं।",
+        "जलधि लाँघि गए अचरज नाहीं॥"
+      ],
+      "transliteration": [
+        "Prabhu mudrikaa meli mukh maahin",
+        "Jaladhi laanghi gaye acharaj naahin"
+      ],
+      "existingMeaning": "Carrying Rama’s ring in your mouth, you crossed the ocean—an achievement entirely fitting for you.",
+      "existingExplanation": "The ring was a token by which Sita could recognise Hanuman as Rama’s messenger. He crosses the ocean carrying both that proof and the responsibility entrusted to him.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C20",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 20",
+      "originalText": [
+        "दुर्गम काज जगत के जेते।",
+        "सुगम अनुग्रह तुम्हरे तेते॥"
+      ],
+      "transliteration": [
+        "Durgam kaaj jagat ke jete",
+        "Sugam anugraha tumhare tete"
+      ],
+      "existingMeaning": "The world’s difficult tasks become easier through your grace.",
+      "existingExplanation": "The devotee expresses trust in Hanuman’s help when facing obstacles. A personal reading is that devotion can give courage and steadiness to undertake work that initially feels beyond one’s ability.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C21",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 21",
+      "originalText": [
+        "राम दुआरे तुम रखवारे।",
+        "होत न आज्ञा बिनु पैसारे॥"
+      ],
+      "transliteration": [
+        "Raam duaare tum rakhvaare",
+        "Hot na aagyaa binu paisaare"
+      ],
+      "existingMeaning": "You guard Rama’s doorway; no one enters without your permission.",
+      "existingExplanation": "The image presents Hanuman as a guide to Rama. Spiritually, his qualities—humility, faithful service, and love—show the devotee a way to approach the divine.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C22",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 22",
+      "originalText": [
+        "सब सुख लहै तुम्हारी सरना।",
+        "तुम रक्षक काहू को डर ना॥"
+      ],
+      "transliteration": [
+        "Sub sukh lahai tumhaaree sharnaa",
+        "Tum rakshak kaahoo ko dar naa"
+      ],
+      "existingMeaning": "Those who take refuge in you find happiness. With you as their protector, they need not fear.",
+      "existingExplanation": "Taking refuge means placing trust in Hanuman’s care. The verse expresses the reassurance of feeling supported through difficulty.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C23",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 23",
+      "originalText": [
+        "आपन तेज सम्हारो आपै।",
+        "तीनों लोक हाँक तें काँपै॥"
+      ],
+      "transliteration": [
+        "Aapan tej samhaaro aapai",
+        "Teenon lok haank te kaanpai"
+      ],
+      "existingMeaning": "Only you can contain your immense power; your roar makes all three worlds tremble.",
+      "existingExplanation": "Hanuman’s strength is so great that he himself must govern it. A useful personal lesson is that power requires self-control.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C24",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 24",
+      "originalText": [
+        "भूत पिसाच निकट नहिं आवै।",
+        "महाबीर जब नाम सुनावै॥"
+      ],
+      "transliteration": [
+        "Bhoot pisaach nikat nahin aavai",
+        "Mahaabeer jab naam sunaavai"
+      ],
+      "existingMeaning": "Ghosts and harmful spirits do not approach when the name of the great hero Hanuman is spoken.",
+      "existingExplanation": "The literal meaning is protection from hostile supernatural beings. A symbolic reading also sees remembrance of Hanuman as a source of courage against frightening thoughts; that reading adds to the literal meaning.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C25",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 25",
+      "originalText": [
+        "नासै रोग हरै सब पीरा।",
+        "जपत निरंतर हनुमत बीरा॥"
+      ],
+      "transliteration": [
+        "Naasai rog harai sab peeraa",
+        "Japat nirantar Hanumat beeraa"
+      ],
+      "existingMeaning": "Continually repeating the name of brave Hanuman removes illness and suffering.",
+      "existingExplanation": "This is a devotional expression of faith in his healing grace. It gives the person suffering a prayer to hold onto, rather than setting out a medical treatment or a guaranteed outcome.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C26",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 26",
+      "originalText": [
+        "संकट तें हनुमान छुड़ावै।",
+        "मन क्रम बचन ध्यान जो लावै॥"
+      ],
+      "transliteration": [
+        "Sankat te Hanumaan chhudaavai",
+        "Man kram bachan dhyaan jo laavai"
+      ],
+      "existingMeaning": "Hanuman delivers from trouble those who remember him through thought, action, and speech.",
+      "existingExplanation": "The verse asks for devotion involving the whole person. What someone thinks, says, and does should support the same sincere commitment.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C27",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 27",
+      "originalText": [
+        "सब पर राम तपस्वी राजा।",
+        "तिन के काज सकल तुम साजा॥"
+      ],
+      "transliteration": [
+        "Sab par Raam tapasvee raajaa",
+        "Tin ke kaaj sakal tum saajaa"
+      ],
+      "existingMeaning": "Rama, the king devoted to spiritual discipline, reigns supreme; you accomplish all his tasks.",
+      "existingExplanation": "“Tapasvi” describes someone who practises discipline and restraint. Hanuman’s service supports Rama’s righteous purpose.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C28",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 28",
+      "originalText": [
+        "और मनोरथ जो कोई लावै।",
+        "सोई अमित जीवन फल पावै॥"
+      ],
+      "transliteration": [
+        "Aur manorath jo koee laavai",
+        "Soee amit jeevan phal paavai"
+      ],
+      "existingMeaning": "Whoever brings their heartfelt wishes to you receives abundant fulfilment in life.",
+      "existingExplanation": "“Manorath” means a cherished wish or aspiration. This is the devotee’s expression of trust in Hanuman’s generosity and blessing.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C29",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 29",
+      "originalText": [
+        "चारों जुग परताप तुम्हारा।",
+        "है परसिद्ध जगत उजियारा॥"
+      ],
+      "transliteration": [
+        "Chaaron jug parataap tumhaaraa",
+        "Hai parasiddh jagat ujiyaaraa"
+      ],
+      "existingMeaning": "Your greatness extends through all four ages, and your renowned glory lights up the world.",
+      "existingExplanation": "The four ages are the traditional Hindu ages of Satya, Treta, Dvapara, and Kali. Hanuman’s significance is presented as enduring across time.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C30",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 30",
+      "originalText": [
+        "साधु संत के तुम रखवारे।",
+        "असुर निकंदन राम दुलारे॥"
+      ],
+      "transliteration": [
+        "Saadhu sant ke tum rakhvaare",
+        "Asur nikandan Raam dulaare"
+      ],
+      "existingMeaning": "You protect holy people, destroy demons, and are dearly loved by Rama.",
+      "existingExplanation": "This brings together three aspects of Hanuman: protection, courage against wrongdoing, and devotion. His strength serves those who need his care.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C31",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 31",
+      "originalText": [
+        "अष्ट सिद्धि नौ निधि के दाता।",
+        "अस बर दीन जानकी माता॥"
+      ],
+      "transliteration": [
+        "Asht siddhi nau nidhi ke daataa",
+        "As bar deen Jaanakee maataa"
+      ],
+      "existingMeaning": "You can bestow the eight spiritual powers and the nine treasures, through a blessing given by Mother Sita.",
+      "existingExplanation": "“Janaki” is another name for Sita. The eight powers are extraordinary abilities described in spiritual traditions; the nine treasures represent forms of wealth and abundance. The verse honours Sita’s blessing and Hanuman’s ability to share it.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C32",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 32",
+      "originalText": [
+        "राम रसायन तुम्हरे पासा।",
+        "सदा रहो रघुपति के दासा॥"
+      ],
+      "transliteration": [
+        "Raam rasaayan tumhare paasaa",
+        "Sadaa raho Raghupati ke daasaa"
+      ],
+      "existingMeaning": "You possess the life-giving essence of devotion to Rama and remain forever his servant.",
+      "existingExplanation": "“Rasayan” means an elixir or rejuvenating substance. Here, love and remembrance of Rama are pictured as nourishment for the soul. Despite his powers, Hanuman remains devoted to service.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C33",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 33",
+      "originalText": [
+        "तुम्हरे भजन राम को पावै।",
+        "जनम जनम के दुख बिसरावै॥"
+      ],
+      "transliteration": [
+        "Tumhare bhajan Raam ko paavai",
+        "Janam janam ke dukh bisraavai"
+      ],
+      "existingMeaning": "Through devotion to you, a person reaches Rama and is freed from the sorrows of countless lifetimes.",
+      "existingExplanation": "Hanuman leads the devotee towards the Lord he himself loves. “Countless lifetimes” places this promise within the Hindu understanding of rebirth and spiritual liberation.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C34",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 34",
+      "originalText": [
+        "अंत काल रघुबर पुर जाई।",
+        "जहाँ जन्म हरि-भक्त कहाई॥"
+      ],
+      "transliteration": [
+        "Ant kaal Raghubar pur jaaee",
+        "Jahaan janm Hari-bhakt kahaaee"
+      ],
+      "existingMeaning": "At life’s end, the devotee reaches Rama’s abode; wherever born, they are known as a devotee of God.",
+      "existingExplanation": "The verse expresses hope that devotion carries beyond death. Translations differ slightly in how they connect its two lines, but the central idea is an enduring relationship with God.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C35",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 35",
+      "originalText": [
+        "और देवता चित्त न धरई।",
+        "हनुमत सेई सर्ब सुख करई॥"
+      ],
+      "transliteration": [
+        "Aur devtaa chitt na dharaee",
+        "Hanumat seee sarb sukh karaee"
+      ],
+      "existingMeaning": "Even without turning the mind towards other deities, one who serves Hanuman receives every happiness.",
+      "existingExplanation": "This expresses confidence in wholehearted devotion to Hanuman. It is commonly understood as praising the completeness of that path, rather than requiring contempt for other forms of worship.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C36",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 36",
+      "originalText": [
+        "संकट कटै मिटै सब पीरा।",
+        "जो सुमिरै हनुमत बलबीरा॥"
+      ],
+      "transliteration": [
+        "Sankat katai mitai sab peeraa",
+        "Jo sumirai Hanumat balbeeraa"
+      ],
+      "existingMeaning": "Troubles are overcome and suffering is removed for those who remember mighty Hanuman.",
+      "existingExplanation": "The promise returns to the hymn’s recurring theme of protection. Remembrance means keeping him present in the heart, especially in times of distress.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C37",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 37",
+      "originalText": [
+        "जै जै जै हनुमान गोसाईं।",
+        "कृपा करहु गुरु देव की नाईं॥"
+      ],
+      "transliteration": [
+        "Jai jai jai Hanumaan Gosaaeen",
+        "Kripaa karahu guru dev kee naaeen"
+      ],
+      "existingMeaning": "Glory, glory, glory to Lord Hanuman. Show me compassion as a revered teacher would.",
+      "existingExplanation": "The prayer now addresses Hanuman personally. It asks him to guide, support, and correct the devotee with a teacher’s care.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C38",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 38",
+      "originalText": [
+        "जो सत बार पाठ कर कोई।",
+        "छूटहि बंदि महा सुख होई॥"
+      ],
+      "transliteration": [
+        "Jo sat baar paath kar koee",
+        "Chhootahi bandi mahaa sukh hoee"
+      ],
+      "existingMeaning": "Whoever recites this prayer a hundred times is released from bondage and receives great happiness.",
+      "existingExplanation": "The common reading of “sat bar” here is “a hundred times.” Bondage can mean captivity and, in a spiritual reading, the attachments or fears that keep a person inwardly trapped. The verse expresses faith in sustained recitation.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C39",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 39",
+      "originalText": [
+        "जो यह पढ़ै हनुमान चालीसा।",
+        "होय सिद्धि साखी गौरीसा॥"
+      ],
+      "transliteration": [
+        "Jo yah padhai Hanumaan Chaaleesaa",
+        "Hoy siddhi saakhee Gaureesaa"
+      ],
+      "existingMeaning": "Whoever reads the Hanuman Chalisa attains fulfilment, with Shiva as witness.",
+      "existingExplanation": "“Gaurisa” means the Lord of Gauri—Shiva. “Siddhi” here means accomplishment or fulfilment, which can include spiritual attainment.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "C40",
+      "work": "Hanuman Chalisa",
+      "label": "Chaupai 40",
+      "originalText": [
+        "तुलसीदास सदा हरि चेरा।",
+        "कीजै नाथ हृदय महँ डेरा॥"
+      ],
+      "transliteration": [
+        "Tulseedaas sadaa Hari cheraa",
+        "Keejai Naath hriday mahan deraa"
+      ],
+      "existingMeaning": "Tulsidas is forever God’s servant. O Lord, make your dwelling in my heart.",
+      "existingExplanation": "The hymn ends with a personal request for Hanuman’s presence. After praising his greatness, Tulsidas asks that his own inner life be filled with devotion.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    },
+    {
+      "id": "D41",
+      "work": "Hanuman Chalisa",
+      "label": "Closing Doha",
+      "originalText": [
+        "पवनतनय संकट हरन, मंगल मूरति रूप।",
+        "राम लखन सीता सहित, हृदय बसहु सुर भूप॥"
+      ],
+      "transliteration": [
+        "Pavantanay sankat haran, mangal moorat roop",
+        "Raam Lakhan Seetaa sahit, hriday basahu sur bhoop"
+      ],
+      "existingMeaning": "O son of the Wind God, remover of troubles and embodiment of blessing, dwell in my heart together with Rama, Lakshmana, and Sita.",
+      "existingExplanation": "The final prayer gathers the whole hymn into one wish: that Hanuman and those he loves remain present within the devotee. It asks for an inward life shaped by courage, compassion, loyalty, and faith.",
+      "sourceFiles": [
+        "src/data/chalisa.json",
+        "src/data/extras.json"
+      ],
+      "primary": true,
+      "reviewStatus": "pending",
+      "rightsStatus": "pending",
+      "reviewer": null,
+      "provenance": "Existing app text; exact external edition and meaning authorship not established. No automatic approval."
+    }
+  ]
+}

@@ -1,6 +1,12 @@
+import "./learning.css";
+import "./hi.css";
 import type { Metadata, Viewport } from "next";
 import "../restored/styles.css";
 import "./iphone.css";
+import "./desktop.css";
+import "./welcome.css";
+import "./home.css";
+import "./install.css";
 import ConvexClientProvider from "./ConvexClientProvider";
 
 export const metadata: Metadata = {

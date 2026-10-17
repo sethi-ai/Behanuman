@@ -1,0 +1,78 @@
+{
+  "work": "Ramcharitmanas",
+  "sourceRepository": "https://github.com/bhavykhatri/DharmicData",
+  "commit": "96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7",
+  "license": "ODbL-1.0 (upstream database)",
+  "retrievedAt": "2026-10-17T12:06:33.926Z",
+  "reviewStatus": "not_editorially_reviewed",
+  "runtimeEligible": false,
+  "sourceComplete": true,
+  "criticalEditionVerified": false,
+  "recordCount": 2247,
+  "files": [
+    {
+      "file": "1_बाल_काण्ड_data.json",
+      "kanda": "बालकाण्ड",
+      "records": 760,
+      "sha256": "e7d77c8094ad1c2de8f39b0c9b5b5c52ea1a2086ddd9be64df1d5e924a614719",
+      "source": "https://github.com/bhavykhatri/DharmicData/blob/96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Ramcharitmanas/1_%E0%A4%AC%E0%A4%BE%E0%A4%B2_%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1_data.json",
+      "opening": "वर्णानामर्थसंघानां रसानां छन्दसामपि।\n\nमङ्गलानां च कर्त्तारौ ",
+      "ending": "सिय रघुबीर बिबाहु जे सप्रेम गावहिं सुनहिं।\n\nतिन्ह कहुँ सदा उछाहु मंगलायतन राम जसु।।361।।"
+    },
+    {
+      "file": "2_अयोध्या_काण्ड_data.json",
+      "kanda": "अयोध्या काण्ड",
+      "records": 664,
+      "sha256": "b7aa6e74e057b6c3fc784b62b871a51168a02ca7936a5cd4b02aadd2b63260d4",
+      "source": "https://github.com/bhavykhatri/DharmicData/blob/96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Ramcharitmanas/2_%E0%A4%85%E0%A4%AF%E0%A5%8B%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE_%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1_data.json",
+      "opening": "यस्याङ्के च विभाति भूधरसुता देवापगा मस्तके\n\nभाले बालविधुर्गल",
+      "ending": "नित पूजत प्रभु पाँवरी प्रीति न हृदयँ समाति।।\n\nमागि मागि आयसु करत राज काज बहु भाँति।।325।।"
+    },
+    {
+      "file": "3_अरण्य_काण्ड_data.json",
+      "kanda": "अरण्य काण्ड",
+      "records": 98,
+      "sha256": "90288231b1191577f8ee9c73a4e51af68194e964e096e3e53772a51abfb12976",
+      "source": "https://github.com/bhavykhatri/DharmicData/blob/96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Ramcharitmanas/3_%E0%A4%85%E0%A4%B0%E0%A4%A3%E0%A5%8D%E0%A4%AF_%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1_data.json",
+      "opening": "मूलं धर्मतरोर्विवेकजलधेः पूर्णेन्दुमानन्ददं\n\nवैराग्याम्बुजभा",
+      "ending": "गुनागार संसार दुख रहित बिगत संदेह।।\n\nतजि मम चरन सरोज प्रिय तिन्ह कहुँ देह न गेह।।45।।"
+    },
+    {
+      "file": "4_किष्किन्धा_काण्ड_data.json",
+      "kanda": "किष्किन्धा काण्ड",
+      "records": 61,
+      "sha256": "b6b623357ce05164d777e3e112b60c395798a80c2ecd499c3f27d3e2000b04b0",
+      "source": "https://github.com/bhavykhatri/DharmicData/blob/96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Ramcharitmanas/4_%E0%A4%95%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%95%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%BE_%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1_data.json",
+      "opening": "कुन्देन्दीवरसुन्दरावतिबलौ विज्ञानधामावुभौ\n\nशोभाढ्यौ वरधन्विन",
+      "ending": "बलि बाँधत प्रभु बाढेउ सो तनु बरनि न जाई।\n\nउभय धरी महँ दीन्ही सात प्रदच्छिन धाइ।।29।।"
+    },
+    {
+      "file": "5_सुंदर_काण्ड_data.json",
+      "kanda": "सुंदर काण्ड",
+      "records": 121,
+      "sha256": "0a206bf837b94ee1c4112c94cb0b3a45b3f02b1ffefcc11b464418401bfd9a53",
+      "source": "https://github.com/bhavykhatri/DharmicData/blob/96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Ramcharitmanas/5_%E0%A4%B8%E0%A5%81%E0%A4%82%E0%A4%A6%E0%A4%B0_%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1_data.json",
+      "opening": "शान्तं शाश्वतमप्रमेयमनघं निर्वाणशान्तिप्रदं\n\nब्रह्माशम्भुफणी",
+      "ending": "सुनत बिनीत बचन अति कह कृपाल मुसुकाइ।\n\nजेहि बिधि उतरै कपि कटकु तात सो कहहु उपाइ।।59।।"
+    },
+    {
+      "file": "6_लंका_काण्ड_data.json",
+      "kanda": "लंका काण्ड",
+      "records": 273,
+      "sha256": "6c93babe2e8dceea4194438fb387ffb776974505e50b1e4441604a602d79f30f",
+      "source": "https://github.com/bhavykhatri/DharmicData/blob/96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Ramcharitmanas/6_%E0%A4%B2%E0%A4%82%E0%A4%95%E0%A4%BE_%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1_data.json",
+      "opening": "रामं कामारिसेव्यं भवभयहरणं कालमत्तेभसिंहं\n\nयोगीन्द्रं ज्ञानग",
+      "ending": "ुनि प्रभु आइ त्रिबेनीं हरषित मज्जनु कीन्ह।\n\nकपिन्ह सहित बिप्रन्ह कहुँ दान बिबिध बिधि दीन्ह।।120(ख)।।"
+    },
+    {
+      "file": "7_उत्तर_काण्ड_data.json",
+      "kanda": "उत्तर काण्ड",
+      "records": 270,
+      "sha256": "0238ce4e5c96a1e12f71d7162a09b5717a87146004a3c0283abc0f063eadc374",
+      "source": "https://github.com/bhavykhatri/DharmicData/blob/96b3bafd47ffbfe1902f3f0ef7a1928dd43c34d7/Ramcharitmanas/7_%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0_%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1_data.json",
+      "opening": "केकीकण्ठाभनीलं सुरवरविलसद्विप्रपादाब्जचिह्नं\n\nशोभाढ्यं पीतवस",
+      "ending": "मैं कृतकृत्य भइउँ अब तव प्रसाद बिस्वेस।\n\nउपजी राम भगति दृढ़ बीते सकल कलेस।।129।।"
+    }
+  ],
+  "markdownSha256": "27b84e40bc0026098cf7ec5b103b8232996a413fde9c32d2422dec4823a4ac9f"
+}

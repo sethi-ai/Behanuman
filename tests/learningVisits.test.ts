@@ -1,0 +1,3 @@
+import {expect,test} from 'vitest';import {cleanVisits,visitVerse,rankedVisits} from '../src/lib/learningVisits';
+test('recent uses real opens and most-read requires repeat opens',()=>{let v=visitVerse({},2,100);v=visitVerse(v,1,200);expect(rankedVisits(v,'recent')).toEqual([1,2]);expect(rankedVisits(v,'most')).toEqual([]);v=visitVerse(v,2,300);expect(rankedVisits(v,'most')).toEqual([2]);expect(v[2].count).toBe(2);});
+test('malformed histories do not invent visits',()=>{expect(cleanVisits({'99':{count:5,last:100},'2':{count:-1,last:100}})).toEqual({});expect(visitVerse({},43,100)).toEqual({});});

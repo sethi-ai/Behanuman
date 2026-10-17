@@ -11,3 +11,8 @@ test("sign-in refuses lookalike and external return addresses", () => {
     expect(() => hanumanRedirect(value)).toThrow();
   }
 });
+
+test("owned public domains are allowed without opening redirects to lookalikes",()=>{
+ for(const origin of ["https://behanuman.com","https://www.behanuman.com"])expect(hanumanRedirect(origin+"/")).toBe(origin+"/");
+ for(const url of ["http://www.behanuman.com/","https://www.behanuman.com.evil.example/","https://user@www.behanuman.com/","https://behanuman.com:8443/","https://other.behanuman.com/"])expect(()=>hanumanRedirect(url)).toThrow();
+});
