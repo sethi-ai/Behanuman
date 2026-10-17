@@ -2,7 +2,7 @@
 
 Test URL: https://www.behanuman.com/ . Original app https://hanuman.dyut.si/ remains separate.
 
-Current tested frontend is r4f84ax22 / dpl_8GZWTaihkcEXzKqUcM8YkscW9cU6. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
+Current tested frontend is a7yxdioqj / dpl_6BzehjZZkzF63GpZWX66sYeXvGf7. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
 
 ## Phone journey
 
@@ -28,6 +28,8 @@ Rollout checks use mocked provider responses; no additional paid end-to-end call
 
 Latest targeted test release: three lifetime Claude attempts per account, across devices, with paid errors counting and free story lookup unchanged. All 69 automated tests pass; no new paid end-to-end call. Chat uses shared themes and in-memory conversation bubbles; Learn no longer has the h.i banner. The current interface uses a single Send button with explicit Anthropic disclosure; supported messages request generation immediately. See the final targeted update in RELEASE-2026-10-17.md.
 
-Artwork correction: /app now uses root assets; distinct Chaupai1/2 and all44 dark images checked in the published browser. Reader gada oval and wide-share capsule removed; square WhatsApp icon unchanged. Archive consolidation remains pending clarification.
+Artwork correction: /app now uses root assets; distinct Chaupai1/2 and all44 dark images checked in the published browser. Reader gada oval and wide-share capsule removed; square WhatsApp icon unchanged. Archive now groups Browse stories, Past stories and Home in the header.
 
 Latest UI: Spotify is hidden for everyone on the hosted test app (embed src absent); playlist configuration and recitation retained. h.i uses a single Send flow, paragraph/status bubbles and compact source disclosure. A local unsupported-topic status was browser-checked without a paid call; no generated-response acceptance claim.
+
+Current controls: one Archive menu at right and a red information button beside the composer. Sending details remain in an accessible modal, and the first Send requires explicit confirmation.69tests/types/lint/hostedbuild pass; mobile/desktop, draft preservation and keyboard checks pass. Compiled reduced-motion rule stops the pulse. No new paid test; observed shared allowance499remaining, without attribution.
