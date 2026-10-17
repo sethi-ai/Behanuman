@@ -2,7 +2,7 @@
 
 Test URL: https://www.behanuman.com/ . Original app https://hanuman.dyut.si/ remains separate.
 
-Current tested frontend is dcsdsj6jr / dpl_EXkTnwP9epbBn3GXDbXV7VbJHMff. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
+Current tested frontend is pxv2qc27p / dpl_EKjSmxPFYw1ZknVQiQMnYiQDvh4w. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
 
 ## Phone journey
 
@@ -35,3 +35,5 @@ Latest UI: Spotify is hidden for everyone on the hosted test app (embed src abse
 Current controls: one Archive menu at right and a red information button beside the composer. Sending details remain in an accessible modal, and the first Send requires explicit confirmation.69tests/types/lint/hostedbuild pass; mobile/desktop, draft preservation and keyboard checks pass. Compiled reduced-motion rule stops the pulse. No new paid test; observed shared allowance499remaining, without attribution.
 
 Latest visual update: rounded orange gradient chat surface using existing app colours, contrasting bubbles and circular Send; four local appearances and live390px/desktop checked. Archive/info/first-send gate/3attempt allowance are unchanged. Lint/types/hostedbuild pass; no paid response test.
+
+Three source-supported starters now appear below the existing Hanuman artwork. Each only prefills/focuses the editable composer; public taps preserve3/3 and submit nothing.72tests/types/lint/hostedbuild pass. No new paid generation or corpus expansion.

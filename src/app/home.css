@@ -113,3 +113,17 @@ html.dk #hi-screen .hi-reader-message>div{background:color-mix(in srgb,var(--s1)
 html.dk #hi-screen .hi-composer-wrap{border-color:#ffffff26!important}
 @media(max-width:600px){html #hi-screen.hi-chat-screen{top:82px!important;left:10px!important;right:10px!important}#hi-screen .hi-chat-header{padding:12px 14px!important}#hi-screen .hi-stream-inner{padding-inline:12px}#hi-screen .hi-chat-empty h3{font-size:26px}#hi-screen .hi-chat-empty p{font-size:13px}#hi-screen .hi-composer-wrap{margin-inline:8px!important;padding-inline:10px!important}}
 @media(min-width:1000px) and (hover:hover) and (pointer:fine){html #hi-screen.hi-chat-screen{left:328px!important;right:16px!important;top:88px!important}}
+/* Exactly three editable suggestions, shown only before a conversation starts. */
+#hi-screen .hi-chat-empty{max-width:430px;margin:0 auto;padding:6px 0 12px;text-align:center}
+#hi-screen .hi-empty-art{display:block;object-fit:contain;width:72px;height:72px;margin:0 auto 6px}
+#hi-screen .hi-empty-art-dark{display:none}
+html.dk #hi-screen .hi-empty-art-light{display:none}
+html.dk #hi-screen .hi-empty-art-dark{display:block}
+#hi-screen .hi-chat-empty h3{font-size:25px;margin:6px 0 12px}
+#hi-screen .hi-starters{display:grid;gap:6px}
+#hi-screen .hi-starters button{width:100%;min-height:44px;padding:9px 14px;text-align:left;border-radius:19px;border-color:#ffffff88;background:var(--s1);color:var(--t1);font:400 12px/1.5 Inter,sans-serif;box-shadow:0 3px 10px #00000008}
+#hi-screen .hi-starter-hint{font-size:10px;line-height:1.5;margin:8px 0 0;color:var(--t1)}
+#hi-screen .hi-chat-empty .hi-note{font-size:10px!important;line-height:1.5;margin:4px 0 0}
+html.dk #hi-screen .hi-starters button{border-color:#ffffff30}
+@media(max-height:740px){#hi-screen .hi-empty-art{width:60px;height:60px}#hi-screen .hi-chat-empty h3{font-size:23px;margin-block:4px 8px}}
+#hi-screen .hi-empty-art{border-radius:16px;box-shadow:0 3px 10px #0000000a}
