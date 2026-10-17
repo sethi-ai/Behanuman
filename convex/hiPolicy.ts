@@ -1,9 +1,9 @@
 import valmikiStories from './hiStories.json';
 import ramcharitmanasCandidates from './ramcharitmanasStories.json';
-export type HiStory={id:string;revision:number;title:string;retelling:string;anchor:string;question:string;citation:string;url:string;presentation:string;reviewStatus:string;reviewer:string|null;rightsStatus:string;tags:string[];work?:string;sourceDocument?:string;rightsBasis?:string};
+export type HiStory={id:string;revision:number;title:string;retelling:string;anchor:string;question:string;citation:string;url:string;presentation:string;reviewStatus:string;reviewer:string|null;rightsStatus:string;tags:string[];work?:string;sourceDocument?:string;rightsBasis?:string;rightsScope?:string};
 // Keep legacy preview drafts visible as labelled samples. New scripture candidates
 // enter neither matching, browsing nor model context until BOTH reviews pass.
-export function buildStoryCorpus(candidates:HiStory[]):HiStory[]{return [...valmikiStories,...candidates.filter(isGenerationEligible)];}
+export function buildStoryCorpus(candidates:HiStory[]):HiStory[]{return [...valmikiStories,...candidates.filter(story=>isGenerationEligible(story))];}
 export const storyCorpus=buildStoryCorpus(ramcharitmanasCandidates);
 const stories=storyCorpus;
 
@@ -25,13 +25,15 @@ export function parseReflection(raw: string): {status:'reflection';reflection:st
     if (v.status === 'safety') return {status:'safety'};
     if (v.status !== 'reflection' || typeof v.reflection !== 'string' || v.reflection.length < 20 || v.reflection.length > 1100 || !(v.question === null || typeof v.question === 'string' && v.question.length <= 180)) return null;
     const text = v.reflection+' '+(v.question||'');
+    if (/\b(?:hanuman|jambavan|rama|ramcharitmanas|chalisa)\b/i.test(text)) return null;
     if (/https?:|<|>|\b(you must|you should|you need to|i am hanuman|hanuman (says|tells you)|will succeed|guarantee|diagnos|cure|step \d|scripture says)\b/i.test(text)) return null;
     if (v.question && (String(v.question).match(/\?/g)||[]).length !== 1) return null;
     return {status:'reflection',reflection:v.reflection.trim(),question:typeof v.question==='string'?v.question.trim():null};
   } catch { return null; }
 }
 
-export function isGenerationEligible(story:{reviewStatus?:unknown;rightsStatus?:unknown;reviewer?:unknown;revision?:unknown;citation?:unknown;presentation?:unknown;url?:unknown}){
+export function isGenerationEligible(story:{rightsScope?:unknown;reviewStatus?:unknown;rightsStatus?:unknown;reviewer?:unknown;revision?:unknown;citation?:unknown;presentation?:unknown;url?:unknown},scope:'public'|'test'='public'){
+ if(story.rightsScope==='test_only'&&scope!=='test')return false;
  if(story.reviewStatus!=='approved'||story.rightsStatus!=='approved'||typeof story.reviewer!=='string'||!story.reviewer.trim()||!Number.isInteger(story.revision)||Number(story.revision)<1||typeof story.citation!=='string'||!story.citation.trim()||typeof story.presentation!=='string'||!story.presentation.trim()||typeof story.url!=='string')return false;
  try{const url=new URL(story.url);return url.protocol==='https:'&&!url.username&&!url.password;}catch{return false;}
 }

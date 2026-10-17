@@ -60,7 +60,7 @@ export default function LearningApp(){
    {day>=21&&!state.milestone&&<section className="learning-box"><h3>Twenty-one days with Hanuman</h3><p>A moment to celebrate your commitment. You have marked {state.learned.length} of 43 verses learned. There is room to keep exploring.</p><button disabled={disabled} onClick={()=>{act({field:'hidden',value:false});act({field:'milestone',value:true});}}>Keep Learn in Navigation</button><button disabled={disabled} onClick={()=>{act({field:'hidden',value:true});act({field:'milestone',value:true});window.dispatchEvent(new Event('bh:open-account'));}}>Hide Learn from Navigation</button></section>}
    <h3>Your journey</h3><div className="learning-lessons">{lessons.map((list,i)=><button key={i} disabled={disabled} onClick={()=>openVerse(list.find(n=>!state.learned.includes(n))??list[0],Date.now())}><span>Lesson {i+1}</span><small>{verses[list[0]].label} – {verses[list.at(-1)!].label}</small><small>{list.every(n=>state.learned.includes(n))?'Learned':'Explore'}</small></button>)}</div>
    
-   <details><summary>Revisit ({state.revisit.length})</summary>{state.revisit.map(n=><button key={n} disabled={disabled} onClick={()=>openVerse(n,Date.now())}>{verses[n].label}</button>)}</details>
+
   </>:<article className="learning-verse"><button onClick={()=>setView('journey')}>Back to journey</button><label className="learning-jump">Jump to verse<select value={state.current} disabled={disabled} onChange={e=>openVerse(Number(e.target.value),Date.now())}>{verses.map((v,i)=><option value={i} key={v.id}>{v.label}</option>)}</select></label><h3>{verse.label}</h3>
    {/* Existing devotional artwork and copy; additional editorial claims stay out until sourced. */}
    {/* eslint-disable-next-line @next/next/no-img-element */}

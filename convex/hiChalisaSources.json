@@ -1,0 +1,41 @@
+[
+  {
+    "id": "chalisa-C7",
+    "verseId": "C7",
+    "work": "Hanuman Chalisa",
+    "revision": 1,
+    "label": "Chaupai 7",
+    "originalText": [
+      "विद्यावान गुनी अति चातुर।",
+      "राम काज करिबे को आतुर॥"
+    ],
+    "transliteration": [
+      "Vidyaavaan gunee ati chaatur",
+      "Raam kaaj karibe ko aatur"
+    ],
+    "meaning": "Hanuman is praised for knowledge, good qualities and discernment, and for his eagerness to serve Rama.",
+    "citation": "Hanuman Chalisa, Chaupai 7 (existing app C7)",
+    "url": "https://sanskritdocuments.org/doc_z_otherlang_hindi/chaalisa.html",
+    "presentation": "Original lines retained from src/data/chalisa.json. External online text used for comparison only, not a copied volunteer transcription or modern translation. Printed edition not pinned. English meaning newly written for this test.",
+    "reviewStatus": "approved",
+    "reviewer": "Owner (test-app activation approved, 17 October 2026)",
+    "rightsStatus": "approved",
+    "rightsScope": "test_only",
+    "rightsBasis": "Owner approved these original app-written explanations and existing ancient verse lines for the Be Hanuman test app on 17 October 2026. No modern translation is copied. Broader publication/commercial review remains pending.",
+    "tags": [
+      "knowledge",
+      "discernment",
+      "service",
+      "learning",
+      "work",
+      "purpose",
+      "strength",
+      "confidence",
+      "interview",
+      "overwhelmed",
+      "encouragement",
+      "ramcharitmanas",
+      "jambavan"
+    ]
+  }
+]

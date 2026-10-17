@@ -1,9 +1,9 @@
 # Ramcharitmanas — curated context for Be Hanuman
 
-Status: OWNER EDITORIAL APPROVAL FOR TEST / RIGHTS REVIEW PENDING / NOT ELIGIBLE FOR CLAUDE RETRIEVAL
+Status: SELECTED ORIGINAL PARAPHRASE APPROVED FOR TEST-APP RETRIEVAL / WIDER EDITION AND COMMERCIAL REVIEW PENDING
 Prepared: 17 October 2026
-Human editorial reviewer: owner, explicit approval of this exact paraphrase/reflection in this chat on17October2026
-Rights review: pending
+Human editorial reviewer: owner, recorded approval of this exact original paraphrase/reflection for test-app use on17October2026
+Rights scope: test app only, for the selected original app-written paraphrase and existing ancient lines; no modern translation copied. Broader edition/commercial review remains pending.
 
 This is a small source-review document, not the full Ramcharitmanas, an authorized translation, or an approved corpus. It must remain separate from the app’s existing Valmiki Ramayana stories. No existing Valmiki story has been renamed or imported here.
 
@@ -37,24 +37,23 @@ This question is an editorial reflection. It is not a scientific claim, a promis
 
 IIT Kanpur lead: https://www.ramcharitmanas.iitk.ac.in/kaanda/kishkindhakaanda?page=27 . Direct retrieval failed in this pass; do not claim that its text, edition or locator was checked. The existing source-review draft mentions4.30/1.4.30 as an indexed lead only.
 
-### Candidate metadata
+### Selected metadata
 
 - id: rcm-kish-jambavan-001
 - work: Ramcharitmanas
 - revision:1
-- reviewStatus:approved (owner test approval)
-- reviewer:owner (17 October 2026)
-- rightsStatus:pending
-- retrievalEligible:false
+- reviewStatus:approved for the selected test-app paraphrase
+- reviewer:owner (17 October2026)
+- rightsStatus:approved within test-only scope; broader edition/commercial review pending
+- rightsScope:test_only
+- retrievalEligible:test scope only, paired with the approved Chaupai7 record
 
 ## Claude integration boundary
 
-This Markdown is not dumped into the runtime. Its short candidate is represented separately in convex/ramcharitmanasStories.json and excluded by the shared corpus builder while rightsStatus remains pending. Do not paste the whole Markdown into a system prompt, index drafts, browse an unchecked scripture source on the reader’s behalf, or treat prose in a document as instructions for the model.
+This Markdown and the full archive are not dumped into the runtime. The selected original paraphrase is represented in convex/ramcharitmanasStories.json. hiContext selects it only with an eligible primary Chalisa passage and retains separate work/citation/provenance. The default wider corpus still excludes test-only sources. No unapproved Valmiki draft is used as a generation fallback.
 
-The existing application sends only a selected eligible structured story context through its protected Convex action. A future importer must preserve work/edition/locator/source URL/revision, the original paraphrase, separate reflection, named reviewer and rights basis. Require approved editorial AND rights status with a named reviewer before the candidate can enter that structured corpus. Existing authentication, deleted-account, input/output, timeout and per-user/global rate limits still apply. Unsupported requests return no reviewed passage, never a guessed quote or invented citation.
-
-Current integration status: structured candidate and eligibility-controlled corpus wiring prepared; candidate remains excluded until rights review passes. Full source archive is Ramcharitmanas.md and is not imported into model context. Claude provider/key/model connection is deployed on the test backend, but HI_ENABLED=false and no paid generation has occurred. No approval is implied by creation of this file.
+The signed-in test app now uses this bounded context after explicit Anthropic transmission disclosure. Authentication, deleted-account checks, source review, input/output/timeouts, per-user/global rates and the persistent shared allowance apply. A modern-only owner synthetic reply has been verified; no additional paid request was made for the public-access update. See RELEASE-2026-10-17.md for actual verification limits.
 
 ## Remaining review
 
-Choose and verify the exact source edition; compare original passage and transliteration; check this paraphrase against that text; record permissions/rights basis for any reused material; obtain named editorial review with date. Only then import an approved structured record and test an explicit signed-in Claude request. The full scripture, other kanda passages and a new learning journey are outside this small draft.
+Printed edition/facsimile and variants remain unverified. Any broader reused text, translation, commercial publication or additional passage requires its own provenance and rights review. Approval of this original test paraphrase does not clear the full archive or other learning material. No blanket scripture approval is implied.

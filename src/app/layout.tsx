@@ -10,12 +10,15 @@ import "./install.css";
 import ConvexClientProvider from "./ConvexClientProvider";
 
 export const metadata: Metadata = {
-  title: "Be Hanuman: Hanuman Chalisa",
-  description: "Learn the Hanuman Chalisa one verse at a time. English or Hindi, with a short meaning.",
+  metadataBase: new URL('https://www.behanuman.com'),
+  alternates: { canonical: '/' },
+  title: "Be Hanuman",
+  description: "Make room for devotion, courage and steadiness with Hanuman Chalisa chanting, learning and reflection.",
   manifest: "/manifest.webmanifest",
-  icons: { apple: [{ url: "/icon-180.png", sizes: "180x180", type: "image/png" }] },
+  icons: { icon: [{url:"/icon-32.png?v=2",sizes:"32x32",type:"image/png"}], apple: [{ url: "/icon-180.png?v=2", sizes: "180x180", type: "image/png" }] },
   appleWebApp: { capable: true, title: "Be Hanuman", statusBarStyle: "default" },
-  openGraph: { title: "Be Hanuman: Hanuman Chalisa", description: "Learn the Hanuman Chalisa one verse at a time." },
+  openGraph: { type:'website', url:'/', siteName:'Be Hanuman', title:'Be Hanuman', description:'A little space for daily devotion. Chant, learn and reflect.', images:[{url:'/share-gada.png',secureUrl:'https://www.behanuman.com/share-gada.png',type:'image/png',width:512,height:512,alt:'Be Hanuman golden gada icon.'}] },
+  twitter: {card:'summary_large_image',title:'Be Hanuman',description:'A little space for daily devotion. Chant, learn and reflect.',images:[{url:'/social-preview.png',alt:'Be Hanuman with its golden gada.'}]},
 };
 
 export const viewport: Viewport = {

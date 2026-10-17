@@ -11,8 +11,11 @@
 import type * as accountDeletion from "../accountDeletion.js";
 import type * as auth from "../auth.js";
 import type * as hi from "../hi.js";
+import type * as hiBudget from "../hiBudget.js";
+import type * as hiContext from "../hiContext.js";
 import type * as hiGatewayCheck from "../hiGatewayCheck.js";
 import type * as hiPolicy from "../hiPolicy.js";
+import type * as hiProvider from "../hiProvider.js";
 import type * as http from "../http.js";
 import type * as launchTracking from "../launchTracking.js";
 import type * as launchValidators from "../launchValidators.js";
@@ -32,8 +35,11 @@ declare const fullApi: ApiFromModules<{
   accountDeletion: typeof accountDeletion;
   auth: typeof auth;
   hi: typeof hi;
+  hiBudget: typeof hiBudget;
+  hiContext: typeof hiContext;
   hiGatewayCheck: typeof hiGatewayCheck;
   hiPolicy: typeof hiPolicy;
+  hiProvider: typeof hiProvider;
   http: typeof http;
   launchTracking: typeof launchTracking;
   launchValidators: typeof launchValidators;

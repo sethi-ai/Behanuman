@@ -12,14 +12,15 @@
     "url": "https://ebooks.pustak.org/index.php/books/bookdetails/2088/1/14",
     "presentation": "Pustak.org book 2088; catalogue names Bharatiya Sahitya Sangrah,1980. Online text checked17October2026; printed facsimile/edition not independently established. Not identified as Gita Press. No modern translation/commentary reproduced.",
     "reviewStatus": "approved",
-    "reviewer": "Owner (explicit test-app approval, 17 October 2026)",
-    "rightsStatus": "pending",
-    "rightsBasis": "Original editorial paraphrase and reflection; human rights review pending.",
+    "reviewer": "Owner (test-app activation approved, 17 October 2026)",
+    "rightsStatus": "approved",
+    "rightsBasis": "Owner approved these original app-written explanations and existing ancient verse lines for the Be Hanuman test app on 17 October 2026. No modern translation is copied. Broader publication/commercial review remains pending.",
     "tags": [
       "ramcharitmanas",
       "jambavan",
       "encouragement",
       "recognition"
-    ]
+    ],
+    "rightsScope": "test_only"
   }
 ]
