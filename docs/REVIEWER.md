@@ -2,7 +2,7 @@
 
 Test URL: https://www.behanuman.com/ . Original app https://hanuman.dyut.si/ remains separate.
 
-Current tested frontend is a7yxdioqj / dpl_6BzehjZZkzF63GpZWX66sYeXvGf7. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
+Current tested frontend is dcsdsj6jr / dpl_EXkTnwP9epbBn3GXDbXV7VbJHMff. Read RELEASE-2026-10-17.md; the old core commit alone does not contain this final release. Do not use any maintainer key or account for local setup.
 
 ## Phone journey
 
@@ -33,3 +33,5 @@ Artwork correction: /app now uses root assets; distinct Chaupai1/2 and all44 dar
 Latest UI: Spotify is hidden for everyone on the hosted test app (embed src absent); playlist configuration and recitation retained. h.i uses a single Send flow, paragraph/status bubbles and compact source disclosure. A local unsupported-topic status was browser-checked without a paid call; no generated-response acceptance claim.
 
 Current controls: one Archive menu at right and a red information button beside the composer. Sending details remain in an accessible modal, and the first Send requires explicit confirmation.69tests/types/lint/hostedbuild pass; mobile/desktop, draft preservation and keyboard checks pass. Compiled reduced-motion rule stops the pulse. No new paid test; observed shared allowance499remaining, without attribution.
+
+Latest visual update: rounded orange gradient chat surface using existing app colours, contrasting bubbles and circular Send; four local appearances and live390px/desktop checked. Archive/info/first-send gate/3attempt allowance are unchanged. Lint/types/hostedbuild pass; no paid response test.
